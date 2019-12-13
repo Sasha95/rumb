@@ -1,0 +1,25 @@
+.ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+  padding-top: 37px;
+  padding-right: 120px;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  margin-right: auto;
+}
+
+.text {
+  color: black;
+  margin-left: 37px;
+  text-decoration: none;
+}
+
+.textBold {
+  composes: text;
+  font-weight: 600;
+  cursor: pointer;
+}
