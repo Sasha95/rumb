@@ -4,12 +4,14 @@ import {
   BrowserRouter as Router,
   Route,
 } from "react-router-dom";
+import { MainTravel } from './modules/mainTravel';
 
 const App: React.FC = () => {
   return (
     <Router>
         <Route path="/">
           <Header />
+          <MainTravel />
         </Route>
         <Route path="/howItWorks">
           {/* <HowItWorks /> */}
