@@ -5,6 +5,7 @@ import book from "../../resources/book.png"
 import location from "../../resources/location.png"
 import calnedar from "../../resources/calendar.png"
 import { Country } from "./Country"
+import { RangeDate } from "./RangeDate"
 
 export const MainTravel = () => {
     return (
@@ -27,6 +28,9 @@ export const MainTravel = () => {
                     <div className={styles["felx-container2"]}>
                         <Interests />
                         <Country />
+                        <div className={styles.range}>
+                            <RangeDate />
+                        </div>
                     </div>
                 </div>
             </div>

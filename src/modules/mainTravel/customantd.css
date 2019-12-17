@@ -18,13 +18,14 @@
   box-shadow: none;
 }
 
-
 .ant-input-affix-wrapper .ant-input-prefix {
   left: 0px;
 }
 
 /*select */
 .ant-select-selection--multiple .ant-select-selection__choice:first-child {
+  color: #BFBFBF;
+  font-weight: normal;
   background-color: white;
   padding-left: 0px;
   border: none;
@@ -43,10 +44,19 @@
   color: #52C41A;
 }
 
-.ant-select-selection--multiple .ant-select-selection__choice__remove:first-child {
-  display: none;
-  /*  */
+.ant-select-selection__choice:first-child{
+  padding-right: 0px;
 }
+
+.ant-select-selection__choice:first-child .ant-select-selection__choice__remove {
+  display: none;
+}
+
+.ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected .ant-select-selected-icon,
+.ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item-selected:hover .ant-select-selected-icon{
+  display: none;
+}
+
 
 .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item .ant-select-selected-icon {
   display: none;
@@ -62,7 +72,7 @@
 
 .ant-select-selection--multiple .ant-select-selection__rendered {
   left: 0;
-  margin-left: 0;
+  margin: 0;
 }
 
 .ant-select-focused .ant-select-selection,
@@ -86,4 +96,49 @@
 ::-webkit-scrollbar-thumb {
   background: #d9d9d9;
   border-radius: 4px;
+}
+
+/* Modal */
+.ant-modal-close-x{
+  display: none;
+}
+
+/* Calendar */
+
+.DayPicker_weekHeader_li {
+  font-size: 12px;
+  color: #BFBFBF;
+}
+
+.DayPicker_weekHeader_li::first-letter {
+  visibility: visible;
+  text-transform: capitalize;
+}
+
+.CalendarMonth_caption::first-letter{
+  visibility: visible;
+  text-transform: capitalize;
+}
+
+.CalendarDay__default{
+  border: none !important;
+}
+
+.CalendarDay__selected, .CalendarDay__selected:active, .CalendarDay__selected:hover {
+  background-color: #D9F7BE !important;
+  color: #595959 !important;
+}
+
+.CalendarDay__selected_span{
+  background-color: #F6FFED !important;
+  color: #595959 !important;
+}
+
+.CalendarDay__hovered_span, .CalendarDay__hovered_span:hover{
+  background-color: #F6FFED !important;
+  color: #595959 !important;
+}
+
+.DayPickerNavigation_button__default {
+  border: none !important;
 }
