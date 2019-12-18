@@ -24,6 +24,7 @@
 
 /*select */
 .ant-select-selection--multiple .ant-select-selection__choice:first-child {
+  margin-left: 0px;
   color: #BFBFBF;
   font-weight: normal;
   background-color: white;
