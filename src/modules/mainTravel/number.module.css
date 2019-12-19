@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+}
+
+.flex-container {
+    flex: 1;
+    border-left: 1px solid #D9D9D9;
+}
+
+.costom-lable-people {
+    padding-left: 18px;
+    color: #BFBFBF;
+}
+
+.data {
+    padding-right: 10px;
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+    align-self: center;
+}
+
+.horizontal-line{
+    border-top: 1px solid #D9D9D9;
+}
+
+.member {
+    width: 330px;
+    height: 64px;
+    background: #FAFAFA;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0px;
+    padding-left: 16px;
+    display: table-cell;
+    vertical-align: middle 
+}

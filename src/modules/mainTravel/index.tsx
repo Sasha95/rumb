@@ -6,6 +6,7 @@ import location from "../../resources/location.png"
 import calnedar from "../../resources/calendar.png"
 import { Country } from "./Country"
 import { RangeDate } from "./RangeDate"
+import { NumberOfPeoples } from "./NumberOfPeoples"
 
 export const MainTravel = () => {
     return (
@@ -33,6 +34,7 @@ export const MainTravel = () => {
                         </div>
                     </div>
                 </div>
+                <NumberOfPeoples />
             </div>
         </div>
     )

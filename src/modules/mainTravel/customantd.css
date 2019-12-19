@@ -76,6 +76,15 @@
   margin: 0;
 }
 
+.ant-input-affix-wrapper .ant-input-suffix{
+  right: 0px;
+}
+
+.ant-input{
+  border-top-left-radius: 0px; 
+  border-top-right-radius: 0px;
+}
+
 .ant-select-focused .ant-select-selection,
 .ant-select-selection:focus,
 .ant-select-selection:active,
