@@ -2,9 +2,22 @@
     display: flex;
 }
 
+.wrapper {
+    height: 64px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 8px 8px;
+}
+
 .flex-container {
     flex: 1;
     border-left: 1px solid #D9D9D9;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .costom-lable-people {
@@ -13,7 +26,7 @@
 }
 
 .data {
-    padding-right: 10px;
+    padding-right: 17px;
     color: #262626;
     font-weight: 600;
     font-size: 14px;
@@ -33,4 +46,14 @@
     padding-left: 16px;
     display: table-cell;
     vertical-align: middle 
+}
+.member-unactive {
+    background: #FAFAFA;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0px 0px 8px 8px;
+}
+
+.image {
+    padding: 6px 12px;
+    cursor: pointer;
 }

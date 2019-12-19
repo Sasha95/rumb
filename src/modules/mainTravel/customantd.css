@@ -83,6 +83,8 @@
 .ant-input{
   border-top-left-radius: 0px; 
   border-top-right-radius: 0px;
+  border-bottom-left-radius: 8px; 
+  border-bottom-right-radius: 8px;
 }
 
 .ant-select-focused .ant-select-selection,
