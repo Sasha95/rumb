@@ -21,6 +21,9 @@
 .ant-input-affix-wrapper .ant-input-prefix {
   left: 0px;
 }
+.ant-input-affix-wrapper .ant-input-suffix{
+  right: 0px;
+}
 
 /*select */
 .ant-select-selection--multiple .ant-select-selection__choice:first-child {
@@ -76,15 +79,9 @@
   margin: 0;
 }
 
-.ant-input-affix-wrapper .ant-input-suffix{
-  right: 0px;
-}
 
 .ant-input{
-  border-top-left-radius: 0px; 
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 8px; 
-  border-bottom-right-radius: 8px;
+  border-radius: 0px;
 }
 
 .ant-select-focused .ant-select-selection,

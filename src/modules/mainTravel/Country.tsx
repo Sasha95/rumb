@@ -9,7 +9,7 @@ export const Country = () => {
   return (
     <div>
       <AutoComplete
-        style={{ width: '100%', border: "none",marginTop: "30px" }}
+        style={{ width: '100%', border: "none", marginTop: "30px" }}
         dataSource={countries}
         placeholder='Попробуйте "Москва"'
         dropdownMenuStyle={{ textAlign: "right" }}

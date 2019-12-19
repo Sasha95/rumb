@@ -3,10 +3,12 @@
 }
 
 .wrapper {
-    height: 64px;
+    padding-top: 21px;
+    padding-bottom: 21px;
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 0px 0px 8px 8px;
+    max-width: 330px;
 }
 
 .flex-container {
@@ -39,7 +41,8 @@
 
 .member {
     width: 330px;
-    height: 64px;
+    padding-top: 21px;
+    padding-bottom: 21px;
     background: #FAFAFA;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 0px;

@@ -1,5 +1,4 @@
 .container {
-    min-height: 200px;
     width: 330px;
     background: #FFFFFF;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
@@ -22,7 +21,6 @@
     display: flex;
     align-items: center;
     justify-content: center; 
-    overflow: auto;   
 }
 
 .hr {
@@ -44,17 +42,20 @@
     border-top: 1px dashed #BFBFBF
 }
 
-.date {
-    display: flex;
-    align-items: flex-end;
-    align-content: flex-end;
-}
 
 .custom-date{
-    padding-right: 10px;
+    padding-bottom: 8px;
+    padding-right: 22px;
     color: #262626;
     font-weight: 600;
     font-size: 14px;
+}
+
+.date-container{
+    width: 330px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    background-color: #FFFFFF;
 }
 
 .custom-label {
@@ -63,8 +64,18 @@
     font-size: 14px;
 }
 
-.range{
-    padding-top: 33px;
-    padding-bottom: 8px;
+.title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;    
 }
 
+.parachute {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+}
