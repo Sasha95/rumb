@@ -75,7 +75,24 @@
 }
 
 .parachute {
-    position: absolute;
-    margin-top: auto;
-    margin-bottom: auto;
+    background-image: url('../../resources/parachute.svg') no-repeat;
+    /* position: fixed;
+    top: 35%;
+    left: 15%;
+    z-index: 3; */
+}
+
+.ellipse {
+    background-image: no-repeat url('../../resources/ellipse.svg');
+
+    /* position: fixed;
+    z-index: 0;
+    bottom: 40px; */
+}
+
+.ellipse1 {
+    background-image: url('../../resources/ellipse1.svg') no-repeat;
+    /* position: fixed;
+    right: 0px;
+    bottom: 52px; */
 }

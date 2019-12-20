@@ -1,0 +1,36 @@
+.wrapper {
+    height: 40px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn {
+    border: 1px solid #52C41A;
+    padding: 1px 8px;
+    margin-left: 120px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-weight: normal;
+    width: 55px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-self: center;
+    color: #52C41A;
+    cursor: pointer;
+}
+
+.text{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8C8C8C;
+    padding: 10px;
+    margin: 0 auto;
+}
