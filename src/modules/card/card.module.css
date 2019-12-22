@@ -1,0 +1,143 @@
+.font {
+  font-size: 14px;
+  color: #8c8c8c;
+  line-height: 22px;
+  padding-left: 6px;
+  padding-right: 14px;
+}
+
+.font-title {
+  font-size: 24px;
+  line-height: 32px;
+  color: #262626;
+}
+
+.font-container {
+  padding-bottom: 8px;
+}
+
+.container {
+  display: flex;
+  height: 262px;
+  background: #ffffff;
+  border: 1px solid #389e0d;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.imgcont {
+  flex: 1;
+  width: 383px;
+}
+
+.palce {
+  background: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 7px;
+  width: 131px;
+  margin-left: 12px;
+  margin-top: 12px;
+}
+
+.city {
+  display: inline-flex;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 4px 12px 4px 8px;
+}
+
+.image {
+  padding-left: 14px;
+}
+
+.first-container {
+  background-image: url("../../resources/swim.png");
+  height: 262;
+  max-width: 383px;
+}
+
+.second-container {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+    padding-right: 50px;
+    margin-top: auto;
+    line-height: 22px;
+    color: #262626;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+  
+
+.date {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 9px;
+  padding-right: 32px;
+}
+
+.star {
+  color: #389e0d;
+  margin-right: 4px;
+  margin-left: 13px;
+}
+
+.rate-container {
+  margin-top: 16px;
+}
+
+
+.third-container {
+    padding-top: 32px;
+    padding-right: 24px;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-container {
+    padding-bottom: 24px;
+    margin-top: auto;
+}
+
+.order {
+    background: #389e0d;
+    border-radius: 4px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.cost {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #262626;
+}
+
+
+
+
+.ellipsis-placeholder {
+    margin-left: auto;
+    margin-top: -20px;
+    margin-right: 25px;
+    padding-left: 20px;
+
+}

@@ -30,8 +30,10 @@ export const NumberOfPeoples = () => {
     const display = classnames(styles.member, {[styles['member-unactive']] : !show });
     return (
         <>
+        <div className={styles.content}>
             <div className={display}>
                 <Checkbox title={"Я один участник"} onChange={onChange} />
+            </div>
             </div>
             {show && <div className={styles.wrapper}>
                 <Input

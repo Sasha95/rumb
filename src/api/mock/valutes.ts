@@ -1,4 +1,6 @@
-export const valutes = [
+import { IValute } from "../dto/Valutes.g";
+
+export const valutes: IValute[] = [
   {
     name: "USD",
     symbol: "$",

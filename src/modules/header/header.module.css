@@ -9,7 +9,7 @@
 .logo {
   text-decoration: none;
   color: black;
-  margin-right: auto;
+  margin-right: auto; 
 }
 
 .text {
@@ -22,4 +22,8 @@
   composes: text;
   font-weight: 600;
   cursor: pointer;
+}
+
+.search {
+  display: flex;
 }

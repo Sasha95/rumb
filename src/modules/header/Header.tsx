@@ -3,6 +3,7 @@ import styles from './header.module.css'
 import { Link } from "react-router-dom";
 import { Languages } from '../../components/language/Language';
 import { Valute } from '../../components/valute/Valute';
+import { Input, Icon } from 'antd';
 
 const titles = [
     { name: 'howItWorks', description: 'Как это работает' },
@@ -21,6 +22,12 @@ export const Header = () => {
                 <Link to='/' className={styles.logo}>
                     ЛОГО
                 </Link>
+                <li className={styles.search}>
+                <Input
+                    style={{maxWidth: "384px"}}
+                    prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
+                />
+                </li>
                 {titles.map((item, index) => (
                     <li key={index}>
                         <Link to={`/${item.name}`} className={styles.text}>

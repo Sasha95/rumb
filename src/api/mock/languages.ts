@@ -1,4 +1,6 @@
-export const languages = [
+import { ILanguages } from "../dto/Languages.g";
+
+export const languages: ILanguages[] = [
     {
       name: "Русский",
       symbol: 'RU',

@@ -7,6 +7,8 @@ interface IProps {
 
 export const Button: React.FC<IProps> = ({onClick}) => {
     return(
-        <input type="button" className={styles.btn} onClick={onClick} value="Мне повезет" />
+        <div className={styles.container}>
+            <input type="button" className={styles.btn} onClick={onClick} value="Мне повезет" />
+        </div>
     )
 }

@@ -5,13 +5,26 @@
     border-radius: 8px 8px 0px 0px;
     padding-top: 33px;
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 .felx-container1 {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;   
 }
   
 .felx-container2 {
     flex: 1;
+}
+
+.location-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column; 
+    padding-bottom: 7px;
 }
 
 .wrapper {
@@ -35,9 +48,8 @@
 }
 
 .line {
-    margin-top: 24px;
-    margin-bottom: 22px;
-    margin-left: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
     transform: rotate( 90deg);
     border-top: 1px dashed #BFBFBF
 }
@@ -56,6 +68,8 @@
     padding-top: 21px;
     padding-bottom: 21px;
     background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .custom-label {
@@ -68,31 +82,26 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
-    display: flex;
     align-items: center;
     text-align: center;
-    color: #000000;    
+    color: #000000;
+    padding-bottom: 32px;
 }
 
 .parachute {
-    background-image: url('../../resources/parachute.svg') no-repeat;
-    /* position: fixed;
+    position: fixed;
     top: 35%;
     left: 15%;
-    z-index: 3; */
 }
 
 .ellipse {
-    background-image: no-repeat url('../../resources/ellipse.svg');
-
-    /* position: fixed;
+    position: fixed;
     z-index: 0;
-    bottom: 40px; */
+    bottom: 40px;
 }
 
 .ellipse1 {
-    background-image: url('../../resources/ellipse1.svg') no-repeat;
-    /* position: fixed;
+    position: fixed;
     right: 0px;
-    bottom: 52px; */
+    bottom: 52px;
 }
