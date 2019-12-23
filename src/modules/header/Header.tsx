@@ -14,17 +14,15 @@ const titles = [
 ]
 
 export const Header = () => {
-
     return (
         <>
-
             <ul className={styles.ul}>
                 <Link to='/' className={styles.logo}>
                     ЛОГО
                 </Link>
                 <li className={styles.search}>
                 <Input
-                    style={{maxWidth: "384px"}}
+                    style={{width: "384px"}}
                     prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
                 />
                 </li>

@@ -9,7 +9,7 @@
 .logo {
   text-decoration: none;
   color: black;
-  margin-right: auto; 
+  margin-right: 40px; 
 }
 
 .text {
@@ -25,5 +25,6 @@
 }
 
 .search {
-  display: flex;
+  /* display: flex; */
+  margin-right: auto;
 }

@@ -3,7 +3,6 @@
   color: #8c8c8c;
   line-height: 22px;
   padding-left: 6px;
-  padding-right: 14px;
 }
 
 .font-title {
@@ -14,15 +13,19 @@
 
 .font-container {
   padding-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
   display: flex;
-  height: 262px;
+  height: 264px;
+  width: 1200px;
   background: #ffffff;
   border: 1px solid #389e0d;
   box-sizing: border-box;
   border-radius: 8px;
+  margin-top: 26px;
 }
 
 .imgcont {
@@ -34,7 +37,7 @@
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 7px;
-  width: 131px;
+  display: inline-block;
   margin-left: 12px;
   margin-top: 12px;
 }
@@ -66,17 +69,16 @@
 }
 
 .description {
-    padding-right: 50px;
-    margin-top: auto;
-    line-height: 22px;
-    color: #262626;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box; 
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-  }
-  
+  padding-right: 50px;
+  margin-top: auto;
+  line-height: 22px;
+  color: #262626;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
 
 .date {
   font-weight: normal;
@@ -96,48 +98,44 @@
   margin-top: 16px;
 }
 
-
 .third-container {
-    padding-top: 32px;
-    padding-right: 24px;
-    min-width: 200px;
-    display: flex;
-    flex-direction: column;
+  padding-top: 32px;
+  padding-right: 24px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .order-container {
-    padding-bottom: 24px;
-    margin-top: auto;
+  padding-bottom: 24px;
+  margin-top: auto;
 }
 
 .order {
-    background: #389e0d;
-    border-radius: 4px;
-    height: 40px;
-    font-size: 16px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    margin-top: 12px;
-    cursor: pointer;
+  background: #389e0d;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  margin-top: 12px;
+  cursor: pointer;
 }
 
 .cost {
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    color: #262626;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  color: #262626;
 }
 
-
-
-
 .ellipsis-placeholder {
-    margin-left: auto;
-    margin-top: -20px;
-    margin-right: 25px;
-    padding-left: 20px;
-
+  margin-left: auto;
+  margin-top: -20px;
+  margin-right: 25px;
+  padding-left: 20px;
 }

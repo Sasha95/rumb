@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import { Interests } from "./Interests";
 import styles from "./mainTravel.module.css";
 import book from "../../resources/book.png";
@@ -11,14 +11,19 @@ import parachute from "../../resources/parachute.svg";
 import ellipse from "../../resources/ellipse.svg";
 import ellipse1 from "../../resources/ellipse1.svg";
 import { Footer } from "../footer/Footer";
-import { DataCard } from "../card/DataCard";
-import { data } from "../../api/mock/cards";
+import { useHistory } from "react-router-dom"; 
 
 export const MainTravel = () => {
-  const onClick = () => {
-    console.log("!!");
-  };
+    const [selectedInteres, setSelectedInteres] = useState();
+    const history = useHistory();
+    const onClick = () => {   
+    history.push(`/search`)
+ };
 
+  const handleSelected = (x: string[]) => {
+    x.shift();
+    setSelectedInteres(x)
+  }
   return (
     <>
       <div className={styles.parachute}>
@@ -48,15 +53,13 @@ export const MainTravel = () => {
               </div>
             </div>
             <div className={styles["felx-container2"]}>
-              <Interests />
+              <Interests handleSelected={handleSelected}/>
               <Country />
             </div>
           </div>
           <RangeDate />
           <NumberOfPeoples />
-          <Button onClick={onClick} />
-
-          {/* <DataCard card={data[0]}/> */}
+          <Button onClick={onClick}/>
         </div>
       </div>
       <Footer />

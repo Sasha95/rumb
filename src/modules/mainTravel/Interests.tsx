@@ -6,19 +6,17 @@ import styles from "./mainTravel.module.css"
 import "./customantd.css"
 
 const { Option } = Select;
-
-export const Interests = () => {
-    const handleChange = (item: string) => {
-        console.log(item);
-    }
-
+interface IProps {
+    handleSelected: (x: string[]) => void;
+}
+export const Interests: React.FC<IProps> = ({handleSelected}) => {
     return (
         <>
             <Select
                 mode="multiple"
                 placeholder=""
-                defaultValue={"Интересы"}
-                onChange={handleChange}
+                defaultValue={["Интересы"]}
+                onChange={(x: string[]) => handleSelected(x)}
                 optionLabelProp="value"
                 style={{width: "100%"}}
                 dropdownMenuStyle={{textAlign: "right"}}

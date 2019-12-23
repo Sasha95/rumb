@@ -8,7 +8,7 @@ import clock from "../../resources/clock.svg";
 import read from "../../resources/read.svg";
 import flash from "../../resources/flash.svg";
 import skin from "../../resources/skin.svg";
-import classnames from "classnames";
+import Truncate from 'react-truncate';
 
 interface IData {
   card: ICard;
@@ -46,19 +46,26 @@ export const DataCard: React.FC<IData> = ({ card }) => {
           </span>
           <span className={styles.font}>{card.countRate}</span>
         </div>
+        <Truncate
+          style={{ marginTop: "auto" }}
+          trimWhitespace
+          width={540}
+          lines={4}
+          ellipsis={<span>... <a href='/link/to/article'>Подробнее</a></span>}>
+          {card.description}
+        </Truncate>
+      </div>
 
-          <span className={styles.description}>{card.description}</span>
-          <div className={styles["ellipsis-placeholder"]}>
-            <span>Подробнее</span>
-          </div>
-        </div>
-        
       <div className={styles["third-container"]}>
         <span className={styles["font-container"]}>
           <img src={read} alt={"read"} />
-          <span className={styles.font}>{card.interes}</span>
-          <img src={clock} alt={"clock"} />
-          <span className={styles.font}>{card.time}</span>
+          <span style={{ paddingRight: "14px" }} className={styles.font}>{card.interes}</span>
+          {card.time &&
+            <span>
+              <img src={clock} alt={"clock"} />
+              <span className={styles.font}>{card.time}</span>
+            </span>
+          }
         </span>
         <div className={styles["font-container"]}>
           <img src={flash} alt={"flash"} />
