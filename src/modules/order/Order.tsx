@@ -19,60 +19,67 @@ export const Order = () => {
     const { orderId } = useParams();
     const selected: ICard = data.filter(x => x.id === Number(orderId))[0];
 
-    // useEffect(() => {
-    //     if (orderId) {
-    //         setSelected(data.filter(x => x.id === Number(orderId))[0]);
-    //     }
-    // }, [orderId])
     return (
-        <>
+        <div className={styles.container}>
             <div className={styles["image-container"]}>
-                <Row type={"flex"} justify={"center"}>
-                    {<img src={selected.images[0]}
-                        className={styles.img}
-                        alt={"img"}
-                    />}
-                    {<img src={selected.images[1]}
-                        style={{ marginLeft: "24px", marginRight: "24px" }}
-                        className={styles.img}
-                        alt={"img"}
-                    />}
-                    {selected &&
-                        <div className={styles["social-container"]}>
-                            <img src={selected.images[2]}
-                                className={styles.img}
-                                alt={"img"} />
-                            <div className={styles["social-like"]}>
-                                <img className={styles["share-like"]} src={share} alt={"share"} />
-                                <span className={styles["share-like-text"]}>Поделиться</span>
-                            </div>
-                            <div className={styles["social-share"]}>
-                                <img className={styles["share-like"]} src={like} alt={"like"} />
-                                <span className={styles["share-like-text"]}>Избранное</span>
-                            </div>
-                        </div>}
-                </Row>
-                <Row>
-                    <Col offset={2} span={4}>
-                        <div className={styles["common-text"]}>
-                            c 23 мар 2020 по 31 мар 2020
+                <table style={{ marginLeft: "120px" }}>
+                    <tbody>
+                        <tr>
+                            <td style={{width: "408px"}}>
+                                <img src={selected.images[0]}
+                                    className={styles.img}
+                                    alt={"img"}
+                                />
+                            </td>
+                            <td>
+                                <img src={selected.images[1]}
+                                    style={{ marginLeft: "24px", marginRight: "24px" }}
+                                    className={styles.img}
+                                    alt={"img"}
+                                />
+                            </td>
+                            <td>
+                                <span className={styles["social-container"]}>
+                                    <img src={selected.images[2]}
+                                        className={styles.img}
+                                        alt={"img"} />
+                                    <div className={styles["social-like"]}>
+                                        <img className={styles["share-like"]} src={share} alt={"share"} />
+                                        <span className={styles["share-like-text"]}>Поделиться</span>
+                                    </div>
+                                    <div className={styles["social-share"]}>
+                                        <img className={styles["share-like"]} src={like} alt={"like"} />
+                                        <span className={styles["share-like-text"]}>Избранное</span>
+                                    </div>
+                                </span>}
+                        </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div className={styles["common-text"]}>
+                                    c 23 мар 2020 по 31 мар 2020
                         </div>
-                        <div className={styles["common-interes"]}>
-                            Обучение регате от профессионалов
+                                <div className={styles["common-interes"]}>
+                                    Обучение регате от профессионалов
                         </div>
-                        <div className={styles["common-text"]}>
-                            ГЕНТ, БЕЛЬГИЯ
+                                <div className={styles["common-text"]}>
+                                    ГЕНТ, БЕЛЬГИЯ
                         </div>
-                    </Col>
-                    <SelectedItem imgage={book} title={"Интерес"} description={"Регата"} descriptionImage={"regata"} />
-                    <SelectedItem imgage={calendar} title={"Дата начала"} description={"23 марта 2020"} descriptionImage={"date"} />
-                    <SelectedItem imgage={time} title={"Длительность"} description={"7 дней"} descriptionImage={"dureation"} />
-                    <SelectedItem imgage={thunder} title={"Уровень сложности"} description={"Для новичков"} descriptionImage={"level"} />
-                    <SelectedItem imgage={equipment} title={"Оборудование"} description={"Треб. снаряжение"} descriptionImage={"equimpment"} />
-                </Row>
+                        </td>
+                            <td>
+                                <SelectedItem imgage={book} title={"Интерес"} description={"Регата"} descriptionImage={"regata"} />
+                                <SelectedItem imgage={calendar} title={"Дата начала"} description={"23 марта 2020"} descriptionImage={"date"} />
+                                <SelectedItem imgage={time} title={"Длительность"} description={"7 дней"} descriptionImage={"dureation"} />
+                                <SelectedItem imgage={thunder} title={"Уровень сложности"} description={"Для новичков"} descriptionImage={"level"} />
+                                <SelectedItem imgage={equipment} title={"Оборудование"} description={"Треб. снаряжение"} descriptionImage={"equimpment"} />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <OrderInformation operator={true} title={"Чем мы займемся"}>
-                <div className={styles.font}>{selected.description}></div>
+                <div className={styles.font}>{selected.description}</div>
             </OrderInformation>
             <OrderInformation title={"Что включено"}>
                 <div className={styles["forn-includ"]}>Инвентарь</div>
@@ -94,8 +101,8 @@ export const Order = () => {
                 <div className={globalStyle["font-underline"]}>перейти к правилам</div>
             </OrderInformation>
             <hr className={styles.hr} />
-            <Row>
-                <Col span={6} offset={2}>
+            <Row type={"flex"} align={"middle"}>
+                <Col style={{ paddingLeft: "120px" }}>
                     <div >
                         7 дней
                     </div>
@@ -103,7 +110,7 @@ export const Order = () => {
                         Обучение регате от профессионалов
                     </div>
                 </Col>
-                <Col>
+                <Col offset={13} span={3}>
                     <span className={globalStyle.cost}>
                         {selected.cost}
                         {selected.valute}
@@ -123,8 +130,10 @@ export const Order = () => {
                         <span className={globalStyle["card-font"]}>{selected.countRate}</span>
                     </div>
                 </Col>
-                <div className={styles.btn}></div>
+                <Col span={1}>
+                    <span className={styles["btn-order"]}>Заказать</span>
+                </Col>
             </Row>
-        </>
+        </div>
     )
 }

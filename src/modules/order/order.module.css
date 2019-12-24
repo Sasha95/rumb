@@ -1,3 +1,8 @@
+.container {
+    background: #FFFFFF;
+    
+}
+
 .image-container {
     display: inline-block;
     padding-top: 70px;
@@ -78,8 +83,8 @@
     border: 1px solid #D9D9D9;
 }
 
-.btn {
-    composes: button from '../../core/theme/commonStyle.module.css';
-    width: 200px;
-    height: 300px;
+.btn-order {
+    composes: button-order from '../../core/theme/commonStyle.module.css';
+    width: 100px;
+    height: 32px;
 }

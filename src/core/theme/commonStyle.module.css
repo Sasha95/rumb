@@ -27,4 +27,10 @@
 .button-order {
     background: #389E0D;
     border-radius: 4px;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 5px 16px;
 }

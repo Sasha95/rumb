@@ -1,6 +1,5 @@
 import React from "react"
 import styles from "./orderInformation.module.css"
-import { Col, Row } from "antd"
 
 interface IProps {
     title: string;
@@ -9,17 +8,20 @@ interface IProps {
 
 export const OrderInformation: React.FC<IProps> = ({ title, operator, children }) => {
     return (
-        <Row style={{ paddingTop: "60px" }}>
-            <Col span={6} offset={2}>
-                <div className={styles["our-doing"]}>
+        <table style={{marginLeft: "120px", marginTop: "70px"}}>
+            <tbody>
+            <tr>
+                <td style={{width: "408px", verticalAlign: "top"}}>
+                    <div className={styles["our-doing"]}>
                     {title}
-                </div>
-                {operator &&
-                    <div className={styles["btn-call"]}>
-                        Связаться с оператором
-                </div>}
-            </Col>
-            <Col span={15}> {children} </Col>
-        </Row>
+                    {operator &&
+                        <div className={styles["btn-call"]}>
+                            Связаться с оператором
+                        </div>}
+                </div></td>
+                <td style={{paddingRight: "120px"}}>{children}</td>
+            </tr>
+            </tbody>
+        </table>
     )
 }
