@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { MainTravel } from './modules/mainTravel';
 import { Search } from './modules/search';
+import { Order } from './modules/order/Order';
 
 const App: React.FC = () => {
   return (
@@ -20,6 +21,9 @@ const App: React.FC = () => {
         </Route>
         <Route path="/search">
           <Search />
+        </Route>
+        <Route path="/order:orderId">
+          <Order />
         </Route>
         <Route path="/howItWorks">
           {/* <HowItWorks /> */}

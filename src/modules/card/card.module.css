@@ -68,18 +68,6 @@
   flex-direction: column;
 }
 
-.description {
-  padding-right: 50px;
-  margin-top: auto;
-  line-height: 22px;
-  color: #262626;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-}
-
 .date {
   font-weight: normal;
   font-size: 16px;
@@ -133,9 +121,10 @@
   color: #262626;
 }
 
-.ellipsis-placeholder {
-  margin-left: auto;
-  margin-top: -20px;
-  margin-right: 25px;
-  padding-left: 20px;
+.showmore {
+  text-decoration-line: underline;
+  font-weight: normal;
+  font-size: 14px;
+  color: #389E0D;
+  cursor: pointer;
 }

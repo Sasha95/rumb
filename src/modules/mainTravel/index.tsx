@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import { Interests } from "./Interests";
 import styles from "./mainTravel.module.css";
 import book from "../../resources/book.png";

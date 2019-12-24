@@ -9,12 +9,17 @@ import read from "../../resources/read.svg";
 import flash from "../../resources/flash.svg";
 import skin from "../../resources/skin.svg";
 import Truncate from 'react-truncate';
+import { useHistory } from "react-router-dom";
 
 interface IData {
   card: ICard;
 }
 
 export const DataCard: React.FC<IData> = ({ card }) => {
+  const history = useHistory();
+  const handleOrder = () => {
+    history.push(`/order${card.id}`);
+  }
   return (
     <div className={styles.container}>
       <div className={styles["first-container"]}>
@@ -51,7 +56,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
           trimWhitespace
           width={540}
           lines={4}
-          ellipsis={<span>... <a href='/link/to/article'>Подробнее</a></span>}>
+          ellipsis={<span>... <span className={styles.showmore} onClick={handleOrder}>Подробнее</span></span>}>
           {card.description}
         </Truncate>
       </div>
@@ -81,7 +86,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             {card.valute}
           </span>
           <span className={styles["font"]}>{card.from}</span>
-          <div className={styles.order}>Заказать</div>
+          <div className={styles.order} onClick={handleOrder}>Заказать</div>
         </span>
       </div>
     </div>

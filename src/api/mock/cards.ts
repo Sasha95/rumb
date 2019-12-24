@@ -1,6 +1,8 @@
 import swim from "../../resources/swim.png"
 import bike from "../../resources/bike.png"
 import regat from "../../resources/regat.png"
+import image1 from "../../resources/image1.png"
+import image2 from "../../resources/image2.png"
 import { ICard } from "../dto/Card"
 
 export const data: ICard[] = [{
@@ -19,7 +21,7 @@ export const data: ICard[] = [{
     cost: 91,
     valute: "$",
     from: "с человека",
-    images: [swim, bike, regat, swim, swim]
+    images: [swim, image1, image2, swim, swim]
 },
 {
     id: 2,

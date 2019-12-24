@@ -1,0 +1,11 @@
+.title {
+    color: #8C8C8C;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.descrition {
+    color: #F5F5F5;
+    composes: title
+}
