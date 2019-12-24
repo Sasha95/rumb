@@ -14,5 +14,16 @@ export interface ICard {
     cost: number,
     valute: string,
     from: string,
+    including: {
+        inventory: string,
+        beverages: string,
+        nutrition: string,
+    },
+    requires: string,
+    adress: {
+        fullAdress: string,
+        timeStart: string,
+    }
+    cancelReserv: string,
     images: string[]
 }

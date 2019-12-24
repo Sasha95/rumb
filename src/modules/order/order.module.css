@@ -27,7 +27,6 @@
 .social-share {
     composes: social-like;
     left: 210px;
-
 }
 
 .share-like{
@@ -41,6 +40,46 @@
     padding: 5px 16px 5px 15px;
 }
 
-.where-container {
+.common-text {
+    color: #F5F5F5;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
 
+.common-interes {
+    color: #FFFFFF;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.font {
+    font-weight: normal;
+    color: #8C8C8C;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.forn-includ {
+    color: #595959;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.font-rule {
+    text-decoration-line: underline;
+    color: #389E0D;
+}
+
+.hr {
+    margin-top: 61px;
+    border: 1px solid #D9D9D9;
+}
+
+.btn {
+    composes: button from '../../core/theme/commonStyle.module.css';
+    width: 200px;
+    height: 300px;
 }
