@@ -11,32 +11,52 @@ import parachute from "../../resources/parachute.svg";
 import ellipse from "../../resources/ellipse.svg";
 import ellipse1 from "../../resources/ellipse1.svg";
 import { Footer } from "../footer/Footer";
-import { useHistory } from "react-router-dom"; 
+import { useHistory } from "react-router-dom";
+import { Popular } from "../popular/Popular";
+import { Affix } from "antd";
+import { Cards } from "../card/Cards";
+import { SelectValue } from "antd/lib/select";
+import { useDispatch } from 'react-redux'
+import { set_current } from "../../store/currentSelect/currentActions"
 
 export const MainTravel = () => {
-    const [selectedInteres, setSelectedInteres] = useState();
-    const history = useHistory();
-    const onClick = () => {   
+  const [selectedInteres, setSelectedInteres] = useState();
+  const [date, setDate] = useState();
+  const [place, setPlace] = useState();
+  const [numberOfPeople, setNumberOfPeople] = useState();
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const onClick = () => {
+    dispatch(set_current({date: date, interests: selectedInteres, numberOfPeople: numberOfPeople, places: place}))
     history.push(`/search`)
- };
+  };
 
   const handleSelected = (x: string[]) => {
     x.shift();
     setSelectedInteres(x)
   }
+  const handlePlace = (place: SelectValue) => {
+    setPlace(place)
+  }
+  const handleDate = (startDate: string, endDate: string) => {
+    setDate(startDate+"; "+endDate)
+  }
+  const handleNumberOfPeople= (number: number) => {
+    setNumberOfPeople(number)
+  }
+
   return (
     <>
-      <div className={styles.parachute}>
-        <img src={parachute} alt="parachute" />
-      </div>
-      <div className={styles.ellipse}>
-        <img src={ellipse} alt="ellipse" />
-      </div>
-      <div className={styles.ellipse1}>
-        <img src={ellipse1} alt="ellipse1" />
-      </div>
-
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} style={{ height: "100vh" }}>
+        <div className={styles.parachute}>
+          <img src={parachute} alt="parachute" />
+        </div>
+        <div className={styles.ellipse}>
+          <img src={ellipse} alt="ellipse" />
+        </div>
+        <div className={styles.ellipse1}>
+          <img src={ellipse1} alt="ellipse1" />
+        </div>
         <div>
           <div className={styles.title}>
             Путешествуй увлечениями <br /> Планирование активного отдыха стало
@@ -53,16 +73,24 @@ export const MainTravel = () => {
               </div>
             </div>
             <div className={styles["felx-container2"]}>
-              <Interests handleSelected={handleSelected}/>
-              <Country />
+              <Interests handleSelected={handleSelected} />
+              <Country handlePlace={handlePlace} />
             </div>
           </div>
-          <RangeDate />
-          <NumberOfPeoples />
-          <Button onClick={onClick}/>
+          <RangeDate handleDate={handleDate} />
+          <NumberOfPeoples handleNumberOfPeople={handleNumberOfPeople} />
+          <Button onClick={onClick} />
         </div>
       </div>
-      <Footer />
+      <div className={styles.wrapper}>
+        <Popular />
+      </div>
+      <div className={styles.wrapper}>
+        <Cards />
+      </div>
+      <Affix offsetBottom={0}>
+        <Footer />
+      </Affix>
     </>
   );
 };

@@ -7,9 +7,13 @@
 }
 
 .logo {
+  position: absolute;
+  top: 37px;
+  left: 26px;
   text-decoration: none;
   color: black;
-  margin-right: 40px; 
+  /* display: inline-block; */
+  /* padding: 37px 40px 30px 26px; */
 }
 
 .text {
@@ -26,5 +30,10 @@
 
 .search {
   /* display: flex; */
+  margin-right: auto;
+}
+
+.centerContainer {
+  margin-left: auto;
   margin-right: auto;
 }

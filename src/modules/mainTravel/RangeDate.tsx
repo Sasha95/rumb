@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Modal, Input } from "antd";
 import moment from "moment";
 import "moment/locale/ru";
@@ -9,7 +9,11 @@ import "./customantd.css";
 import styles from "./mainTravel.module.css";
 import calnedar from "../../resources/calendar.png";
 
-export const RangeDate = () => {
+interface IProps {
+  handleDate: (startDate: string, endDate: string) => void;
+}
+
+export const RangeDate: React.FC<IProps> = ({handleDate}) => {
   const [show, setShow] = useState();
   const [startDate, setstartDate] = useState(moment());
   const [endDate, setendDate] = useState(moment().add(3, "days"));
@@ -22,13 +26,18 @@ export const RangeDate = () => {
     "startDate"
   );
 
+  useEffect(()=> {
+    if (startDate && endDate){
+    handleDate(startDate.format("YYYY-MM-DD"), endDate.format("YYYY-MM-DD"));
+    }
+  }, [startDate, endDate])
+
   const onDatesChange = ({ startDate, endDate }: any) => {
     setstartDate(startDate);
     setendDate(endDate);
-    if (startDate && endDate)
-      setCountDate(
-        `${startDate.format("DD MMM")} - ${endDate.format("DD MMM")}`
-      );
+    if (startDate && endDate){
+      setCountDate(`${startDate.format("DD MMM")} - ${endDate.format("DD MMM")}`);
+    }
   };
   const onFocusChange = (focusedInput: any) => {
     setfocusedInput(!focusedInput ? "startDate" : focusedInput);
@@ -54,11 +63,12 @@ export const RangeDate = () => {
       </Modal>
       <div className={styles['date-container']}>
         <Input
+            readOnly
             suffix={<span className={styles["custom-date"]}>{countDate}</span>}
             prefix={
             <span className={styles["custom-label"]}>
-                <img className={styles.image} src={calnedar} alt="calendar" />
-                Дата
+                <img className={styles.imageDate} src={calnedar} alt="calendar" />
+                <span className={styles.date}>Дата</span>                
             </span>
             }
             onClick={() => setShow(true)}

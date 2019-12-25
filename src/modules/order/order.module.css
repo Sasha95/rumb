@@ -1,6 +1,8 @@
 .container {
     background: #FFFFFF;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
 }
 
 .image-container {
@@ -87,4 +89,9 @@
     composes: button-order from '../../core/theme/commonStyle.module.css';
     width: 100px;
     height: 32px;
+}
+
+.containerCenter {
+    margin-left: auto;
+    margin-right: auto;
 }

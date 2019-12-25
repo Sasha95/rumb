@@ -13,7 +13,7 @@ export const OrderInformation: React.FC<IProps> = ({
 }) => {
   return (
     <tr>
-      <td style={{width: "408px", verticalAlign: "top"}}>
+      <td className={styles.leftWrap}>
         <div className={styles["our-doing"]}>
           {title}
           {operator && (
@@ -21,7 +21,7 @@ export const OrderInformation: React.FC<IProps> = ({
           )}
         </div>
       </td>
-      <td style={{ width: "794px" }}>{children}</td>
+      <td className={styles.rihtWrap}>{children}</td>
     </tr>
   );
 };

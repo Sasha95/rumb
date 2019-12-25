@@ -38,11 +38,11 @@ export const Languages = () => {
                     ))}
                 </ul>
             </Modal>
-            <li className={styles.textBold} onClick={handleOpenModal}>
+            <span className={styles.textBold} onClick={handleOpenModal}>
                 {<img src={languageImg} alt="language" />} {" "}
                 {selected.description} {" "}
                 ({selected.symbol})
-            </li>
+            </span>
         </>
     )
 }

@@ -12,7 +12,9 @@ interface IProps {
 export const Interests: React.FC<IProps> = ({handleSelected}) => {
     return (
         <>
-            <Select
+            <Select       
+                // prefixCls="ewfewf"
+                // onInputKeyDown
                 mode="multiple"
                 placeholder=""
                 defaultValue={["Интересы"]}
@@ -21,7 +23,7 @@ export const Interests: React.FC<IProps> = ({handleSelected}) => {
                 style={{width: "100%"}}
                 dropdownMenuStyle={{textAlign: "right"}}
             >
-                <Option style={{display: "none"}} key={0}> Интересы </Option>
+                {/* <Option  style={{display: "none"}} key={0}> Интересы </Option> */}
                 {options.map((item, index) => (
                     <Option key={index + 1} value={item}> {item} </Option>
                 ))}

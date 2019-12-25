@@ -1,0 +1,59 @@
+.textImage {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+}
+
+.centerImage {
+    position: absolute;
+    left: 100px;
+    top: 50%;
+}
+
+.poptext {
+    letter-spacing: 0.02em;
+    color: #000000;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.btn {
+    background: #1890FF;
+    border-radius: 4px;
+    width: 240px;
+    height: 32px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding-left: 12px;
+    padding-bottom: 9px;
+}
+
+.image {
+    padding-left: 18px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.ellipseLeft {
+    position: absolute;
+    z-index: 0;
+    left: 0px;
+    top: 0px; 
+}
+
+.ellipseRight {
+    position: absolute;
+    z-index: 0;
+    right: 0px;
+    top: 0px; 
+}

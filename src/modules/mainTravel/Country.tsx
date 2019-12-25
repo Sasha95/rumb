@@ -4,8 +4,13 @@ import styles from "./mainTravel.module.css";
 import { countries } from "../../api/mock/countries";
 import { AutoComplete, Input, } from "antd";
 import "./customantd.css"
+import { SelectValue } from "antd/lib/select";
 
-export const Country = () => {
+interface IProps {
+  handlePlace: (palce: SelectValue) => void;
+}
+
+export const Country: React.FC<IProps> = ({handlePlace}) => {
   return (
     <div>
       <AutoComplete
@@ -19,10 +24,13 @@ export const Country = () => {
             .toUpperCase()
             .indexOf(inputValue.toUpperCase()) !== -1
         }
+        onChange={handlePlace} 
       >
-        <Input prefix={<span className={styles["custom-label"]}>Место</span>} />
+        <Input 
+        style={{textAlign: "right", paddingRight: "10px"}} 
+        prefix={<span className={styles["custom-label"]}>Место</span>} 
+        />
       </AutoComplete>
-
       <hr className={styles.hr} />
     </div>
   );

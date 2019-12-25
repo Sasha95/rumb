@@ -32,15 +32,15 @@ export const Valute = () => {
                             )}
                             onClick={()=>handleChange(item)} key={index}>
                                 <div>{item.description}</div>
-                                <div>{item.name}</div>
+                                <div>{item.name} - {item.symbol}</div>
                         </li>
                     ))}
                 </ul>
             </Modal>
-            <li className={styles.textBold} onClick={handleOpenModal}>
+            <span className={styles.textBold} onClick={handleOpenModal}>
                 {selected.symbol} {" "}
                 {selected.name}
-            </li>
+            </span>
         </>
     )
 }

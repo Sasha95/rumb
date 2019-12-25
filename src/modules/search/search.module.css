@@ -32,11 +32,3 @@
   line-height: 32px;
   color: #000000;
 }
-
-.show-more {
-    text-decoration-line: underline;
-    color: #389E0D;
-    margin-top: 48px;
-    margin-bottom: 114px;
-    cursor: pointer;
-}

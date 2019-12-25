@@ -15,7 +15,7 @@ const persistConfig = {
   storage
 };
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// const persistedReducer = persistReducer(persistConfig, rootReducer);
 const composeEnhancers =
   process.env.NODE_ENV === "production"
     ? compose
@@ -28,6 +28,6 @@ const composedEnhancers = compose(
 );
 
 export default () => {
-  const store = createStore(persistedReducer, initialState, composedEnhancers);
-  return { store, persistor: persistStore(store) };
+  const store = createStore(rootReducer, initialState, composedEnhancers);
+  return { store };  //, persistor: persistStore(store)
 };

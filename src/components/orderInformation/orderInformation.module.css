@@ -19,13 +19,16 @@
     height: 32px;
     padding: 5px 16px;
     margin-top: 10px;
+    cursor: pointer;
 }
 
-/* .leftWrap {
-    width: "408px";
-    vertical-align: "top";
+.leftWrap {
+    width: 408px;
+    vertical-align: top;
+    padding-top: 60px;
 }
 
 .rihtWrap {
-    width: "794px";
-} */
+    width: 794px;
+    padding-top: 60px;
+}

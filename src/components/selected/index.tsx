@@ -11,7 +11,7 @@ interface IProps {
 
 export const SelectedItem: React.FC<IProps> = ({imgage, title, description, descriptionImage}) => {
     return(
-        <Col span={2}>
+        <Col span={3} style={{width: "120px", marginRight: "20px"}}>
             <div>
                 <img src={imgage} alt={descriptionImage} />
             </div>

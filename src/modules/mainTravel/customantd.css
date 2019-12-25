@@ -5,7 +5,7 @@
 }
 
 .ant-input-affix-wrapper .ant-input:not(:first-child) {
-  padding-left: 50px;
+  /* padding-left: 50px; */
   box-shadow: none;
   border: none;
 }
@@ -19,11 +19,12 @@
 }
 
 .ant-input-affix-wrapper .ant-input-prefix {
-  left: 0px;
+  /* left: 0px; */
 }
 .ant-input-affix-wrapper .ant-input-suffix{
   right: 0px;
 }
+
 
 /*select */
 .ant-select-selection--multiple .ant-select-selection__choice:first-child {
@@ -81,7 +82,10 @@
 
 
 .ant-input{
-  border-radius: 0px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 .ant-select-focused .ant-select-selection,

@@ -26,7 +26,7 @@ const setValutesFail = (state: IValutetate, result: Failure<IEmpty, Error>): IVa
     return newState(state, {error: result.error.message, isLoading: false})
 }
 
-export const languageReducer = reducerWithInitialState(ValuteInitialState)
+export const valuteReducer = reducerWithInitialState(ValuteInitialState)
     .case(getValutes.started, getValutesStart)
     .case(getValutes.done, getValutesDone)
     .case(getValutes.failed, getValutesFail)    
