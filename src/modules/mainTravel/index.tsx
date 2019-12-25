@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Interests } from "./Interests";
 import styles from "./mainTravel.module.css";
+import globalStyle from "../../core/theme/commonStyle.module.css";
 import book from "../../resources/book.png";
 import location from "../../resources/location.png";
 import { Country } from "./Country";
@@ -13,11 +14,11 @@ import ellipse1 from "../../resources/ellipse1.svg";
 import { Footer } from "../footer/Footer";
 import { useHistory } from "react-router-dom";
 import { Popular } from "../popular/Popular";
-import { Affix } from "antd";
+import { Affix, Col, Row } from "antd";
 import { Cards } from "../card/Cards";
 import { SelectValue } from "antd/lib/select";
-import { useDispatch } from 'react-redux'
-import { set_current } from "../../store/currentSelect/currentActions"
+import { useDispatch } from "react-redux";
+import { set_current } from "../../store/currentSelect/currentActions";
 
 export const MainTravel = () => {
   const [selectedInteres, setSelectedInteres] = useState();
@@ -27,23 +28,30 @@ export const MainTravel = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const onClick = () => {
-    dispatch(set_current({date: date, interests: selectedInteres, numberOfPeople: numberOfPeople, places: place}))
-    history.push(`/search`)
+    dispatch(
+      set_current({
+        date: date,
+        interests: selectedInteres,
+        numberOfPeople: numberOfPeople,
+        places: place
+      })
+    );
+    history.push(`/search`);
   };
 
   const handleSelected = (x: string[]) => {
     x.shift();
-    setSelectedInteres(x)
-  }
+    setSelectedInteres(x);
+  };
   const handlePlace = (place: SelectValue) => {
-    setPlace(place)
-  }
+    setPlace(place);
+  };
   const handleDate = (startDate: string, endDate: string) => {
-    setDate(startDate+"; "+endDate)
-  }
-  const handleNumberOfPeople= (number: number) => {
-    setNumberOfPeople(number)
-  }
+    setDate(startDate + "; " + endDate);
+  };
+  const handleNumberOfPeople = (number: number) => {
+    setNumberOfPeople(number);
+  };
 
   return (
     <>
@@ -86,7 +94,12 @@ export const MainTravel = () => {
         <Popular />
       </div>
       <div className={styles.wrapper}>
-        <Cards />
+        <Row type="flex">
+          <Col>
+            <div className={globalStyle.popularText}>ПOПУЛЯРНЫЕ ТУРЫ</div>
+            <Cards />
+          </Col>
+        </Row>
       </div>
       <Affix offsetBottom={0}>
         <Footer />
