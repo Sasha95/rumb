@@ -26,7 +26,7 @@ export const Order = () => {
             <div className={styles["image-container"]}>
                 <table className={styles.containerCenter}>
                     <tbody>
-                        <tr style={{verticalAlign: "top"}}>
+                        <tr style={{ verticalAlign: "top" }}>
                             <td style={{ width: "408px" }}>
                                 <img
                                     src={selected.images[0]}
@@ -81,12 +81,12 @@ export const Order = () => {
                                 <div className={styles["common-interes"]}>
                                     {selected.title}
                                 </div>
-                                <div className={styles["common-text"]} style={{textTransform: "uppercase"}}>
-                                    {selected.country} {selected.town? ", "+selected.town: ""}
+                                <div className={styles["common-text"]} style={{ textTransform: "uppercase" }}>
+                                    {selected.country} {selected.town ? ", " + selected.town : ""}
                                 </div>
                             </td>
 
-                            <td style={{ width: "794px"}}>
+                            <td style={{ width: "794px" }}>
                                 <SelectedItem
                                     imgage={book}
                                     title={"Интерес"}
@@ -129,11 +129,11 @@ export const Order = () => {
                     </OrderInformation>
                     <OrderInformation title={"Что включено"}>
                         <div className={styles["forn-includ"]}>Инвентарь</div>
-                        <div className={styles.font} style={{paddingBottom: "10px", paddingTop: "10px"}}>{selected.including.inventory}</div>
+                        <div className={styles.font} style={{ paddingBottom: "10px", paddingTop: "10px" }}>{selected.including.inventory}</div>
                         <div className={styles["forn-includ"]}>Напитки</div>
-                        <div className={styles.font} style={{paddingBottom: "10px", paddingTop: "10px"}}>{selected.including.beverages}</div>
+                        <div className={styles.font} style={{ paddingBottom: "10px", paddingTop: "10px" }}>{selected.including.beverages}</div>
                         <div className={styles["forn-includ"]}>Питание</div>
-                        <div className={styles.font} style={{paddingTop: "10px"}}>{selected.including.nutrition}</div>
+                        <div className={styles.font} style={{ paddingTop: "10px" }}>{selected.including.nutrition}</div>
                     </OrderInformation>
                     <OrderInformation title={"Требования к участнику"}>
                         <div className={styles.font}>{selected.requires}</div>
@@ -151,10 +151,41 @@ export const Order = () => {
                 </tbody>
             </table>
             <hr className={styles.hr} />
+            {/* <Row type={"flex"} justify={"space-around"}>
+                <Col offset={2}>
+                    <div className={styles.footerDay}>{moment(selected.dateOfEnd).from(moment(selected.dateOfStart), true)}</div>
+                    <div className={styles.footerText}>{selected.title}</div>
+                </Col>
+                <Col>
+                    <span className={globalStyle.cost}>
+                        {selected.cost}
+                        {selected.valute}
+                    </span>
+                    <span className={globalStyle["card-font"]}>{selected.from}</span>
+                    <div>
+                        <span className={globalStyle["font-rate"]}>
+                            {selected.rate}
+                            {"  "}
+                            <Rate
+                                className={globalStyle["font-rate"]}
+                                disabled
+                                allowHalf
+                                defaultValue={Number(selected.rate.toFixed(1))}
+                            />
+                        </span>
+                        <span className={globalStyle["card-font"]}>
+                            {selected.countRate}
+                        </span>
+                    </div>
+                </Col>
+                <Col style={{paddingLeft: "94px"}}>
+                    <span className={styles["btn-order"]}>Заказать</span>
+                </Col>
+            </Row> */}
             <table className={styles.containerCenter}>
                 <tbody>
                     <tr>
-                        <td style={{ width: "408px" }}>
+                        <td >
                             <div className={styles.footerDay}>{moment(selected.dateOfEnd).from(moment(selected.dateOfStart), true)}</div>
                             <div className={styles.footerText}>{selected.title}</div>
                         </td>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import globalStyle from "../../core/theme/commonStyle.module.css";
-import { Row } from "antd";
+import { Row, Col } from "antd";
 import { DataCard } from "./DataCard";
 import { data } from "../../api/mock/cards";
 import { ICard } from "../../api/dto/Card";
@@ -13,15 +13,22 @@ export const Cards = () => {
   const selector = useSelector(current);
 
   useEffect(() => {
-    let filter;
-    if ((selector.interests && selector.interests.length>0)) {
-      filter = data.filter(x => selector.interests.includes(x.interes))
-      .filter(x => selector.places && (selector.places.indexOf(x.town)!==-1 || selector.places.indexOf(x.country)!==-1))
-      setFilterData(filter)
-      setCureentData(filter.slice(currentData.length, currentData.length + 3));
-    } else{
-      setCureentData(data.slice(currentData.length, currentData.length + 3));
-    }
+      let interes: ICard[] = [];
+      let places: ICard[] = [];
+      if (selector.interests && selector.interests.length>0){
+        interes.push(...data.filter(x => selector.interests.includes(x.interes)))
+      }
+      if (selector.places){
+        places.push(...data.filter(x => (selector.places.indexOf(x.town)!==-1 || selector.places.indexOf(x.country)!==-1)))
+      }
+      const filter = Array.from(new Set([...places, ...interes]));
+      if (filter.length>0){
+        setFilterData(filter)
+        setCureentData(filter.slice(currentData.length, currentData.length + 3));
+      } else{
+        setFilterData(data)
+        setCureentData(data.slice(currentData.length, currentData.length + 3));
+      }
   }, []);
   
 
@@ -44,13 +51,10 @@ export const Cards = () => {
           <DataCard card={item} />
         </Row>
       ))}
-      <Row
-        onClick={handleClick}
-        className={globalStyle.showMore}
-        type={"flex"}
-        justify="center"
-      >
-        Показать еще
+      <Row type={"flex"} justify="center">
+        <Col className={globalStyle.showMore} onClick={handleClick}>
+          Показать еще
+        </Col>
       </Row>
     </div>
   );

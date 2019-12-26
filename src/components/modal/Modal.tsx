@@ -1,7 +1,7 @@
 import React from "react"
 import classNames from "classnames";
 import styles from "./modal.module.css"
-const close = require("../../resources/close.png");
+const close = require("../../resources/close.svg");
 
 interface Title {
     title: string;

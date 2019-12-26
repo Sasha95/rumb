@@ -173,3 +173,15 @@
   height: 9px;
   /* margin: -3.5px; */
 }
+
+/* caorusel */
+.ant-carousel .slick-dots li.slick-active button {
+  height: 8px;
+  border-radius: 30px;
+  width: 8px;
+}
+.ant-carousel .slick-dots li button {
+  height: 8px;
+  border-radius: 30px;
+  width: 8px;
+}

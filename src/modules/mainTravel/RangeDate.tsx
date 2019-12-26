@@ -7,7 +7,7 @@ import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import "./customantd.css";
 import styles from "./mainTravel.module.css";
-import calnedar from "../../resources/calendar.png";
+import calnedar from "../../resources/mainCalendar.svg";
 
 interface IProps {
   handleDate: (startDate: string, endDate: string) => void;

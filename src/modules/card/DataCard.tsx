@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Rate } from "antd";
+import { Rate, Carousel } from "antd";
 import { ICard } from "../../api/dto/Card";
 import globalStyle from "../../core/theme/commonStyle.module.css"
 import styles from "./card.module.css";
@@ -26,10 +26,22 @@ export const DataCard: React.FC<IData> = ({ card }) => {
     <div className={styles.container}>
       <div className={styles["first-container"]}>
         <div className={styles.imgcont}>
-          <div className={styles.palce}>
-            <img className={styles.image} src={place} alt={"place"} />
-            <span className={styles.city}>
-              {card.town}, {card.country}
+          <Carousel 
+          adaptiveHeight 
+          variableWidth
+          autoplay
+          dotsClass={"test"}
+          >
+              {card.images.map((image, index)=> (
+                <img key={index} className={styles.imageCarousel} src={image} alt={"place"} />
+                ))}
+          </Carousel>
+          <div style={{position: "absolute", top: "12px", left: "12px"}}>
+            <span className={styles.palce}>
+              <img className={styles.image} src={place} alt={"place"} />
+              <span className={styles.city}>
+                {card.town}, {card.country}
+              </span>
             </span>
           </div>
         </div>

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Interests } from "./Interests";
 import styles from "./mainTravel.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
-import book from "../../resources/book.png";
-import location from "../../resources/location.png";
+import book from "../../resources/mainBook.svg";
+import location from "../../resources/location.svg";
 import { Country } from "./Country";
 import { RangeDate } from "./RangeDate";
 import { NumberOfPeoples } from "./NumberOfPeoples";
@@ -20,7 +20,6 @@ import { SelectValue } from "antd/lib/select";
 import { useDispatch } from "react-redux";
 import { set_current } from "../../store/currentSelect/currentActions";
 import { CurrentInitialState } from "../../store/currentSelect/currentState";
-import moment from "moment";
 
 export const MainTravel = () => {
   const [selectedInteres, setSelectedInteres] = useState();
@@ -57,11 +56,6 @@ export const MainTravel = () => {
   const handleNumberOfPeople = (number: number) => {
     setNumberOfPeople(number);
   };
-
-  // console.log(moment().from(moment().subtract(5, 'days'), true))
-  console.log(moment('2019-12-26').from(moment('2019-12-20'), true))
-
-
   return (
     <>
       <div className={styles.wrapper} style={{ height: "100vh" }}>

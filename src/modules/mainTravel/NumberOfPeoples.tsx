@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react"
 import styles from "./number.module.css"
 import { Checkbox } from "../../components/checkbox/Checkbox";
 import { Input } from "antd";
-import people from "../../resources/people.png"
-import up from "../../resources/up.png"
-import down from "../../resources/down.png"
+import people from "../../resources/people.svg"
+import up from "../../resources/up.svg"
+import down from "../../resources/downNum.svg"
 import classnames from "classnames"
 
 interface IProps {

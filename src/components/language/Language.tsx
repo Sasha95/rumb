@@ -5,7 +5,7 @@ import stylemodal from "../../components/modal/modal.module.css"
 import { Modal } from "../modal/Modal"
 import styles from '../../modules/header/header.module.css'
 import { ILanguages } from "../../api/dto/Languages.g"
-import languageImg from "../../resources/language.png"
+import languageImg from "../../resources/language.svg"
 
 export const Languages = () => {
     const [showModal, setShowModal] = useState(false);
