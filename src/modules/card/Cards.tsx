@@ -21,8 +21,13 @@ export const Cards = () => {
       if (selector.places){
         places.push(...data.filter(x => (selector.places.indexOf(x.town)!==-1 || selector.places.indexOf(x.country)!==-1)))
       }
+      console.log("places", places)
+      console.log("interes", interes)
+      // console.log("!!!!", interes.filter(x => !places.includes(x)))
+      // const filter = interes.filter(x => places.includes(x));
       const filter = Array.from(new Set([...places, ...interes]));
-      if (filter.length>0){
+      console.log(filter)
+      if (filter.length>0 && interes.length===0 && places.length===0){
         setFilterData(filter)
         setCureentData(filter.slice(currentData.length, currentData.length + 3));
       } else{
