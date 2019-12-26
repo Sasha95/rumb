@@ -30,7 +30,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
     if (startDate && endDate){
     handleDate(startDate.format("YYYY-MM-DD"), endDate.format("YYYY-MM-DD"));
     }
-  }, [startDate, endDate])
+  }, [startDate, endDate, handleDate])
 
   const onDatesChange = ({ startDate, endDate }: any) => {
     setstartDate(startDate);
@@ -61,7 +61,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
           hideKeyboardShortcutsPanel
         />
       </Modal>
-      <div className={styles['date-container']}>
+      <div onClick={() => setShow(true)} className={styles['date-container']}>
         <Input
             readOnly
             suffix={<span className={styles["custom-date"]}>{countDate}</span>}
@@ -70,8 +70,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
                 <img className={styles.imageDate} src={calnedar} alt="calendar" />
                 <span className={styles.date}>Дата</span>                
             </span>
-            }
-            onClick={() => setShow(true)}
+          }            
         />
       </div>
     </>

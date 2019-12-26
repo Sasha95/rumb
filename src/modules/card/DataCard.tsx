@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Rate, Carousel } from "antd";
+import { Rate, Carousel, Icon } from "antd";
 import { ICard } from "../../api/dto/Card";
 import globalStyle from "../../core/theme/commonStyle.module.css"
 import styles from "./card.module.css";
@@ -29,8 +29,6 @@ export const DataCard: React.FC<IData> = ({ card }) => {
           <Carousel 
           adaptiveHeight 
           variableWidth
-          autoplay
-          dotsClass={"test"}
           >
               {card.images.map((image, index)=> (
                 <img key={index} className={styles.imageCarousel} src={image} alt={"place"} />
