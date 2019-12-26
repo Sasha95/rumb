@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Rate, Carousel, Icon } from "antd";
+import { Rate, Carousel } from "antd";
 import { ICard } from "../../api/dto/Card";
 import globalStyle from "../../core/theme/commonStyle.module.css"
 import styles from "./card.module.css";

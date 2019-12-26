@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./order.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import { data } from "../../api/mock/cards";
@@ -15,11 +15,16 @@ import equipment from "../../resources/equipment.svg";
 import { SelectedItem } from "../../components/selected";
 import { OrderInformation } from "../../components/orderInformation/OrderInformation";
 import moment from "moment";
+import Truncate from "react-truncate";
 
 export const Order = () => {
     const { orderId } = useParams();
     const selected: ICard = data.filter(x => x.id === Number(orderId))[0];
+    const [show, setShow] = useState(false);
 
+    const handleToggle = () => {
+        setShow(!show)
+    }
 
     return (
         <div className={styles.container}>
@@ -125,7 +130,15 @@ export const Order = () => {
             <table className={styles.containerCenter}>
                 <tbody>
                     <OrderInformation operator={true} title={"Чем мы займемся"}>
-                        <div className={styles.font}>{selected.description}</div>
+                    <Truncate
+                        trimWhitespace
+                        lines={show? 5 :false}
+                        open={show}
+                        className={styles.font}
+                    >
+                    <div>{selected.description}</div>
+                    </Truncate>
+                    <div className={globalStyle["font-underline"]} onClick={handleToggle}>{show? "раскрыть" : "скрыть"}</div>
                     </OrderInformation>
                     <OrderInformation title={"Что включено"}>
                         <div className={styles["forn-includ"]}>Инвентарь</div>
