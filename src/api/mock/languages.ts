@@ -4,32 +4,32 @@ export const languages: ILanguages[] = [
     {
       name: "Русский",
       symbol: 'RU',
-      description: "Русский"
+      description: "Россия"
     },
     {
       name: "English",
       symbol: 'AuE',
-      description: "Australia"
+      description: "Австралия"
     },
     {
       name: "Deutsch",
       symbol: 'DE',
-      description: "Deutschland"
+      description: "Германия"
     },
     {
       name: "Japanese",
       symbol: 'JA',
-      description: "Japanese"
+      description: "Япония"
     },
     {
       name: "Spanish",
       symbol: 'ES',
-      description: "Spanish"
+      description: "Испания"
     },
     {
       name: "Finnish",
       symbol: 'FI',
-      description: "Finnish"
+      description: "Финляндия"
     }
   ];
   

@@ -3,7 +3,7 @@ import {set_current} from "./currentActions"
 import { newState } from "../../core/common/newState";
 
 export interface ICurrent {
-    interests: string[] | [];
+    interests: string[];
     places: string;
     numberOfPeople: number;
     date: string;

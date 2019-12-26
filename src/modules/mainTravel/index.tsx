@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Interests } from "./Interests";
 import styles from "./mainTravel.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
@@ -19,6 +19,7 @@ import { Cards } from "../card/Cards";
 import { SelectValue } from "antd/lib/select";
 import { useDispatch } from "react-redux";
 import { set_current } from "../../store/currentSelect/currentActions";
+import { CurrentInitialState } from "../../store/currentSelect/currentState";
 
 export const MainTravel = () => {
   const [selectedInteres, setSelectedInteres] = useState();
@@ -38,6 +39,9 @@ export const MainTravel = () => {
     );
     history.push(`/search`);
   };
+  useEffect(()=>{
+    set_current(CurrentInitialState)
+  }, [])
 
   const handleSelected = (x: string[]) => {
     x.shift();

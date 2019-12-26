@@ -38,7 +38,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
         <div className={styles["rate-container"]}>
           <span>
             <img src={date} alt={date} />
-            <span className={styles.date}>{card.date}</span>
+            <span className={styles.date}>{card.dateOfStart}</span>
           </span>
           <span className={globalStyle["font-rate"]}>
             {card.rate}

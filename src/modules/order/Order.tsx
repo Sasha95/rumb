@@ -14,6 +14,7 @@ import thunder from "../../resources/thunder.svg";
 import equipment from "../../resources/equipment.svg";
 import { SelectedItem } from "../../components/selected";
 import { OrderInformation } from "../../components/orderInformation/OrderInformation";
+import moment from "moment";
 
 export const Order = () => {
     const { orderId } = useParams();
@@ -74,25 +75,27 @@ export const Order = () => {
                         <tr>
                             <td style={{ width: "408px" }}>
                                 <div className={styles["common-text"]}>
-                                    c 23 мар 2020 по 31 мар 2020
+                                    c {selected.dateOfStart} по {selected.dateOfEnd}
                                 </div>
                                 <div className={styles["common-interes"]}>
-                                    Обучение регате от профессионалов
+                                    {selected.title}
                                 </div>
-                                <div className={styles["common-text"]}>ГЕНТ, БЕЛЬГИЯ</div>
+                                <div className={styles["common-text"]} style={{textTransform: "uppercase"}}>
+                                    {selected.country} {selected.town? ", "+selected.town: ""}
+                                </div>
                             </td>
 
                             <td style={{ width: "794px" }}>
                                 <SelectedItem
                                     imgage={book}
                                     title={"Интерес"}
-                                    description={"Регата"}
+                                    description={selected.interes}
                                     descriptionImage={"regata"}
                                 />
                                 <SelectedItem
                                     imgage={calendar}
                                     title={"Дата начала"}
-                                    description={"23 марта 2020"}
+                                    description={selected.dateOfStart}
                                     descriptionImage={"date"}
                                 />
                                 <SelectedItem

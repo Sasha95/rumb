@@ -46,6 +46,7 @@ export const NumberOfPeoples: React.FC<IProps> = ({handleNumberOfPeople}) => {
             </div>
             {show && <div className={styles.wrapper}>
                 <Input
+                    readOnly
                     style={{ display: "inline" }}
                     suffix={<div className={styles.container}>
                         <div className={styles.data}>{count}

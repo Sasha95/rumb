@@ -4,36 +4,43 @@ import { Row } from "antd";
 import { DataCard } from "./DataCard";
 import { data } from "../../api/mock/cards";
 import { ICard } from "../../api/dto/Card";
+import { useSelector } from "react-redux";
+import { current } from "../../store/currentSelect/currentSelectors";
 
-interface IProps {
-  interes?: string[];
-  country?: string;
-}
-
-export const Cards: React.FC<IProps> = ({ interes, country }) => {
+export const Cards = () => {
   const [currentData, setCureentData] = useState<ICard[]>([]);
-  const [filterData, setFilterData] = useState<ICard[]>([]);
+  const [filterData, setFilterData] = useState<ICard[]>();
+  const selector = useSelector(current);
 
   useEffect(() => {
-    if (interes && filterData) {
-      setFilterData(filterData.filter(x => interes.includes(x.interes)))
+    let filter;
+    if ((selector.interests && selector.interests.length>0)) {
+      filter = data.filter(x => selector.interests.includes(x.interes))
+      if (selector.places){
+        filter = filter.filter(x => selector.places.indexOf(x.town)!==-1 || selector.places.indexOf(x.country)!==-1)
+      }
+      setFilterData(filter)
+      setCureentData(filter.slice(currentData.length, currentData.length + 3));
+    } else{
+      setCureentData(data.slice(currentData.length, currentData.length + 3));
     }
-    if(country && filterData){
-      setFilterData(filterData.filter(x => x.country === country))
-    }
-    setCureentData(data.slice(currentData.length, currentData.length + 3));
-  }, [country, currentData.length, filterData, interes]);
+  }, []);
   
 
   const handleClick = () => {
-    setCureentData(
-      currentData.concat(
-        data.slice(currentData.length, currentData.length + 3)
-      ) as ICard[]
-    );
+    if(filterData){
+      setCureentData(
+        currentData.concat(filterData.slice(currentData.length, currentData.length + 3)) as ICard[]
+      ); 
+    }else{
+      setCureentData(
+        currentData.concat(data.slice(currentData.length, currentData.length + 3)) as ICard[]
+      ); 
+    }
   };
 
-  console.log(currentData);
+  console.log("currentData", currentData);
+  console.log("selector", selector);
 
   return (
     <div>
