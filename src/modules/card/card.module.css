@@ -12,6 +12,7 @@
 
 .container {
   display: flex;
+  justify-content: space-between;
   height: 264px;
   width: 1200px;
   background: #ffffff;

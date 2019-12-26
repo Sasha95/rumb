@@ -2,7 +2,7 @@ import { ILanguages } from "../dto/Languages.g";
 
 export const languages: ILanguages[] = [
     {
-      name: "Русский",
+      name: "Russian",
       symbol: 'RU',
       description: "Россия"
     },

@@ -96,3 +96,14 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.footerDay {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    color: #8C8C8C;
+}
+.footerText{
+    composes: footerDay;
+    color: #262626;
+}

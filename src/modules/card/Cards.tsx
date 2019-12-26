@@ -16,9 +16,7 @@ export const Cards = () => {
     let filter;
     if ((selector.interests && selector.interests.length>0)) {
       filter = data.filter(x => selector.interests.includes(x.interes))
-      if (selector.places){
-        filter = filter.filter(x => selector.places.indexOf(x.town)!==-1 || selector.places.indexOf(x.country)!==-1)
-      }
+      .filter(x => selector.places && (selector.places.indexOf(x.town)!==-1 || selector.places.indexOf(x.country)!==-1))
       setFilterData(filter)
       setCureentData(filter.slice(currentData.length, currentData.length + 3));
     } else{
@@ -38,9 +36,6 @@ export const Cards = () => {
       ); 
     }
   };
-
-  console.log("currentData", currentData);
-  console.log("selector", selector);
 
   return (
     <div>

@@ -41,6 +41,10 @@
   .title{
     margin-right: auto;
     align-self: flex-end;
+    color: #262626;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
   }
 
   .containter {
@@ -68,3 +72,17 @@
     composes: flex-item-langval;
     border: none;
   }
+  
+.titleItemModal {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+}
+
+.textItemModal {
+  color: #8C8C8C;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+}

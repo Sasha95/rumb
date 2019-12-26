@@ -7,5 +7,5 @@
 
 .descrition {
     color: #F5F5F5;
-    composes: title
+    composes: title;
 }

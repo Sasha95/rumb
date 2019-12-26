@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import classNames from "classnames";
-
 import { languages } from "../../api/mock/languages"
 import stylemodal from "../../components/modal/modal.module.css"
 import { Modal } from "../modal/Modal"
@@ -32,8 +31,8 @@ export const Languages = () => {
                                 {[stylemodal["flex-item-langval"]]: item===selected, 
                                 [stylemodal["flex-item-langval-unactive"]]: item!==selected }
                             )} onClick={()=>handleChange(item)} key={index}>
-                            <div>{item.name}</div>
-                            <div>{item.description}</div>
+                            <div className={stylemodal.titleItemModal}>{item.name}</div>
+                            <div className={stylemodal.textItemModal}>{item.description}</div>
                         </li>
                     ))}
                 </ul>

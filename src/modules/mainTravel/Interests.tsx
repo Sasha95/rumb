@@ -19,7 +19,6 @@ export const Interests: React.FC<IProps> = ({handleSelected}) => {
         // setSelected(selected, ...x] as string[]);
         handleSelected(x);
     }
-    console.log(selected)
     return (
         <>
             <Select       

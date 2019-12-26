@@ -6,6 +6,7 @@ import { Valute } from '../../components/valute/Valute';
 import { Input, Icon } from 'antd';
 import { useSelector } from 'react-redux';
 import { current } from '../../store/currentSelect/currentSelectors';
+import classnames from "classnames"
 
 const titles = [
     { name: 'howItWorks', description: 'Как это работает' },
@@ -23,7 +24,7 @@ export const Header = () => {
         if (selector.interests && selector.interests.length > 0)
             setTextInput(selector.interests.join(", ").concat(selector.places ? " • " + selector.places : ""));
     }, [selector])
-
+    // const dispaly = classnames(styles.container, {})
     return (
         <div style={{ paddingTop: "30px", paddingBottom: "30px" }}>
             <Link to='/' className={styles.logo}>
@@ -32,15 +33,15 @@ export const Header = () => {
             <table className={styles.centerContainer}>
                 <tbody>
                     <tr>
-                        {location.pathname !== "/" &&
-                            <td style={{ width: "408px", verticalAlign: "middle" }}>
+                        {/* {location.pathname !== "/" && */}
+                            <td className={styles.container} style={{display: location.pathname !== "/"? "": "none"}}>
                                 <Input
                                     value={textInput}
                                     placeholder={"Начать поиск"}
                                     style={{ width: "384px", right: "35px" }}
                                     prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
                                 />
-                            </td>}
+                            </td>
                         <td>
                             {titles.map((item, index) => (
                                 <span key={index}>

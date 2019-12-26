@@ -20,6 +20,7 @@ import { SelectValue } from "antd/lib/select";
 import { useDispatch } from "react-redux";
 import { set_current } from "../../store/currentSelect/currentActions";
 import { CurrentInitialState } from "../../store/currentSelect/currentState";
+import moment from "moment";
 
 export const MainTravel = () => {
   const [selectedInteres, setSelectedInteres] = useState();
@@ -56,6 +57,10 @@ export const MainTravel = () => {
   const handleNumberOfPeople = (number: number) => {
     setNumberOfPeople(number);
   };
+
+  // console.log(moment().from(moment().subtract(5, 'days'), true))
+  console.log(moment('2019-12-26').from(moment('2019-12-20'), true))
+
 
   return (
     <>

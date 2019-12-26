@@ -31,8 +31,8 @@ export const Valute = () => {
                                 [stylemodal["flex-item-langval-unactive"]]: item!==selected }
                             )}
                             onClick={()=>handleChange(item)} key={index}>
-                                <div>{item.description}</div>
-                                <div>{item.name} - {item.symbol}</div>
+                                <div className={stylemodal.titleItemModal}>{item.description}</div>
+                                <div className={stylemodal.textItemModal}>{item.name} - {item.symbol}</div>
                         </li>
                     ))}
                 </ul>

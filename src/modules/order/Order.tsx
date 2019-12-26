@@ -20,6 +20,7 @@ export const Order = () => {
     const { orderId } = useParams();
     const selected: ICard = data.filter(x => x.id === Number(orderId))[0];
 
+
     return (
         <div className={styles.container}>
             <div className={styles["image-container"]}>
@@ -73,9 +74,9 @@ export const Order = () => {
                 <table className={styles.containerCenter} style={{ marginTop: "50px" }}>
                     <tbody>
                         <tr>
-                            <td style={{ width: "408px" }}>
+                            <td style={{ width: "408px", paddingRight: "24px" }}>
                                 <div className={styles["common-text"]}>
-                                    c {selected.dateOfStart} по {selected.dateOfEnd}
+                                    c {moment(selected.dateOfStart).format('D MMM YYYY')} по {moment(selected.dateOfEnd).format('D MMM YYYY')}
                                 </div>
                                 <div className={styles["common-interes"]}>
                                     {selected.title}
@@ -85,7 +86,7 @@ export const Order = () => {
                                 </div>
                             </td>
 
-                            <td style={{ width: "794px" }}>
+                            <td style={{ width: "794px"}}>
                                 <SelectedItem
                                     imgage={book}
                                     title={"Интерес"}
@@ -95,25 +96,25 @@ export const Order = () => {
                                 <SelectedItem
                                     imgage={calendar}
                                     title={"Дата начала"}
-                                    description={selected.dateOfStart}
+                                    description={moment(selected.dateOfStart).format('D MMMM YYYY')}
                                     descriptionImage={"date"}
                                 />
                                 <SelectedItem
                                     imgage={time}
                                     title={"Длительность"}
-                                    description={"7 дней"}
+                                    description={moment(selected.dateOfEnd).from(moment(selected.dateOfStart), true)}
                                     descriptionImage={"dureation"}
                                 />
                                 <SelectedItem
                                     imgage={thunder}
                                     title={"Уровень сложности"}
-                                    description={"Для новичков"}
+                                    description={selected.professional}
                                     descriptionImage={"level"}
                                 />
                                 <SelectedItem
                                     imgage={equipment}
                                     title={"Оборудование"}
-                                    description={"Треб. снаряжение"}
+                                    description={selected.equipment}
                                     descriptionImage={"equimpment"}
                                 />
                             </td>
@@ -128,11 +129,11 @@ export const Order = () => {
                     </OrderInformation>
                     <OrderInformation title={"Что включено"}>
                         <div className={styles["forn-includ"]}>Инвентарь</div>
-                        <div className={styles.font}>{selected.including.inventory}</div>
+                        <div className={styles.font} style={{paddingBottom: "10px", paddingTop: "10px"}}>{selected.including.inventory}</div>
                         <div className={styles["forn-includ"]}>Напитки</div>
-                        <div className={styles.font}>{selected.including.beverages}</div>
+                        <div className={styles.font} style={{paddingBottom: "10px", paddingTop: "10px"}}>{selected.including.beverages}</div>
                         <div className={styles["forn-includ"]}>Питание</div>
-                        <div className={styles.font}>{selected.including.nutrition}</div>
+                        <div className={styles.font} style={{paddingTop: "10px"}}>{selected.including.nutrition}</div>
                     </OrderInformation>
                     <OrderInformation title={"Требования к участнику"}>
                         <div className={styles.font}>{selected.requires}</div>
@@ -154,8 +155,8 @@ export const Order = () => {
                 <tbody>
                     <tr>
                         <td style={{ width: "408px" }}>
-                            <div>7 дней</div>
-                            <div>Обучение регате от профессионалов</div>
+                            <div className={styles.footerDay}>{moment(selected.dateOfEnd).from(moment(selected.dateOfStart), true)}</div>
+                            <div className={styles.footerText}>{selected.title}</div>
                         </td>
                         <td align={"right"} style={{ width: "611px" }}>
                             <span className={globalStyle.cost}>

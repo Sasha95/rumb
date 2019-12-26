@@ -11,14 +11,15 @@
   top: 37px;
   left: 26px;
   text-decoration: none;
-  color: black;
-  /* display: inline-block; */
-  /* padding: 37px 40px 30px 26px; */
+  color: #000000;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .text {
   color: black;
-  margin-left: 37px;
+  margin-right: 37px;
   text-decoration: none;
 }
 
@@ -29,11 +30,15 @@
 }
 
 .search {
-  /* display: flex; */
   margin-right: auto;
 }
 
 .centerContainer {
   margin-left: auto;
   margin-right: auto;
+}
+
+.container{
+  width: 408px;
+  vertical-align: middle;
 }

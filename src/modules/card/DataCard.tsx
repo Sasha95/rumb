@@ -11,6 +11,7 @@ import read from "../../resources/read.svg";
 import flash from "../../resources/flash.svg";
 import skin from "../../resources/skin.svg";
 import Truncate from 'react-truncate';
+import moment from "moment";
 
 interface IData {
   card: ICard;
@@ -38,7 +39,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
         <div className={styles["rate-container"]}>
           <span>
             <img src={date} alt={date} />
-            <span className={styles.date}>{card.dateOfStart}</span>
+            <span className={styles.date}>{moment(card.dateOfStart).format('D MMMM YYYY')}</span>
           </span>
           <span className={globalStyle["font-rate"]}>
             {card.rate}
