@@ -93,10 +93,10 @@ export const MainTravel = () => {
           <Button onClick={onClick} />
         </div>
       </div>
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} style={{background: "#FAFAFA"}}>
         <Popular />
       </div>
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} style={{background: "#FFFFFF"}}>
         <Row type="flex">
           <Col>
             <div className={globalStyle.popularText}>ПOПУЛЯРНЫЕ ТУРЫ</div>

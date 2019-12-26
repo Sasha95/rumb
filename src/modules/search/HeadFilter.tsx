@@ -32,7 +32,7 @@ export const HeadFilter = () => {
             </span>
             <Row type={"flex"} justify={"space-between"} style={{ paddingTop: "32px", width: "1200px" }}>
                 <Col className={styles.text}>Более 300 вариантов приключений</Col>
-                <Col>
+                <Col style={{cursor: "pointer"}}>
                     Показать сначала дорогие
                     <img style={{ paddingLeft: "11px" }} src={down} alt="down" />
                 </Col>
