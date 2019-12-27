@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Interests } from "./Interests";
 import styles from "./mainTravel.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
@@ -23,7 +23,8 @@ import { CurrentInitialState } from "../../store/currentSelect/currentState";
 
 export const MainTravel = () => {
   const [selectedInteres, setSelectedInteres] = useState();
-  const [date, setDate] = useState();
+  const [dateOfStart, setDateStart] = useState();
+  const [dateOfEnd, setDateEnd] = useState();
   const [place, setPlace] = useState();
   const [numberOfPeople, setNumberOfPeople] = useState();
   const dispatch = useDispatch();
@@ -31,7 +32,8 @@ export const MainTravel = () => {
   const onClick = () => {
     dispatch(
       set_current({
-        date: date,
+        dateOfStart: dateOfStart,
+        dateOfEnd: dateOfEnd,
         interests: selectedInteres,
         numberOfPeople: numberOfPeople,
         places: place
@@ -39,9 +41,8 @@ export const MainTravel = () => {
     );
     history.push(`/search`);
   };
-  useEffect(()=>{
-    set_current(CurrentInitialState)
-  }, [])
+
+  dispatch(set_current(CurrentInitialState))
 
   const handleSelected = (x: string[]) => {
     x.shift();
@@ -51,7 +52,8 @@ export const MainTravel = () => {
     setPlace(place);
   };
   const handleDate = (startDate: string, endDate: string) => {
-    setDate(startDate + "; " + endDate);
+    setDateStart(startDate);
+    setDateEnd(endDate)
   };
   const handleNumberOfPeople = (number: number) => {
     setNumberOfPeople(number);

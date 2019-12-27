@@ -55,7 +55,6 @@
 }
 
 .first-container {
-  /* background-image: url("../../resources/swim.png"); */
   height: 262;
   max-width: 383px;
 }
@@ -63,7 +62,7 @@
 .second-container {
   margin-top: 24px;
   padding-bottom: 24px;
-  max-width: 560px;
+  width: 560px;
   display: flex;
   flex-direction: column;
 }
@@ -77,7 +76,7 @@
 }
 
 .rate-container {
-  margin-top: 16px;
+  margin-top: auto;
 }
 
 .third-container {

@@ -45,7 +45,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
         </div>
       </div>
       <div className={styles["second-container"]}>
-        <div className={styles["font-title"]}>{card.title}</div>
+        <div className={styles["font-title"]}><Truncate style={{width: "100%"}} lines={2}>{card.title}</Truncate></div>
         <div className={styles["rate-container"]}>
           <span>
             <img src={date} alt={date} />

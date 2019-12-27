@@ -1,5 +1,6 @@
 export interface ICard {
     id: number,
+    freeSeats: number,
     town: string,
     country: string,
     title: string,

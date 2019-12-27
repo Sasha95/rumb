@@ -6,19 +6,22 @@ export interface ICurrent {
     interests: string[];
     places: string;
     numberOfPeople: number;
-    date: string;
+    dateOfStart: string;
+    dateOfEnd: string;
 }
 
 export const CurrentInitialState: ICurrent = {
     interests: [],
     places: "",
     numberOfPeople: 2,
-    date: ""
+    dateOfStart: "",
+    dateOfEnd: ""
 }
 
 export const currentReducer = reducerWithInitialState<ICurrent>(CurrentInitialState)
 .case(set_current, (state, result) => newState(state, {
-    date: result.date,
+    dateOfStart: result.dateOfStart,
+    dateOfEnd: result.dateOfEnd,
     interests: result.interests,
     numberOfPeople: result.numberOfPeople,
     places: result.places
