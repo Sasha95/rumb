@@ -13,6 +13,10 @@
   display: inline-block;
 }
 
+.otherFilter {
+  padding-left: 5px;
+}
+
 .btn-active {
   border: 1px solid #389e0d;
 }
