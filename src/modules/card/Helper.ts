@@ -2,20 +2,22 @@ import { ICard } from "../../api/dto/Card";
 import moment from "moment";
 import { ICurrent } from "../../store/currentSelect/currentState";
 
-export const filter = (data: ICard[], selector: ICurrent) => {
+export const filter = (data: ICard[], selector: ICurrent, isFilter: boolean) => {
     let result = data;
-    if (selector.interests && selector.interests.length > 0) {
-      result = result.filter(x => selector.interests.includes(x.interes))
-    }
-    if (selector.places) {
-      result = result.filter(x => (selector.places.indexOf(x.town) !== -1 || selector.places.indexOf(x.country) !== -1))
-    }
-    if (selector.dateOfStart && selector.dateOfEnd) {
-      result = result.filter(x => moment(x.dateOfStart).isSameOrAfter(moment(selector.dateOfStart))
-        && moment(x.dateOfEnd).isSameOrBefore(moment(selector.dateOfEnd)))
-    }
-    if (selector.numberOfPeople) {
-      result = result.filter(x => x.freeSeats >= selector.numberOfPeople);
+    if(isFilter){
+      if (selector.interests && selector.interests.length > 0) {
+        result = result.filter(x => selector.interests.includes(x.interes))
+      }
+      if (selector.places) {
+        result = result.filter(x => (selector.places.indexOf(x.town) !== -1 || selector.places.indexOf(x.country) !== -1))
+      }
+      if (selector.dateOfStart && selector.dateOfEnd) {
+        result = result.filter(x => moment(x.dateOfStart).isSameOrAfter(moment(selector.dateOfStart))
+          && moment(x.dateOfEnd).isSameOrBefore(moment(selector.dateOfEnd)))
+      }
+      if (selector.numberOfPeople) {
+        result = result.filter(x => x.freeSeats >= selector.numberOfPeople);
+      }
     }
     return result
 }

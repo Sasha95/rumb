@@ -20,6 +20,7 @@ import { SelectValue } from "antd/lib/select";
 import { useDispatch } from "react-redux";
 import { set_current } from "../../store/currentSelect/currentActions";
 import { CurrentInitialState } from "../../store/currentSelect/currentState";
+import classnames from "classnames";
 
 export const MainTravel = () => {
   const [selectedInteres, setSelectedInteres] = useState();
@@ -60,7 +61,7 @@ export const MainTravel = () => {
   };
   return (
     <>
-      <div className={styles.wrapper} style={{ height: "100vh" }}>
+      <div className={classnames(styles.wrapper, styles.mainWrapper)}>
         <div className={styles.parachute}>
           <img src={parachute} alt="parachute" />
         </div>
@@ -95,10 +96,10 @@ export const MainTravel = () => {
           <Button onClick={onClick} />
         </div>
       </div>
-      <div className={styles.wrapper} style={{background: "#FAFAFA"}}>
+      <div className={classnames(styles.wrapper, globalStyle.grayColor)}>
         <Popular />
       </div>
-      <div className={styles.wrapper} style={{background: "#FFFFFF"}}>
+      <div className={classnames(styles.wrapper, globalStyle.whiteColor)}>
         <Row type="flex">
           <Col>
             <div className={globalStyle.popularText}>ПOПУЛЯРНЫЕ ТУРЫ</div>

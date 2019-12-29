@@ -20,7 +20,7 @@
   justify-content: space-between;
   height: 264px;
   width: 1200px;
-  background: #ffffff;
+  composes: whiteColor from "../../core/theme/commonStyle.module.css";
   border: 1px solid #389e0d;
   box-sizing: border-box;
   border-radius: 8px;
@@ -34,14 +34,13 @@
 }
 
 .palce {
-  background: #ffffff;
+  composes: whiteColor from "../../core/theme/commonStyle.module.css";
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 7px;
   display: inline-block;
 }
 
 .city {
-  /* display: inline-flex; */
   font-weight: normal;
   font-size: 14px;
   line-height: 22px;
@@ -119,4 +118,21 @@
   font-size: 14px;
   color: #389E0D;
   cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  right: 0;
+  z-index: 20;
+  font-size: x-large;
+  padding-right: 5px;
+}
+
+.leftArrow {
+  composes: rightArrow;
+  right: unset;
+  left: 0;
+  transform: rotate(180deg);
 }

@@ -1,3 +1,11 @@
+.whiteColor {
+  background: #FFFFFF;
+}
+
+.grayColor {
+  background: #FAFAFA;
+}
+
 .font-underline {
   text-decoration-line: underline;
   color: #389e0d;
@@ -51,6 +59,7 @@
   font-size: 24px;
   line-height: 32px;
   padding-bottom: 20px;
+  padding-top: 40px;
 }
 
 .unselectable {
@@ -61,4 +70,9 @@
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
+}
+
+.marginImage {
+  margin-left: 24px;
+  margin-right: 24px;
 }

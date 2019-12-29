@@ -8,8 +8,11 @@
 
 .centerImage {
     position: absolute;
-    left: 100px;
+    margin: auto;
+    left: 0;
+    right: 0;
     top: 50%;
+    text-align: center;
 }
 
 .poptext {
@@ -18,6 +21,7 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 32px;
+    padding-top: 40px;
 }
 
 .btn {
@@ -37,6 +41,10 @@
     color: #FFFFFF;
     padding-left: 12px;
     padding-bottom: 9px;
+}
+
+.imageColContainer {
+    position: relative;
 }
 
 .image {

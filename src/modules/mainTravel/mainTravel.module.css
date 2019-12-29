@@ -1,6 +1,6 @@
 .container {
     width: 330px;
-    background: #FFFFFF;
+    composes: whiteColor from '../../core/theme/commonStyle.module.css';
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 8px 8px 0px 0px;
     padding-top: 33px;
@@ -26,6 +26,11 @@
     justify-content: flex-end;
     flex-direction: column; 
     padding-bottom: 7px;
+}
+
+.mainWrapper {
+    composis: wrapper;
+    height: 90vh;
 }
 
 .wrapper {
@@ -78,7 +83,7 @@
     width: 330px;
     padding-top: 21px;
     padding-bottom: 21px;
-    background-color: #FFFFFF;
+    composes: whiteColor from '../../core/theme/commonStyle.module.css';
     margin-left: auto;
     margin-right: auto;
 }

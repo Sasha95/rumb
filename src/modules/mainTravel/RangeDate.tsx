@@ -8,6 +8,8 @@ import "react-dates/lib/css/_datepicker.css";
 import "./customantd.css";
 import styles from "./mainTravel.module.css";
 import calnedar from "../../resources/mainCalendar.svg";
+import classnames from "classnames"
+import globalStyle from "../../core/theme/commonStyle.module.css";
 
 interface IProps {
   handleDate: (startDate: string, endDate: string) => void;
@@ -39,7 +41,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
       setCountDate(`${startDate.format("DD MMM")} - ${endDate.format("DD MMM")}`);
     }
   };
-  const onFocusChange = (focusedInput: any) => {
+  const onFocusChange = (focusedInput: FocusedInputShape | null) => {
     setfocusedInput(!focusedInput ? "startDate" : focusedInput);
   };
   return (
@@ -59,6 +61,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
           endDate={endDate}
           withPortal={true}
           hideKeyboardShortcutsPanel
+          minimumNights={3}
         />
       </Modal>
       <div onClick={() => setShow(true)} className={styles['date-container']}>
@@ -68,7 +71,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
             prefix={
             <span className={styles["custom-label"]}>
                 <img className={styles.imageDate} src={calnedar} alt="calendar" />
-                <span className={styles.date}>Дата</span>                
+                <span className={classnames(styles.date, globalStyle.unselectable)}>Дата</span>                
             </span>
           }            
         />

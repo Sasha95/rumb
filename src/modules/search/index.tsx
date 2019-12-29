@@ -17,7 +17,7 @@ export const Search = () => {
                 <Col>
                     <div className={styles.container}>
                       <HeadFilter sort={handleSort} />
-                      <Cards sort={sortDirection}/>
+                      <Cards sort={sortDirection} isFilter/>
                     </div>
                 </Col>
             </Row>

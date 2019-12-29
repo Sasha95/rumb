@@ -10,15 +10,17 @@ import { filter, sorting } from "./Helper";
 
 interface IProps {
   sort?: boolean;
+  isFilter?: true;
 }
 
-export const Cards: React.FC<IProps> = ({sort}) => {
+export const Cards: React.FC<IProps> = ({sort, isFilter=false}) => {
   const [currentData, setCureentData] = useState<ICard[]>([]);
   const [filterData, setFilterData] = useState<ICard[]>();
   const selector = useSelector(current);
   
   useEffect(() => {
-    const result = filter(data, selector);
+    const result = filter(data, selector, isFilter);
+    
     setFilterData(result)
     setCureentData(result.slice(currentData.length, currentData.length + 3));    
   }, []);

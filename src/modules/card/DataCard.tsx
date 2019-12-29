@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useHistory } from "react-router-dom";
-import { Rate, Carousel } from "antd";
+import { Rate, Carousel, Icon } from "antd";
 import { ICard } from "../../api/dto/Card";
 import globalStyle from "../../core/theme/commonStyle.module.css"
 import styles from "./card.module.css";
@@ -19,22 +19,35 @@ interface IData {
 
 export const DataCard: React.FC<IData> = ({ card }) => {
   const history = useHistory();
+  const refContainer = useRef<any>();
   const handleOrder = () => {
     history.push(`/order${card.id}`);
   }
+
+  const next = () => {
+    refContainer.current.next();
+  }
+  const prev = () => {
+    refContainer.current.prev();
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles["first-container"]}>
         <div className={styles.imgcont}>
-          <Carousel 
-          adaptiveHeight 
-          variableWidth
+          <Icon  className={styles.leftArrow} type="right-circle" onClick={prev} />
+          <Carousel
+            arrows
+            adaptiveHeight
+            variableWidth
+            ref={ref => refContainer.current = ref}
           >
-              {card.images.map((image, index)=> (
-                <img key={index} className={styles.imageCarousel} src={image} alt={"place"} />
-                ))}
+            {card.images.map((image, index) => (
+              <img key={index} className={styles.imageCarousel} src={image} alt={"place"} />
+            ))}
           </Carousel>
-          <div style={{position: "absolute", top: "12px", left: "12px"}}>
+          <Icon className={styles.rightArrow} type="right-circle" onClick={next} />
+          <div style={{ position: "absolute", top: "12px", left: "12px" }}>
             <span className={styles.palce}>
               <img className={styles.image} src={place} alt={"place"} />
               <span className={styles.city}>
@@ -45,7 +58,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
         </div>
       </div>
       <div className={styles["second-container"]}>
-        <div className={styles["font-title"]}><Truncate style={{width: "100%"}} lines={2}>{card.title}</Truncate></div>
+        <div className={styles["font-title"]}><Truncate style={{ width: "100%" }} lines={2}>{card.title}</Truncate></div>
         <div className={styles["rate-container"]}>
           <span>
             <img src={date} alt={date} />

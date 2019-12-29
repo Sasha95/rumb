@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./orderInformation.module.css";
+import { Col, Row } from "antd";
 
 interface IProps {
   title: string;
@@ -12,16 +13,16 @@ export const OrderInformation: React.FC<IProps> = ({
   children
 }) => {
   return (
-    <tr>
-      <td className={styles.leftWrap}>
+    <Row type={"flex"} justify={"center"}>
+      <Col  style={{ width: "408px", paddingRight: "24px" }} className={styles.leftWrap}>
         <div className={styles["our-doing"]}>
           {title}
           {operator && (
             <div className={styles["btn-call"]}>Связаться с оператором</div>
           )}
         </div>
-      </td>
-      <td className={styles.rihtWrap}>{children}</td>
-    </tr>
+      </Col>
+      <Col style={{ width: "794px" }} className={styles.rihtWrap}>{children} </Col>
+    </Row>
   );
 };

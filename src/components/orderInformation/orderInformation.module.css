@@ -23,12 +23,12 @@
 }
 
 .leftWrap {
-    width: 408px;
+    /* width: 408px; */
     vertical-align: top;
     padding-top: 60px;
 }
 
 .rihtWrap {
-    width: 794px;
+    /* width: 794px; */
     padding-top: 60px;
 }
