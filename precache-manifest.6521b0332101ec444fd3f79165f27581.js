@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f1b7f0fb0c3097c4b318427f61d317f8",
+    "revision": "0b42d90c103a2cad233d62fe652f23c8",
     "url": "/rumb/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rumb/static/css/2.045a7974.chunk.css"
   },
   {
-    "revision": "49398ccbb3ea78274579",
-    "url": "/rumb/static/css/main.947f29bf.chunk.css"
+    "revision": "4ccb003606584ea7ccd5",
+    "url": "/rumb/static/css/main.4682e551.chunk.css"
   },
   {
     "revision": "0a43260003a6423403eb",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rumb/static/js/2.e6225908.chunk.js.LICENSE"
   },
   {
-    "revision": "49398ccbb3ea78274579",
-    "url": "/rumb/static/js/main.474e9aa4.chunk.js"
+    "revision": "4ccb003606584ea7ccd5",
+    "url": "/rumb/static/js/main.c002ab8b.chunk.js"
   },
   {
     "revision": "3eae4a5d2303f6bd727c",
@@ -320,48 +320,48 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rumb/static/media/bike.217a7930.png"
   },
   {
-    "revision": "37e44014795b1ca16c944780ba7f810b",
-    "url": "/rumb/static/media/book.37e44014.svg"
+    "revision": "5458b4b24104b3ef6f114d2c46803502",
+    "url": "/rumb/static/media/book.5458b4b2.svg"
   },
   {
-    "revision": "9e83c00a12e4883b1988b9fa85b7a282",
-    "url": "/rumb/static/media/calendar.9e83c00a.svg"
+    "revision": "58740171b094ed19a9b92c42cb8ffa58",
+    "url": "/rumb/static/media/calendar.58740171.svg"
   },
   {
-    "revision": "53e2a8a66095679c9f54bac9728f2a6c",
-    "url": "/rumb/static/media/clock.53e2a8a6.svg"
+    "revision": "316ac19d28ee478742660699537b9681",
+    "url": "/rumb/static/media/clock.316ac19d.svg"
   },
   {
-    "revision": "c6c8a498d87348d317dbd907911904d5",
-    "url": "/rumb/static/media/close.c6c8a498.svg"
+    "revision": "311eee50464f1956c2aa003ea24d48ec",
+    "url": "/rumb/static/media/close.311eee50.svg"
   },
   {
-    "revision": "b15157bd34247e469ed16868fb4eb248",
-    "url": "/rumb/static/media/date.b15157bd.svg"
+    "revision": "882c4eb9f37336693b58be32686d4d38",
+    "url": "/rumb/static/media/date.882c4eb9.svg"
   },
   {
-    "revision": "39d51fedd8f5efb8262c581d2213bf6c",
-    "url": "/rumb/static/media/down.39d51fed.svg"
+    "revision": "457e867860dba96186f58962e3ab3d29",
+    "url": "/rumb/static/media/down.457e8678.svg"
   },
   {
-    "revision": "eb3bb1a14aa6d0f7021e3dcf47817ca1",
-    "url": "/rumb/static/media/downNum.eb3bb1a1.svg"
+    "revision": "6054c6b6f021d3cce968392ebc7909eb",
+    "url": "/rumb/static/media/downNum.6054c6b6.svg"
   },
   {
-    "revision": "54a3b54ec96560edb313ca875f8bf781",
-    "url": "/rumb/static/media/ellipse.54a3b54e.svg"
+    "revision": "049cad4d37e31fd9d0d8b7c0c58c6e2c",
+    "url": "/rumb/static/media/ellipse.049cad4d.svg"
   },
   {
-    "revision": "8dfdb35c79799650d92a9c17f74c49d0",
-    "url": "/rumb/static/media/ellipse1.8dfdb35c.svg"
+    "revision": "26b392c1d83735f429477b123ec3976f",
+    "url": "/rumb/static/media/ellipse1.26b392c1.svg"
   },
   {
-    "revision": "7dd1094843ef8ac27adfe99e2f18d20b",
-    "url": "/rumb/static/media/equipment.7dd10948.svg"
+    "revision": "9295a20d728281bb8ff55b2a5843fdd1",
+    "url": "/rumb/static/media/equipment.9295a20d.svg"
   },
   {
-    "revision": "b5f7e1de0927baf0d2d1799efd0ba8c8",
-    "url": "/rumb/static/media/flash.b5f7e1de.svg"
+    "revision": "5a5385f66050565b83617aa206f1ffc6",
+    "url": "/rumb/static/media/flash.5a5385f6.svg"
   },
   {
     "revision": "ce8e3b83351a97752f85b7a3fa95e271",
@@ -372,56 +372,56 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rumb/static/media/image2.4ff1f70f.png"
   },
   {
-    "revision": "4d069d75802bf536410f3d6ed48ea7d8",
-    "url": "/rumb/static/media/language.4d069d75.svg"
+    "revision": "9faf5526d530d35fd92e347db7e8c8b9",
+    "url": "/rumb/static/media/language.9faf5526.svg"
   },
   {
-    "revision": "834482b9492985e57523ebba8c3bbcaf",
-    "url": "/rumb/static/media/lbellipse.834482b9.svg"
+    "revision": "8c9ed5ead9dd1e3a49bda63c79e61d44",
+    "url": "/rumb/static/media/lbellipse.8c9ed5ea.svg"
   },
   {
-    "revision": "23fc51367d5ac819167318e3176e28e1",
-    "url": "/rumb/static/media/like.23fc5136.svg"
+    "revision": "17a5fe5a3ed03fd632ad3b2bce6bb04b",
+    "url": "/rumb/static/media/like.17a5fe5a.svg"
   },
   {
-    "revision": "09bb99e33f40a0246dad6778c82da93f",
-    "url": "/rumb/static/media/loc_white.09bb99e3.svg"
+    "revision": "ddec0a1c753575d394d09a9da973b40c",
+    "url": "/rumb/static/media/loc_white.ddec0a1c.svg"
   },
   {
-    "revision": "410c61552b4fe329270ce860e9164e8f",
-    "url": "/rumb/static/media/location.410c6155.svg"
+    "revision": "27ef533c393a8aa0b2278fb8b1cd32cf",
+    "url": "/rumb/static/media/location.27ef533c.svg"
   },
   {
-    "revision": "f1374a04ff48698fde40c532dcf7c519",
-    "url": "/rumb/static/media/mainBook.f1374a04.svg"
+    "revision": "086c4833060fd69d8b494b02bac31dd1",
+    "url": "/rumb/static/media/mainBook.086c4833.svg"
   },
   {
-    "revision": "c4680fb3c100edcd4d23b375384a20e5",
-    "url": "/rumb/static/media/mainCalendar.c4680fb3.svg"
+    "revision": "0f34387834859be65daf83d27e0b9914",
+    "url": "/rumb/static/media/mainCalendar.0f343878.svg"
   },
   {
-    "revision": "4ae2de5a015fe909c53307b62aa60d1c",
-    "url": "/rumb/static/media/more.4ae2de5a.svg"
+    "revision": "ff56ea9c57bd064ed99ffb2f36988645",
+    "url": "/rumb/static/media/more.ff56ea9c.svg"
   },
   {
-    "revision": "8be69d5f7b019e092a70fe7d2fe7383c",
-    "url": "/rumb/static/media/parachute.8be69d5f.svg"
+    "revision": "56d6da83bbfa0a137629a66442e86917",
+    "url": "/rumb/static/media/parachute.56d6da83.svg"
   },
   {
-    "revision": "8c45feaae2f160c8c75c0d26af0f886f",
-    "url": "/rumb/static/media/people.8c45feaa.svg"
+    "revision": "9baf57122b0b907c56f9e249613da8bd",
+    "url": "/rumb/static/media/people.9baf5712.svg"
   },
   {
-    "revision": "95e3185856dabc3c2dd27db8001918c1",
-    "url": "/rumb/static/media/place.95e31858.svg"
+    "revision": "85466e1c56dcb4d1e119d5d33e42af98",
+    "url": "/rumb/static/media/place.85466e1c.svg"
   },
   {
-    "revision": "001bbb6b96b5934a9b5621406ac65179",
-    "url": "/rumb/static/media/rbellips.001bbb6b.svg"
+    "revision": "748f5f30654c7dbdeb724d0f6d474473",
+    "url": "/rumb/static/media/rbellips.748f5f30.svg"
   },
   {
-    "revision": "c519274a26c4a8f7729102999a5e8944",
-    "url": "/rumb/static/media/read.c519274a.svg"
+    "revision": "6ccf3a1483b5fe3b3a0714bb7aa406f7",
+    "url": "/rumb/static/media/read.6ccf3a14.svg"
   },
   {
     "revision": "a47fe8a2cf3c4fbf4273532c043e3b42",
@@ -432,32 +432,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rumb/static/media/seul.cc86930d.png"
   },
   {
-    "revision": "a77c93633b196bf06db867002999cd19",
-    "url": "/rumb/static/media/share.a77c9363.svg"
+    "revision": "55f2a302e38d3f160fcd86c1898d64fc",
+    "url": "/rumb/static/media/share.55f2a302.svg"
   },
   {
     "revision": "484c5c033944afb23d7e71e185731d95",
     "url": "/rumb/static/media/singapur.484c5c03.png"
   },
   {
-    "revision": "e127fa5c635938bfd0fd1f0c8bbcaf2b",
-    "url": "/rumb/static/media/skin.e127fa5c.svg"
+    "revision": "65e7d308a318b9194c15ba16da8f79ee",
+    "url": "/rumb/static/media/skin.65e7d308.svg"
   },
   {
     "revision": "41376bb7d28469a9cd80ef44f29f3c8a",
     "url": "/rumb/static/media/swim.41376bb7.png"
   },
   {
-    "revision": "68c9588cb611afeee3e64de57c96e63c",
-    "url": "/rumb/static/media/thunder.68c9588c.svg"
+    "revision": "e0b0710a4a54874431c6bad21e22e19a",
+    "url": "/rumb/static/media/thunder.e0b0710a.svg"
   },
   {
-    "revision": "752e56430f1bcbb37d405c211dc7363a",
-    "url": "/rumb/static/media/time.752e5643.svg"
+    "revision": "b371d6417754543b11b0fd53e8d72987",
+    "url": "/rumb/static/media/time.b371d641.svg"
   },
   {
-    "revision": "7b3034aae3576a0762cec05fdfaf87b3",
-    "url": "/rumb/static/media/up.7b3034aa.svg"
+    "revision": "5155f22e7d40d7f051f95ee07cbaaff7",
+    "url": "/rumb/static/media/up.5155f22e.svg"
   },
   {
     "revision": "8dd41a55c17314e3461c582a5666f700",
