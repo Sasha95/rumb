@@ -18,7 +18,15 @@
     margin-right: auto;
 }
 
-.flex-container {
+.whiteColor {
+    background: #FFFFFF;
+}
+  
+.grayColor {
+    background: #FAFAFA;
+}
+
+.flexContainer {
     flex: 1;
     border-left: 1px solid #D9D9D9;
     -webkit-touch-callout: none;
@@ -29,7 +37,7 @@
     user-select: none;
 }
 
-.costom-lable-people {
+.costomLablePeople {
     padding-left: 18px;
     color: #BFBFBF;
 }
@@ -42,7 +50,7 @@
     align-self: center;
 }
 
-.horizontal-line{
+.horizontalLine{
     border-top: 1px solid #D9D9D9;
 }
 
@@ -59,7 +67,7 @@
     /* padding-right: auto; */
     padding-left: auto;
 }
-.member-unactive {
+.memberUnactive {
     background: #FAFAFA;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     border-radius: 0px 0px 8px 8px;

@@ -25,11 +25,11 @@ export const Languages = () => {
     return (
         <>
             <Modal show={showModal} title={"Выбрать язык и регион"} onClose={handleCloseModal}>
-                <ul className={stylemodal["flex-container-langval"]} >
+                <ul className={stylemodal.flexContainerLangval} >
                     {languages.map((item, index) => (
                         <li className={classNames(
-                                {[stylemodal["flex-item-langval"]]: item===selected, 
-                                [stylemodal["flex-item-langval-unactive"]]: item!==selected }
+                                {[stylemodal.flexItemLangval]: item===selected, 
+                                [stylemodal.flexItemLangvalUnactive]: item!==selected }
                             )} onClick={()=>handleChange(item)} key={index}>
                             <div className={stylemodal.titleItemModal}>{item.name}</div>
                             <div className={stylemodal.textItemModal}>{item.description}</div>

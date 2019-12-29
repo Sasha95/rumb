@@ -14,7 +14,7 @@ export const Country: React.FC<IProps> = ({handlePlace}) => {
   return (
     <div>
       <AutoComplete
-        style={{ width: '100%', border: "none", marginTop: "30px" }}
+        className={styles.countryAutocomplite}
         dataSource={countries}
         placeholder='Попробуйте "Москва"'
         dropdownMenuStyle={{ textAlign: "right" }}
@@ -27,8 +27,8 @@ export const Country: React.FC<IProps> = ({handlePlace}) => {
         onChange={handlePlace} 
       >
         <Input 
-        style={{textAlign: "right", paddingRight: "10px"}} 
-        prefix={<span className={styles["custom-label"]}>Место</span>} 
+        className={styles.countryText}
+        prefix={<span className={styles.customLabel}>Место</span>} 
         />
       </AutoComplete>
       <hr className={styles.hr} />

@@ -1,4 +1,4 @@
-.our-doing {
+.ourDoing {
     color: #262626;
     font-style: normal;
     font-weight: 600;
@@ -7,7 +7,7 @@
 }
 
 
-.btn-call {
+.btnCall {
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
     box-sizing: border-box;
@@ -23,12 +23,10 @@
 }
 
 .leftWrap {
-    /* width: 408px; */
     vertical-align: top;
     padding-top: 60px;
 }
 
 .rihtWrap {
-    /* width: 794px; */
     padding-top: 60px;
 }

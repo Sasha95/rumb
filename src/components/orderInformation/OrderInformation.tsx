@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./orderInformation.module.css";
+import globalStyle from "../../core/theme/commonStyle.module.css";
+import classnames from "classnames";
 import { Col, Row } from "antd";
 
 interface IProps {
@@ -14,15 +16,15 @@ export const OrderInformation: React.FC<IProps> = ({
 }) => {
   return (
     <Row type={"flex"} justify={"center"}>
-      <Col  style={{ width: "408px", paddingRight: "24px" }} className={styles.leftWrap}>
-        <div className={styles["our-doing"]}>
+      <Col className={classnames(styles.leftWrap, globalStyle.leftContainer)}>
+        <div className={styles.ourDoing}>
           {title}
           {operator && (
-            <div className={styles["btn-call"]}>Связаться с оператором</div>
+            <div className={styles.btnCall}>Связаться с оператором</div>
           )}
         </div>
       </Col>
-      <Col style={{ width: "794px" }} className={styles.rihtWrap}>{children} </Col>
+      <Col className={classnames(styles.rihtWrap, globalStyle.rightContainer)}>{children} </Col>
     </Row>
   );
 };

@@ -8,9 +8,9 @@ interface IProps {
 
 export const Checkbox: React.FC<IProps> = ({ title, onChange }) => {
     return (
-        <div className={styles["form-group"]}>
+        <div className={styles.formGroup}>
             <input onChange={onChange} type="checkbox" id="html" />
-            <label className={styles.label} htmlFor="html"> {title} </label>
+            <label htmlFor="html"> {title} </label>
         </div>
     )
 }

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./search.module.css";
+import globalStyles from "../../core/theme/commonStyle.module.css"
 import more from "../../resources/more.svg"
-import { Row, Col, Switch } from 'antd';
+import { Row, Col } from 'antd';
 import arrow from "../../resources/down.svg"
 import classnames from "classnames";
-import { Modal } from "../../components/modal/Modal";
 import { OtherFilter } from "../../components/otherFilter/OtherFilter";
 
 const buttons = ["Дата", "1 участник", "Любая сложность", "Цена", "Без спецпредложений", "Длительность", "Снаряжение"]
@@ -39,7 +39,7 @@ export const HeadFilter: React.FC<IProps> = ({sort}) => {
         <>
             <OtherFilter close={handleCloseModal} show={showModal}/>
             {buttons.map((button, index) => (
-                <div className={classnames(styles.btn, { [styles["btn-active"]]: selected.includes(index) })}
+                <div className={classnames(styles.btn, { [styles.btnActive]: selected.includes(index) })}
                     key={index}
                     id={String(index)}
                     onClick={handleActive}>
@@ -50,11 +50,12 @@ export const HeadFilter: React.FC<IProps> = ({sort}) => {
                 <img src={more} alt={"more"} />
                 <span className={styles.otherFilter}>Другие фильтры</span>
             </span>
-            <Row type={"flex"} justify={"space-between"} style={{ paddingTop: "32px", width: "1200px" }}>
+            <Row type={"flex"} justify={"space-between"} className={styles.wrapper}>
                 <Col className={styles.text}>Более 300 вариантов приключений</Col>
-                <Col onClick={handleSort} style={{cursor: "pointer"}}>
+                <Col onClick={handleSort} className={globalStyles.cursorPointer}>
                     Показать сначала дорогие
-                    <img className={classnames({ [styles.arrow]: !sortDirect }, { [styles.rotate]: sortDirect })} src={arrow} alt="arrow" />
+                    <img className={classnames({ [styles.arrow]: !sortDirect }, { [styles.rotate]: sortDirect })} 
+                        src={arrow} alt="arrow" />
                 </Col>
             </Row>
         </>

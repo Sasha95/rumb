@@ -1,10 +1,10 @@
-.font-title {
+.fontTitle {
   font-size: 24px;
   line-height: 32px;
   color: #262626;
 }
 
-.font-container {
+.fontContainer {
   padding-bottom: 8px;
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +20,7 @@
   justify-content: space-between;
   height: 264px;
   width: 1200px;
-  composes: whiteColor from "../../core/theme/commonStyle.module.css";
+  background: #FFFFFF;
   border: 1px solid #389e0d;
   box-sizing: border-box;
   border-radius: 8px;
@@ -33,8 +33,14 @@
   width: 383px;
 }
 
+.placeContainer {
+  position: absolute; 
+  top: 12px; 
+  left: 12px;
+}
+
 .palce {
-  composes: whiteColor from "../../core/theme/commonStyle.module.css";
+  background: #FFFFFF;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 7px;
   display: inline-block;
@@ -53,12 +59,12 @@
   padding-bottom: 8px;
 }
 
-.first-container {
+.firstContainer {
   height: 262;
   max-width: 383px;
 }
 
-.second-container {
+.secondContainer {
   margin-top: 24px;
   padding-bottom: 24px;
   width: 560px;
@@ -74,11 +80,11 @@
   padding-right: 32px;
 }
 
-.rate-container {
+.rateContainer {
   margin-top: auto;
 }
 
-.third-container {
+.thirdContainer {
   padding-top: 32px;
   padding-right: 24px;
   width: 200px;
@@ -86,7 +92,7 @@
   flex-direction: column;
 }
 
-.order-container {
+.orderContainer {
   padding-bottom: 24px;
   margin-top: auto;
 }
@@ -135,4 +141,12 @@
   right: unset;
   left: 0;
   transform: rotate(180deg);
+}
+
+.widthFontTitle {
+  width: 100%;
+}
+
+.cardFontPAdding {
+  padding-right: 14px;
 }

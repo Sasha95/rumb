@@ -8,7 +8,7 @@
     z-index: 9999;
   }
   
-  .modal-main {
+  .modalMain {
     border-radius: 10px;
     position:fixed;
     background: white;
@@ -19,11 +19,11 @@
     transform: translate(-50%,-50%);
   }
   
-  .display-block {
+  .displayBlock {
     display: block;
   }
   
-  .display-none {
+  .displayNone {
     display: none;
   }
 
@@ -51,7 +51,7 @@
     display: flex;
   }
 
-  .flex-container-langval {
+  .flexContainerLangval {
     padding: 0px;
     margin: 0;
     list-style: none;
@@ -59,7 +59,7 @@
     flex-wrap: wrap;
   }
   
-  .flex-item-langval {
+  .flexItemLangval {
     border: 1px solid #B7EB8F;
     cursor: pointer;
     box-sizing: border-box;
@@ -68,8 +68,8 @@
     margin: 20px;
   }
 
-  .flex-item-langval-unactive{
-    composes: flex-item-langval;
+  .flexItemLangvalUnactive{
+    composes: flexItemLangval;
     border: none;
   }
   

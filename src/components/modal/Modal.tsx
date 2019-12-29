@@ -10,10 +10,10 @@ interface Title {
 }
 
 export const Modal: React.FC<Title> = ({ title, show, onClose, children }) => {
-    const display = classNames(styles.modal, { [styles["display-block"]]: show }, { [styles["display-none"]]: !show });
+    const display = classNames(styles.modal, { [styles.displayBlock]: show }, { [styles.displayNone]: !show });
     return (
         <div className={display}>
-            <section className={styles["modal-main"]}>
+            <section className={styles.modalMain}>
                 <div className={styles.containter}>
                     <img className={styles.close} onClick={onClose} src={close} alt="close" />
                     <span className={styles.title}>{title}</span>

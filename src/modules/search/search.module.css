@@ -1,3 +1,8 @@
+.wrapper {
+  padding-top: 32px;
+  width: 1200px;
+}
+
 .btn {
   background: #ffffff;
   border: 1px solid #d9d9d9;
@@ -17,7 +22,7 @@
   padding-left: 5px;
 }
 
-.btn-active {
+.btnActive {
   border: 1px solid #389e0d;
 }
 

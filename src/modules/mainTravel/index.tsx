@@ -77,16 +77,16 @@ export const MainTravel = () => {
             проще
           </div>
           <div className={styles.container}>
-            <div className={styles["felx-container1"]}>
+            <div className={styles.felxContainer1}>
               <div>
                 <img className={styles.image} src={book} alt="interes" />
               </div>
               <div className={styles.line} />
-              <div className={styles["location-container"]}>
+              <div className={styles.locationContainer}>
                 <img className={styles.image} src={location} alt="location" />
               </div>
             </div>
-            <div className={styles["felx-container2"]}>
+            <div className={styles.felxContainer2}>
               <Interests handleSelected={handleSelected} />
               <Country handlePlace={handlePlace} />
             </div>
@@ -96,10 +96,10 @@ export const MainTravel = () => {
           <Button onClick={onClick} />
         </div>
       </div>
-      <div className={classnames(styles.wrapper, globalStyle.grayColor)}>
+      <div className={classnames(styles.wrapper, styles.grayColor)}>
         <Popular />
       </div>
-      <div className={classnames(styles.wrapper, globalStyle.whiteColor)}>
+      <div className={classnames(styles.wrapper, styles.whiteColor)}>
         <Row type="flex">
           <Col>
             <div className={globalStyle.popularText}>ПOПУЛЯРНЫЕ ТУРЫ</div>

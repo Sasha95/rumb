@@ -1,8 +1,8 @@
-.form-group {
+.formGroup {
   display: block;
 }
 
-.form-group input {
+.formGroup input {
   padding: 0;
   height: initial;
   width: initial;
@@ -11,7 +11,8 @@
   cursor: pointer;  
 }
 
-.form-group label {
+.formGroup label {
+  margin-left: 18px;
   position: relative;
   cursor: pointer;
   -webkit-touch-callout: none;
@@ -22,7 +23,7 @@
   user-select: none;
 }
 
-.form-group label:before {
+.formGroup label:before {
   content: "";
   -webkit-appearance: none;
   background-color: transparent;
@@ -39,7 +40,7 @@
   border-radius: 2px;
 }
 
-.form-group input:checked + label:after {
+.formGroup input:checked + label:after {
   content: "";
   display: block;
   position: absolute;
@@ -52,13 +53,9 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-.form-group input:checked + label::before {
+.formGroup input:checked + label::before {
   background: #389e0d;
   border: 1px solid #389e0d;
   box-sizing: border-box;
   border-radius: 2px;
-}
-
-.label {
-  padding-left: 18px;
 }

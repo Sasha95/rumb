@@ -64,12 +64,12 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
           minimumNights={3}
         />
       </Modal>
-      <div onClick={() => setShow(true)} className={styles['date-container']}>
+      <div onClick={() => setShow(true)} className={styles.dateContainer}>
         <Input
             readOnly
-            suffix={<span className={styles["custom-date"]}>{countDate}</span>}
+            suffix={<span className={classnames(styles.customDate, globalStyle.cursorPointer)}>{countDate}</span>}
             prefix={
-            <span className={styles["custom-label"]}>
+            <span className={styles.customLabel}>
                 <img className={styles.imageDate} src={calnedar} alt="calendar" />
                 <span className={classnames(styles.date, globalStyle.unselectable)}>Дата</span>                
             </span>

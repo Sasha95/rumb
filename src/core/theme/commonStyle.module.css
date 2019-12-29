@@ -1,12 +1,4 @@
-.whiteColor {
-  background: #FFFFFF;
-}
-
-.grayColor {
-  background: #FAFAFA;
-}
-
-.font-underline {
+.fontUnderline {
   text-decoration-line: underline;
   color: #389e0d;
   font-weight: normal;
@@ -21,18 +13,18 @@
   color: #262626;
 }
 
-.card-font {
+.cardFont {
   font-size: 14px;
   color: #8c8c8c;
   line-height: 22px;
   padding-left: 6px;
 }
 
-.font-rate {
+.fontRate {
   color: #389e0d;
 }
 
-.button-order {
+.buttonOrder {
     background: #389E0D;
     border-radius: 4px;
     cursor: pointer;
@@ -75,4 +67,17 @@
 .marginImage {
   margin-left: 24px;
   margin-right: 24px;
+}
+
+.leftContainer {
+  width: 408px;
+  padding-right: 24px;
+}
+
+.rightContainer {
+  width: 794px;
+}
+
+.cursorPointer {
+  cursor: pointer;
 }

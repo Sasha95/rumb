@@ -34,9 +34,9 @@ export const NumberOfPeoples: React.FC<IProps> = ({handleNumberOfPeople}) => {
 
     useEffect(()=> {
         handleNumberOfPeople(count)
-    }, [count])
+    }, [count, handleNumberOfPeople])
 
-    const display = classnames(styles.member, { [styles['member-unactive']]: !show });
+    const display = classnames(styles.member, { [styles.memberUnactive]: !show });
     return (
         <>
             <div className={styles.content}>
@@ -51,11 +51,11 @@ export const NumberOfPeoples: React.FC<IProps> = ({handleNumberOfPeople}) => {
                     suffix={<div className={styles.container}>
                         <div className={styles.data}>{count}
                         </div>
-                        <div className={styles["flex-container"]}>
+                        <div className={styles.flexContainer}>
                             <div onClick={counterAdd} className={styles.image}>
                                 <img width={8} height={8} src={up} alt={"up"} />
                             </div>
-                            <div className={styles["horizontal-line"]} >
+                            <div className={styles.horizontalLine} >
                                 <div onClick={counterSubtract} className={styles.image}>
                                     <img width={8} height={8} src={down} alt={"down"} />
                                 </div>
@@ -63,9 +63,10 @@ export const NumberOfPeoples: React.FC<IProps> = ({handleNumberOfPeople}) => {
                         </div>
                     </div>
                     }
-                    prefix={<span className={styles["costom-lable-people"]}>
+                    prefix={<span className={styles.costomLablePeople}>
                         <img style={{ paddingRight: "17px", marginLeft: "-7px" }} src={people} alt="people" />
-                        <span>Нас будет</span></span>}
+                        <span>Нас будет</span>
+                    </span>}
                 />
             </div>}
         </>

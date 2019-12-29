@@ -16,6 +16,7 @@ import { SelectedItem } from "../../components/selected";
 import { OrderInformation } from "../../components/orderInformation/OrderInformation";
 import moment from "moment";
 import Truncate from "react-truncate";
+import classnames from "classnames"
 
 export const Order = () => {
     const { orderId } = useParams();
@@ -28,7 +29,7 @@ export const Order = () => {
 
     return (
         <div className={styles.container}>
-            <div className={styles["image-container"]}>
+            <div className={styles.imageContainer}>
                 <Row type={"flex"} justify={"center"} align={"top"}>
                     <Col>
                         <img src={selected.images[0]} alt={"img"} />
@@ -36,42 +37,42 @@ export const Order = () => {
                     <Col className={globalStyle.marginImage}>
                         <img src={selected.images[1]} alt={"img"} />
                     </Col>
-                    <Col className={styles["social-container"]}>
+                    <Col className={styles.socialContainer}>
                         <img src={selected.images[2]} alt={"img"} />
-                        <div className={styles["social-like"]}>
+                        <div className={styles.socialLike}>
                             <img
-                                className={styles["share-like"]}
+                                className={styles.shareLike}
                                 src={share}
                                 alt={"share"}
                             />
-                            <span className={styles["share-like-text"]}>
+                            <span className={styles.shareLikeText}>
                                 Поделиться
                                     </span>
                         </div>
-                        <div className={styles["social-share"]}>
+                        <div className={styles.socialShare}>
                             <img
-                                className={styles["share-like"]}
+                                className={styles.shareLike}
                                 src={like}
                                 alt={"like"}
                             />
-                            <span className={styles["share-like-text"]}>Избранное</span>
+                            <span className={styles.shareLikeText}>Избранное</span>
                         </div>
                     </Col>
                 </Row>
-                <Row type={"flex"} justify={"center"} style={{ paddingTop: "35px" }}>
-                    <Col style={{ width: "408px", paddingRight: "24px" }}>
-                        <div className={styles["common-text"]}>
+                <Row type={"flex"} justify={"center"} className={styles.paddingLeftContainer}>
+                    <Col className={globalStyle.leftContainer}>
+                        <div className={styles.commonText}>
                             c {moment(selected.dateOfStart).format('D MMM YYYY')} по {moment(selected.dateOfEnd).format('D MMM YYYY')}
                         </div>
-                        <div className={styles["common-interes"]}>
+                        <div className={styles.commonInteres}>
                             {selected.title}
                         </div>
-                        <div className={styles["common-text"]} style={{ textTransform: "uppercase" }}>
+                        <div className={styles.commonText} style={{ textTransform: "uppercase" }}>
                             {selected.country} {selected.town ? ", " + selected.town : ""}
                         </div>
                     </Col>
 
-                    <Col style={{ width: "794px" }}>
+                    <Col className={globalStyle.rightContainer}>
                         <SelectedItem
                             imgage={book}
                             title={"Интерес"}
@@ -114,15 +115,15 @@ export const Order = () => {
                 >
                     <div>{selected.description}</div>
                 </Truncate>
-                <div className={globalStyle["font-underline"]} onClick={handleToggle}>{show ? "раскрыть" : "скрыть"}</div>
+                <div className={globalStyle.fontUnderline} onClick={handleToggle}>{show ? "раскрыть" : "скрыть"}</div>
             </OrderInformation>
             <OrderInformation title={"Что включено"}>
-                <div className={styles["forn-includ"]}>Инвентарь</div>
-                <div className={styles.font} style={{ paddingBottom: "10px", paddingTop: "10px" }}>{selected.including.inventory}</div>
-                <div className={styles["forn-includ"]}>Напитки</div>
-                <div className={styles.font} style={{ paddingBottom: "10px", paddingTop: "10px" }}>{selected.including.beverages}</div>
-                <div className={styles["forn-includ"]}>Питание</div>
-                <div className={styles.font} style={{ paddingTop: "10px" }}>{selected.including.nutrition}</div>
+                <div className={styles.fontInclud}>Инвентарь</div>
+                <div className={classnames(styles.font, styles.paddingInclud)}>{selected.including.inventory}</div>
+                <div className={styles.fontInclud}>Напитки</div>
+                <div className={classnames(styles.font, styles.paddingInclud)}>{selected.including.beverages}</div>
+                <div className={styles.fontInclud}>Питание</div>
+                <div className={classnames(styles.font, styles.paddingInclud)}>{selected.including.nutrition}</div>
             </OrderInformation>
             <OrderInformation title={"Требования к участнику"}>
                 <div className={styles.font}>{selected.requires}</div>
@@ -133,40 +134,40 @@ export const Order = () => {
             </OrderInformation>
             <OrderInformation title={"Правила отмены брони"}>
                 <div className={styles.font}>{selected.cancelReserv}</div>
-                <div className={globalStyle["font-underline"]}>
+                <div className={globalStyle.fontUnderline}>
                     перейти к правилам
-                    </div>
+                </div>
             </OrderInformation>
 
             <hr className={styles.hr} />
             <Row justify={"center"} type={"flex"}>
-                <Col style={{ minWidth: "408px", paddingRight: "24px", alignSelf: "center" }}>
+                <Col className={classnames(globalStyle.leftContainer, styles.centerContainer)}>
                     <div className={styles.footerDay}>{moment(selected.dateOfEnd).from(moment(selected.dateOfStart), true)}</div>
                     <div className={styles.footerText}>{selected.title}</div>
                 </Col>
-                <Col style={{width: "700px", textAlign: "end", paddingRight: "94px"}}>
+                <Col className={styles.footerContainer}>
                     <span className={globalStyle.cost}>
                         {selected.cost}
                         {selected.valute}
                     </span>
-                    <span className={globalStyle["card-font"]}>{selected.from}</span>
+                    <span className={globalStyle.cardFont}>{selected.from}</span>
                     <div>
-                        <span className={globalStyle["font-rate"]}>
+                        <span className={globalStyle.fontRate}>
                             {selected.rate}
                             {"  "}
                             <Rate
-                                className={globalStyle["font-rate"]}
+                                className={globalStyle.fontRate}
                                 disabled
                                 allowHalf
                                 defaultValue={Number(selected.rate.toFixed(1))}
                             />
                         </span>
-                        <span className={globalStyle["card-font"]}>
+                        <span className={globalStyle.cardFont}>
                             {selected.countRate}
                         </span>
                     </div>
                 </Col>
-                <Col style={{alignSelf: "center"}}>
+                <Col className={styles.centerContainer}>
                     <span className={styles.btnOrder}>Заказать</span>
                 </Col>
             </Row>

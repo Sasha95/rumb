@@ -24,11 +24,11 @@ export const Valute = () => {
     return (
         <>
             <Modal show={showModal} title={"Выбрать валюту"} onClose={handleCloseModal}>
-                <ul className={stylemodal["flex-container-langval"]} >
+                <ul className={stylemodal.flexContainerLangval} >
                     {valutes.map((item, index) => (
                         <li className={classNames(
-                                {[stylemodal["flex-item-langval"]]: item===selected, 
-                                [stylemodal["flex-item-langval-unactive"]]: item!==selected }
+                                {[stylemodal.flexItemLangval]: item===selected, 
+                                [stylemodal.flexItemLangvalUnactive]: item!==selected }
                             )}
                             onClick={()=>handleChange(item)} key={index}>
                                 <div className={stylemodal.titleItemModal}>{item.description}</div>
