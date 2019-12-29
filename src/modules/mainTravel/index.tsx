@@ -40,7 +40,7 @@ export const MainTravel = () => {
         places: place
       })
     );
-    history.push(`/search`);
+    history.push(`https://sasha95.github.io/rumb/search`);
   };
 
   dispatch(set_current(CurrentInitialState))
