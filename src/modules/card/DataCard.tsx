@@ -48,7 +48,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             ))}
           </Carousel>
           <Icon className={styles.rightArrow} type="right-circle" onClick={next} />
-          <div className={styles.placeContainer}>
+          <div className={classnames(styles.placeContainer, globalStyle.unselectable)}>
             <span className={styles.palce}>
               <img className={styles.image} src={place} alt={"place"} />
               <span className={styles.city}>

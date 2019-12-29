@@ -20,16 +20,6 @@
     flex: 1;
 }
 
-.countryAutocomplite {
-    width: 100%;
-    border: none;
-    margin-top: 30px;
-}
-
-.countryText {
-    text-align: right;
-    padding-right: 10px;
-}
 
 .locationContainer {
     display: flex;
@@ -54,23 +44,9 @@
     justify-content: center;
 }
 
-.hr {
-    display: flex;
-    margin: 0px;
-    border: 1px solid #E8E8E8;
-}
-
 .image {
     padding-left: 17px;
     padding-right: 17px;
-}
-
-.imageDate {
-    padding-left: 17px;
-}
-
-.date{
-    padding-left: 17px;
 }
 
 .line {
@@ -78,31 +54,6 @@
     margin-bottom: auto;
     transform: rotate( 90deg);
     border-top: 1px dashed #BFBFBF
-}
-
-
-.customDate{
-    padding-bottom: 8px;
-    padding-right: 22px;
-    color: #262626;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-.dateContainer{
-    width: 330px;
-    padding-top: 21px;
-    padding-bottom: 21px;
-    background: #FFFFFF;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.customLabel {
-    color: #BFBFBF;
-    font-weight: normal;
-    font-size: 14px;
-    margin-left: -10px;
 }
 
 .title {

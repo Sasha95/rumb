@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./order.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import { data } from "../../api/mock/cards";
@@ -26,6 +26,10 @@ export const Order = () => {
     const handleToggle = () => {
         setShow(!show)
     }
+
+    useEffect(()=> {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <div className={styles.container}>

@@ -5,11 +5,11 @@ import "moment/locale/ru";
 import { DayPickerRangeController, FocusedInputShape } from "react-dates";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
-import "./customantd.css";
-import styles from "./mainTravel.module.css";
+import styles from "./range.module.css";
 import calnedar from "../../resources/mainCalendar.svg";
 import classnames from "classnames"
 import globalStyle from "../../core/theme/commonStyle.module.css";
+import "../../modules/mainTravel/customantd.css"
 
 interface IProps {
   handleDate: (startDate: string, endDate: string) => void;
@@ -17,12 +17,12 @@ interface IProps {
 
 export const RangeDate: React.FC<IProps> = ({handleDate}) => {
   const [show, setShow] = useState();
-  const [startDate, setstartDate] = useState(moment());
-  const [endDate, setendDate] = useState(moment().add(3, "days"));
+  const [startDate, setstartDate] = useState(); //moment()
+  const [endDate, setendDate] = useState(); //moment().add(3, "days")
   const [countDate, setCountDate] = useState(
-    `${moment().format("DD MMM")} - ${moment()
-      .add(3, "days")
-      .format("DD MMM")}`
+    // `${moment().format("DD MMM")} - ${moment()
+    //   .add(3, "days")
+    //   .format("DD MMM")}`
   );
   const [focusedInput, setfocusedInput] = useState<FocusedInputShape>(
     "startDate"
@@ -69,7 +69,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
             readOnly
             suffix={<span className={classnames(styles.customDate, globalStyle.cursorPointer)}>{countDate}</span>}
             prefix={
-            <span className={styles.customLabel}>
+            <span className={globalStyle.customLabel}>
                 <img className={styles.imageDate} src={calnedar} alt="calendar" />
                 <span className={classnames(styles.date, globalStyle.unselectable)}>Дата</span>                
             </span>

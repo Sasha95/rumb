@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./otherFilter.module.css"
 import globalStyle from "../../core/theme/commonStyle.module.css"
 import { Modal } from "../modal/Modal"
@@ -11,6 +11,13 @@ interface IProps {
 }
 
 export const OtherFilter: React.FC<IProps> = ({ close, show }) => {
+    const [friends, setFrieds] = useState(false)
+    const [returns, setReturns] = useState(false);
+
+    const handleClear = () => {
+        setFrieds(false);
+        setReturns(false)
+    }
     return (
         <Modal show={show} title={"Другие фильтры"} onClose={close}>
             <div className={styles.container}>
@@ -20,7 +27,7 @@ export const OtherFilter: React.FC<IProps> = ({ close, show }) => {
                         <div className={styles.descript}>
                             Показать туры, которые недавно забронировали друзья
                         </div>
-                        <Switch />
+                        <Switch onChange={()=>{setFrieds(!friends)}} checked={friends} />
                     </div>
                     <hr className={styles.hr} />
                 </div>
@@ -30,14 +37,14 @@ export const OtherFilter: React.FC<IProps> = ({ close, show }) => {
                         <div className={styles.descript}>
                             Не показывать туры, в которых нет условий возврата
                         </div>
-                        <Switch />
+                        <Switch onChange={() => setReturns(!returns)} checked={returns} />
                     </div>
                     <hr className={styles.hr} />
                 </div>
                 <div className={styles.footerContainer}>
                     <hr className={styles.hr} />
                     <div className={styles.footer}>
-                        <span className={classnames(globalStyle.unselectable, styles.clear)}>Очистить всё</span>
+                        <span onClick={handleClear} className={classnames(globalStyle.unselectable, styles.clear)}>Очистить всё</span>
                         <span className={classnames(globalStyle.unselectable, styles.btn)}>Показать</span>
                     </div>
                 </div>

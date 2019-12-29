@@ -2,8 +2,7 @@ import React, { useState } from "react"
 import { options } from "../../api/mock/interests"
 import 'antd/dist/antd.css';
 import { Select } from 'antd';
-import styles from "./mainTravel.module.css"
-import "./customantd.css"
+import globalStyle from "../../core/theme/commonStyle.module.css"
 
 const { Option } = Select;
 interface IProps {
@@ -16,18 +15,13 @@ export const Interests: React.FC<IProps> = ({handleSelected}) => {
         if (!selected.includes("Интересы")){
             setSelected(["Интересы"])
         }
-        // setSelected(selected, ...x] as string[]);
         handleSelected(x);
     }
     return (
         <>
             <Select       
-                // prefixCls="ewfewf"
-                
-                // onInputKeyDown={x => {pressHandler(x.keyCode)}}
                 mode="multiple"
                 placeholder=""
-                // value={selected}
                 defaultValue={["Интересы"]}
                 onChange={(x: string[]) => onChange(x)}
                 optionLabelProp="value"
@@ -39,7 +33,7 @@ export const Interests: React.FC<IProps> = ({handleSelected}) => {
                     <Option key={index + 1} value={item}> {item} </Option>
                 ))}
             </Select>
-            <hr className={styles.hr} />
+            <hr className={globalStyle.hr} />
         </>
     )
 }

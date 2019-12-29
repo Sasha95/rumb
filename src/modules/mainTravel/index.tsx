@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Interests } from "./Interests";
+import { Interests } from "../../components/interests/Interests";
 import styles from "./mainTravel.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import book from "../../resources/mainBook.svg";
 import location from "../../resources/location.svg";
-import { Country } from "./Country";
-import { RangeDate } from "./RangeDate";
-import { NumberOfPeoples } from "./NumberOfPeoples";
+import { Country } from "../../components/country/Country";
+import { RangeDate } from "../../components/rangeDate/RangeDate";
+import { NumberOfPeoples } from "../../components/numberOfPeoples/NumberOfPeoples";
 import { Button } from "../../components/button/Button";
 import parachute from "../../resources/parachute.svg";
 import ellipse from "../../resources/ellipse.svg";
