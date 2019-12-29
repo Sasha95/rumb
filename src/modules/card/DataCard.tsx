@@ -21,7 +21,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
   const history = useHistory();
   const refContainer = useRef<any>();
   const handleOrder = () => {
-    history.push(`/rumb/order${card.id}`);
+    history.push(`/rumb/order${card.id}/`);
   }
 
   const next = () => {

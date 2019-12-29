@@ -29,18 +29,17 @@ export const Header = () => {
     const handleChange = (e: any) => {
         setTextInput(e.target.value)
     }
-
     return (
         <div style={{ paddingTop: "30px", paddingBottom: "30px" }}>
-            <Link to='/' className={styles.logo}>
+            <Link to='/rumb/' className={styles.logo}>
                 ЛОГО
             </Link>
             <Row justify={"center"} type={"flex"}>
                 <Col style={{ marginRight: "40px" }}>
                     <div>
                         <Input
-                            style={{ opacity: location.pathname === "/" ? 0 : 1 }}
-                            readOnly={location.pathname === "/"}
+                            style={{ opacity: location.pathname === "/rumb/" || location.pathname === "/rumb" ? 0 : 1 }}
+                            readOnly={location.pathname === "/rumb/" || location.pathname === "/rumb"}
                             onChange={handleChange}
                             value={textInput}
                             placeholder={"Начать поиск"}
@@ -51,7 +50,7 @@ export const Header = () => {
                 </Col>
                 {titles.map((item, index) => (
                     <span key={index}>
-                        <Link to={`/${item.name}`} className={styles.text}>
+                        <Link to={`rumb/${item.name}/`} className={styles.text}>
                             {item.description}
                         </Link>
                     </span>

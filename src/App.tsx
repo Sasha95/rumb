@@ -22,25 +22,25 @@ const App: React.FC = () => {
         <Route exact path="/rumb/">
           <MainTravel />
         </Route>
-        <Route path="/rumb/search">
+        <Route path="/rumb/search/">
           <Search />
         </Route>
-        <Route path="/rumb/order:orderId">
+        <Route path="/rumb/order:orderId/">
           <Order />
         </Route>
-        <Route path="/rumb/howItWorks">
+        <Route path="/rumb/howItWorks/">
           {/* <HowItWorks /> */}
         </Route>
-        <Route path="/rumb/reviews">
+        <Route path="/rumb/reviews/">
           {/* <Reviews /> */}
         </Route>
-        <Route path="/rumb/about">
+        <Route path="/rumb/about/">
           {/* <About /> */}
         </Route>
-        <Route path="/rumb/trips">
+        <Route path="/rumb/trips/">
           {/* <Trips /> */}
         </Route>
-        <Route path="/rumb/signIn">
+        <Route path="/rumb/signIn/">
           {/* <SignIn /> */}
         </Route>
       </Switch>
