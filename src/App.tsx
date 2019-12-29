@@ -15,32 +15,32 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
     <Router>
-      <Route path="https://sasha95.github.io/rumb/">
+      <Route path="/rumb/">
         <Header />
       </Route>
       <Switch>
-        <Route exact path="https://sasha95.github.io/rumb/">
+        <Route exact path="/rumb/">
           <MainTravel />
         </Route>
-        <Route path="https://sasha95.github.io/rumb/search">
+        <Route path="/rumb/search">
           <Search />
         </Route>
-        <Route path="https://sasha95.github.io/rumb/order:orderId">
+        <Route path="/rumb/order:orderId">
           <Order />
         </Route>
-        <Route path="https://sasha95.github.io/rumb/howItWorks">
+        <Route path="/rumb/howItWorks">
           {/* <HowItWorks /> */}
         </Route>
-        <Route path="https://sasha95.github.io/rumb/reviews">
+        <Route path="/rumb/reviews">
           {/* <Reviews /> */}
         </Route>
-        <Route path="https://sasha95.github.io/rumb/about">
+        <Route path="/rumb/about">
           {/* <About /> */}
         </Route>
-        <Route path="https://sasha95.github.io/rumb/trips">
+        <Route path="/rumb/trips">
           {/* <Trips /> */}
         </Route>
-        <Route path="https://sasha95.github.io/rumb/signIn">
+        <Route path="/rumb/signIn">
           {/* <SignIn /> */}
         </Route>
       </Switch>
