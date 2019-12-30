@@ -5,7 +5,7 @@ import { Languages } from '../../components/language/Language';
 import { Valute } from '../../components/valute/Valute';
 import { Input, Icon, Row, Col } from 'antd';
 import { useSelector } from 'react-redux';
-import { current } from '../../store/currentSelect/currentSelectors';
+import { currentSelector } from '../../store/currentSelect/currentSelectors';
 
 const titles = [
     { name: 'howItWorks', description: 'Как это работает' },
@@ -17,15 +17,15 @@ const titles = [
 
 export const Header = () => {
     const location = useLocation();
-    const selector = useSelector(current);
+    const current = useSelector(currentSelector);
     const [textInput, setTextInput] = useState();
     useEffect(() => {
-        if (selector.interests && selector.interests.length > 0){
-            setTextInput(selector.interests.join(", ").concat(selector.places ? " • " + selector.places : ""));
+        if (current.interests && current.interests.length > 0){
+            setTextInput(current.interests.join(", ").concat(current.places ? " • " + current.places : ""));
         } else{
-            setTextInput(selector.places);
+            setTextInput(current.places);
         }
-    }, [selector.interests, selector.places])
+    }, [current.interests, current.places])
     const handleChange = (e: any) => {
         setTextInput(e.target.value)
     }

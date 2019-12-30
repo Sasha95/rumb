@@ -5,7 +5,7 @@ import { DataCard } from "./DataCard";
 import { data } from "../../api/mock/cards";
 import { ICard } from "../../api/dto/Card";
 import { useSelector } from "react-redux";
-import { current } from "../../store/currentSelect/currentSelectors";
+import { currentSelector } from "../../store/currentSelect/currentSelectors";
 import { filter, sorting } from "./Helper";
 
 interface IProps {
@@ -16,10 +16,10 @@ interface IProps {
 export const Cards: React.FC<IProps> = ({sort, isFilter=false}) => {
   const [currentData, setCureentData] = useState<ICard[]>([]);
   const [filterData, setFilterData] = useState<ICard[]>();
-  const selector = useSelector(current);
+  const current = useSelector(currentSelector);
   
   useEffect(() => {
-    const result = filter(data, selector, isFilter);
+    const result = filter(data, current, isFilter);
     
     setFilterData(result)
     setCureentData(result.slice(currentData.length, currentData.length + 3));    

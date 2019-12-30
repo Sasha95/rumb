@@ -1,19 +1,17 @@
 import { createBrowserHistory } from "history";
 import { applyMiddleware, compose, createStore } from "redux";
+import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
-import thunkMiddleware from "redux-thunk";
-import { rootReducer } from "../rootReducer";
-import { getAppInitialState } from "../appState";
+import { IAppState, createMainReducer } from "../mainReducer";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 export const history = createBrowserHistory();
 
-const middleware = [thunkMiddleware];
-const initialState = getAppInitialState();
+const persistWhitelist: Array<keyof IAppState> = ["current"]
 const persistConfig = {
   key: "root",
   storage,
-  whitelist: ["current"]
+  whitelist: persistWhitelist
 };
 
 const composeEnhancers =
@@ -23,12 +21,14 @@ const composeEnhancers =
         shouldHotReload: false
       });
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
-const composedEnhancers = compose(
-  composeEnhancers(applyMiddleware(...middleware))
-);
+export function configureStore() {
+  const middleware = [thunk];
+  const enhancer = composeEnhancers(applyMiddleware(...middleware));
+  const persistedReducer = persistReducer(persistConfig, createMainReducer());
+  const store = createStore(persistedReducer, enhancer);
+  // const store: Cards<IAppState, Action> = createStore(persistedReducer, enhancer);
+  const persistor = persistStore(store);
+  // persistor.purge();
+  return { store, persistor };
+}
 
-export default () => {
-  const store = createStore(persistedReducer, initialState, composedEnhancers);
-  return { store, persistor: persistStore(store) };
-};

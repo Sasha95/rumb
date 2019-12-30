@@ -1,3 +1,3 @@
-import { IAppState } from "../../core/appState";
+import { IAppState } from "../../core/mainReducer";
 
-export const current = (state: IAppState) => state.current;
+export const currentSelector = (state: IAppState) => state.current;

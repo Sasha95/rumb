@@ -1,13 +1,3 @@
-import { createSelector } from "reselect";
-import { IAppState } from "../../core/appState";
+import { IAppState } from "../../core/mainReducer";
 
-export const LanguageSelectors = {
-  mapStateToProps: createSelector(
-    (state: IAppState) => state.language,
-    language => {
-      return {
-        language
-      };
-    }
-  )
-};
+export const languageSelectors = (state: IAppState) => state.language

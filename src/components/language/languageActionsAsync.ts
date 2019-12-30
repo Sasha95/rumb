@@ -1,9 +1,9 @@
 import {getLanguages, setLanguage} from "./languageActions"
-import { SimpleThunk } from "../../common/simpleThunk";
 import { LanguageSetData, LanguagesGetData } from "../../api/ApiRequestLanguages";
 import { ILanguages } from "../../api/dto/Languages.g";
+import { IThunkAction } from "../../core/mainReducer";
 
-export const getDataLanguages = (): SimpleThunk => {
+export const getDataLanguages = (): IThunkAction => {
     return async (dispatch): Promise<void> => {
         try {
             dispatch(getLanguages.started({}));
@@ -15,7 +15,7 @@ export const getDataLanguages = (): SimpleThunk => {
     }
 }
 
-export const setDataLanguage = (lang: ILanguages): SimpleThunk => {
+export const setDataLanguage = (lang: ILanguages): IThunkAction => {
     return async (dispatch): Promise<void> => {
         try {
             dispatch(setLanguage.started(lang));

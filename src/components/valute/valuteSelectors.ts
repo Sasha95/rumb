@@ -1,13 +1,3 @@
-import { createSelector } from "reselect";
-import { IAppState } from "../../core/appState";
+import { IAppState } from "../../core/mainReducer";
 
-export const ValuteSelectors = {
-  mapStateToProps: createSelector(
-    (state: IAppState) => state.valute,
-    valute => {
-      return {
-        valute
-      };
-    }
-  )
-};
+export const valuteSelectors = (state: IAppState) => state.valute;
