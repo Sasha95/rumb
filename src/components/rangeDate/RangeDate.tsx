@@ -17,12 +17,12 @@ interface IProps {
 
 export const RangeDate: React.FC<IProps> = ({handleDate}) => {
   const [show, setShow] = useState();
-  const [startDate, setstartDate] = useState(); //moment()
-  const [endDate, setendDate] = useState(); //moment().add(3, "days")
+  const [startDate, setstartDate] = useState(moment()); //
+  const [endDate, setendDate] = useState(moment().add(3, "days")); //
   const [countDate, setCountDate] = useState(
-    // `${moment().format("DD MMM")} - ${moment()
-    //   .add(3, "days")
-    //   .format("DD MMM")}`
+    `${moment().format("DD MMM")} - ${moment()
+      .add(3, "days")
+      .format("DD MMM")}`
   );
   const [focusedInput, setfocusedInput] = useState<FocusedInputShape>(
     "startDate"

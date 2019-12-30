@@ -96,10 +96,10 @@ export const MainTravel = () => {
           <Button onClick={onClick} />
         </div>
       </div>
-      <div className={classnames(styles.wrapper, styles.grayColor)}>
+      <div className={classnames(styles.wrapper, styles.backgroundPopularDirect)}>
         <Popular />
       </div>
-      <div className={classnames(styles.wrapper, styles.whiteColor)}>
+      <div className={classnames(styles.wrapper, styles.backgroundPopularTour)}>
         <Row type="flex">
           <Col>
             <div className={globalStyle.popularText}>ПOПУЛЯРНЫЕ ТУРЫ</div>

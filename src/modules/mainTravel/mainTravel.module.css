@@ -44,6 +44,14 @@
     justify-content: center;
 }
 
+.backgroundPopularTour {
+    background: #FFFFFF;
+}
+
+.backgroundPopularDirect {
+    background: #FAFAFA;
+}
+
 .image {
     padding-left: 17px;
     padding-right: 17px;

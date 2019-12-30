@@ -9,42 +9,45 @@ import { Search } from './modules/search';
 import { Order } from './modules/order/Order';
 import { Provider } from 'react-redux';
 import configureStore from './core/common/configureStore';
-const { store } = configureStore();
+import { PersistGate } from 'redux-persist/integration/react';
+const { store, persistor } = configureStore();
 
 const App: React.FC = () => {
   return (
     <Provider store={store}>
-    <Router>
-      <Route path="/rumb/">
-        <Header />
-      </Route>
-      <Switch>
-        <Route exact path="/rumb/">
-          <MainTravel />
-        </Route>
-        <Route path="/rumb/search/">
-          <Search />
-        </Route>
-        <Route path="/rumb/order:orderId/">
-          <Order />
-        </Route>
-        <Route path="/rumb/howItWorks/">
-          {/* <HowItWorks /> */}
-        </Route>
-        <Route path="/rumb/reviews/">
-          {/* <Reviews /> */}
-        </Route>
-        <Route path="/rumb/about/">
-          {/* <About /> */}
-        </Route>
-        <Route path="/rumb/trips/">
-          {/* <Trips /> */}
-        </Route>
-        <Route path="/rumb/signIn/">
-          {/* <SignIn /> */}
-        </Route>
-      </Switch>
-    </Router>
+      <PersistGate loading={null} persistor={persistor}>
+        <Router>
+          <Route path="/rumb/">
+            <Header />
+          </Route>
+          <Switch>
+            <Route exact path="/rumb/">
+              <MainTravel />
+            </Route>
+            <Route path="/rumb/search/">
+              <Search />
+            </Route>
+            <Route path="/rumb/order:orderId/">
+              <Order />
+            </Route>
+            <Route path="/rumb/howItWorks/">
+              {/* <HowItWorks /> */}
+            </Route>
+            <Route path="/rumb/reviews/">
+              {/* <Reviews /> */}
+            </Route>
+            <Route path="/rumb/about/">
+              {/* <About /> */}
+            </Route>
+            <Route path="/rumb/trips/">
+              {/* <Trips /> */}
+            </Route>
+            <Route path="/rumb/signIn/">
+              {/* <SignIn /> */}
+            </Route>
+          </Switch>
+        </Router>
+      </PersistGate>
     </Provider>
   );
 }
