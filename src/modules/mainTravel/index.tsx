@@ -62,39 +62,42 @@ export const MainTravel = () => {
   return (
     <>
       <div className={classnames(styles.wrapper, styles.mainWrapper)}>
-        <div className={styles.parachute}>
-          <img src={parachute} alt="parachute" />
-        </div>
-        <div className={styles.ellipse}>
+
+        {/* <div className={styles.ellipse}>
           <img src={ellipse} alt="ellipse" />
         </div>
         <div className={styles.ellipse1}>
           <img src={ellipse1} alt="ellipse1" />
-        </div>
+        </div> */}
         <div>
-          <div className={styles.title}>
-            Путешествуй увлечениями <br /> Планирование активного отдыха стало
-            проще
-          </div>
-          <div className={styles.container}>
-            <div className={styles.felxContainer1}>
-              <div>
-                <img className={styles.image} src={book} alt="interes" />
+            {/* <div className={styles.parachute}>
+              <img style={{ maxWidth: "100%" }} src={parachute} alt="parachute" />
+            </div> */}
+            <div>
+              <div className={styles.title}>
+                Путешествуй увлечениями <br /> Планирование активного отдыха стало
+                проще
               </div>
-              <div className={styles.line} />
-              <div className={styles.locationContainer}>
-                <img className={styles.image} src={location} alt="location" />
-              </div>
-            </div>
-            <div className={styles.felxContainer2}>
-              <Interests handleSelected={handleSelected} />
-              <Country handlePlace={handlePlace} />
+              <span className={styles.container}>
+                <div className={styles.felxContainer1}>
+                  <div>
+                    <img className={styles.image} src={book} alt="interes" />
+                  </div>
+                  <div className={styles.line} />
+                  <div className={styles.locationContainer}>
+                    <img className={styles.image} src={location} alt="location" />
+                  </div>
+                </div>
+                <div className={styles.felxContainer2}>
+                  <Interests handleSelected={handleSelected} />
+                  <Country handlePlace={handlePlace} />
+                </div>
+              </span>
+              <RangeDate handleDate={handleDate} />
+              <NumberOfPeoples handleNumberOfPeople={handleNumberOfPeople} />
+              <Button onClick={onClick} />
             </div>
           </div>
-          <RangeDate handleDate={handleDate} />
-          <NumberOfPeoples handleNumberOfPeople={handleNumberOfPeople} />
-          <Button onClick={onClick} />
-        </div>
       </div>
       <div className={classnames(styles.wrapper, styles.backgroundPopularDirect)}>
         <Popular />

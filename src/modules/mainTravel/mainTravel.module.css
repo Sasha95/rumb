@@ -74,7 +74,9 @@
     padding-bottom: 32px;
 }
 
-.parachute {
+
+
+/* .parachute {
     position: absolute;
     top: 25%;
     left: 15%;
@@ -94,4 +96,4 @@
     right: 0px;
     bottom: 0px;
     z-index: 0;
-}
+} */
