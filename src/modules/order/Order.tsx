@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./order.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import { data } from "../../api/mock/cards";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { ICard } from "../../api/dto/Card";
 import { Rate, Row, Col } from "antd";
 import like from "../../resources/like.svg";
@@ -22,6 +22,7 @@ export const Order = () => {
     const { orderId } = useParams();
     const selected: ICard = data.filter(x => x.id === Number(orderId))[0];
     const [show, setShow] = useState(false);
+    const history = useHistory();
 
     const handleToggle = () => {
         setShow(!show)
@@ -30,6 +31,10 @@ export const Order = () => {
     useEffect(()=> {
         window.scrollTo(0, 0);
     }, [])
+
+    const handleOrder = () => {
+        history.push('/checkout')
+    }
 
     return (
         <div className={styles.container}>
@@ -172,7 +177,7 @@ export const Order = () => {
                     </div>
                 </Col>
                 <Col className={styles.centerContainer}>
-                    <span className={styles.btnOrder}>Заказать</span>
+                    <span onClick={handleOrder} className={styles.btnOrder}>Заказать</span>
                 </Col>
             </Row>
         </div>
