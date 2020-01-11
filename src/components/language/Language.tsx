@@ -19,7 +19,6 @@ export const Languages = () => {
     }
     const handleChange = (item: ILanguages) => {
         setSelected(item);
-        setShowModal(false)
     }
 
     return (

@@ -40,7 +40,7 @@ export const Cards: React.FC<IProps> = ({sort, isFilter=false}) => {
   };
 
   return (
-    <div>
+    <div className={globalStyle.marginContainer}>
       {currentData.map(item => (
         <Row key={item.id}>
           <DataCard card={item} />

@@ -1,0 +1,35 @@
+.imageColContainer {
+    position: relative;
+}
+.imageColContainer + .imageColContainer {
+    margin-left: 24px;
+}
+.centerImage {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    text-align: center;
+}
+.textImage {
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 46px;
+}
+
+.img {
+    max-width: 100%;
+    min-width: 250px;
+}
+
+@media screen and (max-width: 850px) {
+    .imageColContainer {
+        margin-top: 20px;
+    }
+    .imageColContainer + .imageColContainer {
+        margin-left: 0px;
+    }
+}

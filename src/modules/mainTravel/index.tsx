@@ -105,7 +105,7 @@ export const MainTravel = () => {
       <div className={classnames(styles.wrapper, styles.backgroundPopularTour)}>
         <Row type="flex">
           <Col>
-            <div className={globalStyle.popularText}>ПOПУЛЯРНЫЕ ТУРЫ</div>
+            <div className={classnames(globalStyle.popularText, globalStyle.marginContainer)}>ПOПУЛЯРНЫЕ ТУРЫ</div>
             <Cards />
           </Col>
         </Row>

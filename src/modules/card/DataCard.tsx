@@ -13,6 +13,8 @@ import skin from "../../resources/skin.svg";
 import Truncate from 'react-truncate';
 import moment from "moment";
 import classnames from "classnames";
+import TextTruncate from 'react-text-truncate';
+import { useMedia } from "../../hooks/useMedia"
 
 interface IData {
   card: ICard;
@@ -31,6 +33,9 @@ export const DataCard: React.FC<IData> = ({ card }) => {
   const prev = () => {
     refContainer.current.prev();
   }
+  const Sizes = ["SMALL"]
+  const isMinimum = useMedia(["(max-width: 800px)"], Sizes, "BIG");
+  console.log(isMinimum)
 
   return (
     <div className={styles.container}>
@@ -42,6 +47,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             adaptiveHeight
             variableWidth
             ref={ref => refContainer.current = ref}
+            className={styles.corusel}
           >
             {card.images.map((image, index) => (
               <img key={index} className={styles.imageCarousel} src={image} alt={"place"} />
@@ -69,25 +75,29 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             <img src={date} alt={date} />
             <span className={styles.date}>{moment(card.dateOfStart).format('D MMMM YYYY')}</span>
           </span>
-          <span className={globalStyle.fontRate}>
-            {card.rate}
-            {"  "}
-            <Rate
-              className={globalStyle.fontRate}
-              disabled
-              allowHalf
-              defaultValue={Number(card.rate.toFixed(1))}
-            />
+          <span className={styles.rateFont}>
+            <span className={globalStyle.fontRate}>
+              {card.rate}
+              {"  "}
+              <Rate
+                className={globalStyle.fontRate}
+                disabled
+                allowHalf
+                defaultValue={Number(card.rate.toFixed(1))}
+              />
+            </span>
+            <span className={globalStyle.cardFont}>{card.countRate}</span>
           </span>
-          <span className={globalStyle.cardFont}>{card.countRate}</span>
         </div>
-        <Truncate
-          trimWhitespace
-          width={540}
-          lines={4}
-          ellipsis={<span>... <span className={styles.showmore} onClick={handleOrder}>Подробнее</span></span>}>
-          {card.description}
-        </Truncate>
+
+        <TextTruncate
+          containerClassName={styles.textTrunc}
+          line={isMinimum === "SMALL" ? 3 : 4}
+          element="span"
+          truncateText="…"
+          text={card.description}
+          textTruncateChild={<span className={styles.showmore} onClick={handleOrder}>Подробнее</span>}
+      />
       </div>
 
       <div className={styles.thirdContainer}>
@@ -101,14 +111,14 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             </span>
           }
         </span>
-        <div className={styles.fontContainer}>
+        <span className={styles.fontInline}>
           <img src={flash} alt={"flash"} />
           <span className={globalStyle.cardFont}>{card.professional}</span>
-        </div>
-        <div className={styles.fontContainer}>
+        </span>
+        <span className={styles.fontInline}>
           <img src={skin} alt={"skin"} />
           <span className={globalStyle.cardFont}>{card.equipment}</span>
-        </div>
+        </span>
         <span className={styles.orderContainer}>
           <span className={globalStyle.cost}>
             {card.cost}

@@ -30,7 +30,11 @@
 
 .mainWrapper {
     composis: wrapper;
-    height: 90vh;
+    min-height:90vh;
+    
+    background-image: url("../../resources/parachute.svg"), url("../../resources/ellipse.svg"), url("../../resources/ellipse1.svg");
+    background-repeat: no-repeat;
+    background-position: left center, left bottom, right bottom;
 }
 
 .wrapper {
@@ -74,26 +78,11 @@
     padding-bottom: 32px;
 }
 
-
-
-/* .parachute {
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    z-index: 0;
-}
-
-.ellipse {
-    position: absolute;
-    z-index: 0;
-    left: 0px;
-    bottom: 0px;
-    z-index: 0;
-}
-
-.ellipse1 {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    z-index: 0;
-} */
+@media screen and (max-width: 1024px) { 
+    .mainWrapper {
+      background-image: url("../../resources/ellipse.svg"), url("../../resources/ellipse1.svg");
+      background-position: left bottom, right bottom;
+      background-size: 50% 50%, 50% bottom;
+    }
+  }
+  

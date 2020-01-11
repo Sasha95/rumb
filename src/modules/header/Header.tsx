@@ -34,12 +34,13 @@ export const Header = () => {
             <Link to='/rumb/' className={styles.logo}>
                 ЛОГО
             </Link>
-            <Row justify={"center"} type={"flex"}>
+            <Row justify={"end"} type={"flex"}>
+                {location.pathname === "/rumb/" || location.pathname === "/rumb" &&
                 <Col style={{ marginRight: "40px" }}>
                     <div>
                         <Input
-                            style={{ opacity: location.pathname === "/rumb/" || location.pathname === "/rumb" ? 0 : 1 }}
-                            readOnly={location.pathname === "/rumb/" || location.pathname === "/rumb"}
+                            // style={{ opacity: location.pathname === "/rumb/" || location.pathname === "/rumb" ? 0 : 1 }}
+                            // readOnly={location.pathname === "/rumb/" || location.pathname === "/rumb"}
                             onChange={handleChange}
                             value={textInput}
                             placeholder={"Начать поиск"}
@@ -48,6 +49,7 @@ export const Header = () => {
                         />
                     </div>
                 </Col>
+                }
                 {titles.map((item, index) => (
                     <span key={index}>
                         <Link to={`rumb/${item.name}/`} className={styles.text}>

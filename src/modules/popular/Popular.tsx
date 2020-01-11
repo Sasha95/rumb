@@ -9,31 +9,22 @@ import location from "../../resources/loc_white.svg"
 import rbellips from "../../resources/rbellips.svg"
 import lbellipse from "../../resources/lbellipse.svg"
 import { Col, Row } from "antd"
+import { PopularCard } from "../../components/popularCard/PopularCard"
 
 export const Popular = () => {
+
     return (
-        <div>
+        <div className={globalStyle.marginContainer}>
             <img className={style.ellipseLeft} src={lbellipse} alt={"ellips"} />
             <img className={style.ellipseRight} src={rbellips} alt={"rbellips"} />
             <Row className={globalStyle.popularText}>
                 ПОПУЛЯРНЫЕ НАПРАВЛЕНИЯ
             </Row>
-            <Row type={"flex"} justify={"center"}>
-                <Col className={style.imageColContainer}>
-                    <img src={seul} alt={"Seul"} />
-                    <span className={classnames(style.centerImage, style.textImage, globalStyle.unselectable)}>Сеул</span>
-                </Col>
-                <Col className={style.imageColContainer}>
-                    <div className={globalStyle.marginImage}>
-                        <img src={york} alt={"New York"} />
-                        <span className={classnames(style.centerImage, style.textImage, globalStyle.unselectable)}>Нью-Йорк</span>
-                    </div>
-                </Col>
-                <Col className={style.imageColContainer}>
-                    <img src={singapur} alt={"Singapur"} />
-                    <span className={classnames(style.centerImage, style.textImage, globalStyle.unselectable)}>Сингапур</span>
-                </Col>
-            </Row>
+            <div className={style.imgContainer}>
+                <PopularCard cityName={"Сеул"} alt={"Seul"} image={seul} />
+                <PopularCard cityName={"Нью-Йорк"} alt={"New York"} image={york} />
+                <PopularCard cityName={"Сингапур"} alt={"Singapur"} image={singapur} />            
+            </div>
             <Row>
                 <Col>
                     <div className={style.btn}>

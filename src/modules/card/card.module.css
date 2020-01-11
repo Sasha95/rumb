@@ -4,22 +4,32 @@
   color: #262626;
 }
 
+.rateFont {
+  white-space: nowrap;
+}
+
 .fontContainer {
   padding-bottom: 8px;
   display: flex;
   flex-wrap: wrap;
 }
 
+.fontInline {
+  compose: fontContainer;
+  white-space: nowrap;
+}
+
 .imageCarousel{
-  height: 262px;
-  width: 383px;
+  max-height: 262px;
+  max-width: 383px;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  height: 264px;
-  width: 1200px;
+  max-height: 264px;
+  max-width: 1200px;
+  min-width: 375px;
   background: #FFFFFF;
   border: 1px solid #389e0d;
   box-sizing: border-box;
@@ -27,10 +37,14 @@
   margin-top: 26px;
 }
 
+.popContainer {
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
 .imgcont {
   position: relative;
   flex: 1;
-  width: 383px;
 }
 
 .placeContainer {
@@ -58,16 +72,41 @@
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.corusel {
+  max-width: 383px;
+}
+
 
 .firstContainer {
   height: 262;
   max-width: 383px;
+  margin-right: 25px;
+}
+
+@media screen and (max-width: 1152px) { 
+  .corusel {
+    max-width: 350px;
+  }
+  .firstContainer{
+    max-width: 300px;
+  }
+  .imageCarousel{
+    max-width: 350px;
+  }
 }
 
 .secondContainer {
-  margin-top: 24px;
   padding-bottom: 24px;
-  width: 560px;
+  padding-top: 24px;
+  margin-right: 50px;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+}
+.thirdContainer {
+  padding-top: 32px;
+  padding-right: 24px;
+  width: 200px;
   display: flex;
   flex-direction: column;
 }
@@ -83,14 +122,6 @@
 .rateContainer {
   margin-top: auto;
   padding-bottom: 10px;
-}
-
-.thirdContainer {
-  padding-top: 32px;
-  padding-right: 24px;
-  width: 200px;
-  display: flex;
-  flex-direction: column;
 }
 
 .orderContainer {
@@ -150,4 +181,66 @@
 
 .cardFontPAdding {
   padding-right: 14px;
+}
+
+.textTrunc {
+  display: block;
+}
+
+@media screen and (max-width: 800px){
+  .corusel {
+    max-width: 300px;
+  }
+  /* .firstContainer{
+    max-width: 300px;
+  } */
+  .imageCarousel{
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .secondContainer{
+    padding-top: 5px;
+    margin-right: 20px;
+    padding-bottom: 0px;
+  }
+  .thirdContainer {
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+  .rateContainer {
+    margin-top: 10px;
+  }
+  .firstContainer {
+    margin-right: 10px;
+    max-width: 250px;
+  }
+  .orderContainer {
+    padding-bottom: 5px;
+  }
+  .imageCarousel{
+    max-height: 210px;
+  }
+  .corusel {
+    max-height: 210px;
+  }
+  .fontTitle {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .container{
+    flex-direction: column;
+    max-height: 413px;
+  }
+  .thirdContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .textTrunc{
+    display: none;
+  }
+
 }

@@ -18,7 +18,6 @@ export const Valute = () => {
     }
     const handleChange = (item: IValute) => {
         setSelected(item)
-        setShowModal(false)
     }
 
     return (
