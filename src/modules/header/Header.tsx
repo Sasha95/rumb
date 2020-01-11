@@ -35,7 +35,7 @@ export const Header = () => {
                 ЛОГО
             </Link>
             <Row justify={"end"} type={"flex"}>
-                {location.pathname === "/rumb/" || location.pathname === "/rumb" &&
+                {location.pathname === "/rumb" &&
                 <Col style={{ marginRight: "40px" }}>
                     <div>
                         <Input

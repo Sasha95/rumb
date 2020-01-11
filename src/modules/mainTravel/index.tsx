@@ -8,9 +8,6 @@ import { Country } from "../../components/country/Country";
 import { RangeDate } from "../../components/rangeDate/RangeDate";
 import { NumberOfPeoples } from "../../components/numberOfPeoples/NumberOfPeoples";
 import { Button } from "../../components/button/Button";
-import parachute from "../../resources/parachute.svg";
-import ellipse from "../../resources/ellipse.svg";
-import ellipse1 from "../../resources/ellipse1.svg";
 import { Footer } from "../footer/Footer";
 import { useHistory } from "react-router-dom";
 import { Popular } from "../popular/Popular";
@@ -62,17 +59,6 @@ export const MainTravel = () => {
   return (
     <>
       <div className={classnames(styles.wrapper, styles.mainWrapper)}>
-
-        {/* <div className={styles.ellipse}>
-          <img src={ellipse} alt="ellipse" />
-        </div>
-        <div className={styles.ellipse1}>
-          <img src={ellipse1} alt="ellipse1" />
-        </div> */}
-        <div>
-            {/* <div className={styles.parachute}>
-              <img style={{ maxWidth: "100%" }} src={parachute} alt="parachute" />
-            </div> */}
             <div>
               <div className={styles.title}>
                 Путешествуй увлечениями <br /> Планирование активного отдыха стало
@@ -98,7 +84,6 @@ export const MainTravel = () => {
               <Button onClick={onClick} />
             </div>
           </div>
-      </div>
       <div className={classnames(styles.wrapper, styles.backgroundPopularDirect)}>
         <Popular />
       </div>

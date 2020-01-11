@@ -27,7 +27,6 @@
 .container {
   display: flex;
   justify-content: space-between;
-  max-height: 264px;
   max-width: 1200px;
   min-width: 375px;
   background: #FFFFFF;
@@ -75,7 +74,6 @@
 .corusel {
   max-width: 383px;
 }
-
 
 .firstContainer {
   height: 262;
@@ -191,9 +189,6 @@
   .corusel {
     max-width: 300px;
   }
-  /* .firstContainer{
-    max-width: 300px;
-  } */
   .imageCarousel{
     max-width: 300px;
   }
@@ -233,14 +228,62 @@
 @media screen and (max-width: 768px){
   .container{
     flex-direction: column;
-    max-height: 413px;
   }
   .thirdContainer {
+    width: 375px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px;
+    margin-left: 11px;
   }
+  .secondContainer{
+    margin-left: 11px;
+  }
+  .firstContainer{
+    margin: 0px;
+    max-width: 386px;
+  }
+  .corusel{
+    max-width: 386px;
+    width: 386px;
+  }
+  .imageCarousel{
+    max-width: 386px;
+  }
+
   .textTrunc{
     display: none;
   }
+  .fontInline{
+    margin-right: 13px;
+  }
+  .fontContainer{
+    white-space: nowrap;
+    display: block;
+    margin-right: 13px;
+  }
 
+  .cardFontPAdding ~ .cardFontPAdding{
+    padding-right: 0px;
+  }
+  .orderContainer{
+    width: 386px;
+    display: flex;
+    background-color: #F6FFED;
+    border-radius: 8px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin-top: 11px;
+    margin-left: -11px;
+  }
+  .costSmall {
+    padding-left: 11px;
+  }
+  .order{
+    margin: 11px 11px 11px 0px;
+    width: 176px;
+    height: 40px;
+  }
 }

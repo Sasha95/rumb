@@ -45,7 +45,7 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
     setfocusedInput(!focusedInput ? "startDate" : focusedInput);
   };
   return (
-    <>
+    <div className={styles.container}>
       <Modal
         centered
         visible={show}
@@ -76,6 +76,6 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
           }            
         />
       </div>
-    </>
+    </div>
   );
 };
