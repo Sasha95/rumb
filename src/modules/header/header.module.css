@@ -1,44 +1,111 @@
-.ul {
+.menuBar{
+  padding: 0 83px;
+  overflow: auto;
   display: flex;
-  list-style-type: none;
-  justify-content: flex-end;
-  padding-top: 37px;
-  padding-right: 120px;
+  align-items: center;
 }
-
-.logo {
-  position: absolute;
-  top: 37px;
-  left: 26px;
-  text-decoration: none;
-  color: #000000;
+.textBold {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
 }
 
-.text {
-  color: black;
-  margin-right: 37px;
+.logo{
+  float: left;
+}
+.logos{
+  display: inline-block;
+  font-size: 20px;
+  padding: 18px 20px;
+  text-transform: capitalize;
+  width: 120px;
   text-decoration: none;
-}
-
-.textBold {
-  composes: text;
+  color: #000000;
   font-weight: 600;
-  cursor: pointer;
+  line-height: 24px;
+}
+.menuCon{
+  width: calc(100% - 120px);
+  float: left;
+}
+.menuCon .ant-menu-item{
+  padding: 0px 5px;
+}
+.menuCon .ant-menu-submenu-title{
+  padding: 10px 20px;
+}
+.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a{
+  padding: 10px 15px;
+}
+.menuCon .ant-menu-horizontal{
+  border-bottom: none;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover{
+  border-bottom-color: transparent;
+}
+.menuCon .rightMenu{
+  float: right;
+  background-color: transparent;
 }
 
-.search {
-  margin-right: auto;
+.barsMenu{
+  float: right;
+  height: 32px;
+  padding: 0px 6px 6px 6px;
+  margin-top: 8px;
+  display: none;
+  background: none;
+}
+.barsBtn{
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #389E0D;
+  border-radius: 1px;
+  position: relative;
+}
+.barsBtn:after,.barsBtn:before{
+  content: attr(x);
+  width: 20px;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 2px;
+  background: #389E0D;
+  border-radius: 1px;
+}
+.barsBtn:after{
+  top: auto;
+  bottom: -6px;
 }
 
-.centerContainer {
-  margin-left: auto;
-  margin-right: auto;
+.modified{
+  border-bottom: 2px solid transparent !important;
+  color: inherit !important;
 }
 
-.container{
-  width: 384px;
-  right: 35px
+
+@media(max-width: 800px){
+  .barsMenu{
+    margin: 32px 23px;
+    display: inline-block;
+  }
+  .leftMenu,.rightMenu{
+    display: none;
+  }
+  .logos{
+    margin-left: -20px;
+  }
+  .logos{
+    padding: 10px 20px;
+  }
+  .menuBar {
+    margin-left: 23px;
+  }
+}
+
+@media(max-width: 1080px){ 
+  .menuBar {
+    padding: 0px;
+  }
 }

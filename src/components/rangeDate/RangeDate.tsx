@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, Input } from "antd";
 import moment from "moment";
 import "moment/locale/ru";
-import { DayPickerRangeController, FocusedInputShape } from "react-dates";
+import { DayPickerRangeController, FocusedInputShape, DayPickerRangeControllerShape } from "react-dates";
 import "react-dates/initialize";
 import "react-dates/lib/css/_datepicker.css";
 import styles from "./range.module.css";
@@ -10,6 +10,7 @@ import calnedar from "../../resources/mainCalendar.svg";
 import classnames from "classnames"
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import "../../modules/mainTravel/customantd.css"
+import { useMedia } from "../../hooks/useMedia";
 
 interface IProps {
   handleDate: (startDate: string, endDate: string) => void;
@@ -44,16 +45,21 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
   const onFocusChange = (focusedInput: FocusedInputShape | null) => {
     setfocusedInput(!focusedInput ? "startDate" : focusedInput);
   };
+  const Sizes = ["SMALL"];
+  const isMinimum = useMedia(["(max-width: 800px)"], Sizes, "BIG");
+  
   return (
     <div className={styles.container}>
       <Modal
+        width={isMinimum && "375px"}
         centered
         visible={show}
         onCancel={() => setShow(false)}
         footer={null}
       >
+        <div style={{height:isMinimum === "SMALL"? "500px": "100%"}}>
         <DayPickerRangeController
-          numberOfMonths={2}
+          numberOfMonths={isMinimum === "SMALL"? 12: 2}
           onDatesChange={onDatesChange}
           onFocusChange={onFocusChange}
           focusedInput={focusedInput}
@@ -62,7 +68,10 @@ export const RangeDate: React.FC<IProps> = ({handleDate}) => {
           withPortal={true}
           hideKeyboardShortcutsPanel
           minimumNights={3}
+          navNext={isMinimum === "SMALL"? <div />: undefined}
+          orientation={isMinimum === "SMALL"? "verticalScrollable": "horizontal"}
         />
+        </div>
       </Modal>
       <div onClick={() => setShow(true)} className={styles.dateContainer}>
         <Input

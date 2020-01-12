@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 .dateContainer{
-    width: 330px;
+    max-width: 330px;
     padding-top: 21px;
     padding-bottom: 21px;
     background: #FFFFFF;

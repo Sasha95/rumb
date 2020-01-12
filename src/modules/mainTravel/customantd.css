@@ -115,6 +115,9 @@
 .ant-modal-close-x{
   display: none;
 }
+.ant-modal-body{
+  padding: 0px;
+}
 
 /* Calendar */
 
@@ -184,4 +187,39 @@
   height: 8px;
   border-radius: 30px;
   width: 8px;
+}
+
+/* menu */
+
+.ant-drawer-body{
+  padding: 0;
+}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item, .ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu{
+  display: inline-block;
+  width: 100%;
+}
+.ant-drawer-body .ant-menu-horizontal{
+  border-bottom: none;
+}
+.ant-menu-root.ant-menu-vertical, .ant-menu-root.ant-menu-vertical-left, .ant-menu-root.ant-menu-vertical-right, .ant-menu-root.ant-menu-inline {
+    width: 100%;
+}
+.ant-menu {
+  background: transparent;
+}
+.ant-menu-horizontal{
+  border-bottom: none;
+}
+.ant-btn-primary{
+  border-color: transparent;
+  box-shadow: none;
+}
+.ant-btn{
+  border-color: transparent;
+}
+.ant-menu-horizontal > .ant-menu-item > a:hover{
+  color: #262626;
+}
+.ant-menu-horizontal > .ant-menu-item-selected > a{
+  color: #262626;
 }
