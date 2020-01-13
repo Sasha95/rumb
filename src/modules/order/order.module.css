@@ -97,6 +97,7 @@
     composes: buttonOrder from '../../core/theme/commonStyle.module.css';
     width: 100px;
     height: 32px;
+    text-align: center;
 }
 
 .footerDay {
@@ -110,10 +111,15 @@
     color: #262626;
 }
 
+.footerTextContainer {
+    text-align: justify;
+}
+
 .footerContainer {
     width: 700px;
-    text-align: end; 
     padding-right: 94px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .centerContainer {

@@ -27,7 +27,7 @@ export const Order = () => {
         setShow(!show)
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
 
@@ -150,29 +150,31 @@ export const Order = () => {
                     <div className={styles.footerText}>{selected.title}</div>
                 </Col>
                 <Col className={styles.footerContainer}>
-                    <span className={globalStyle.cost}>
-                        {selected.cost}
-                        {selected.valute}
-                    </span>
-                    <span className={globalStyle.cardFont}>{selected.from}</span>
                     <div>
-                        <span className={globalStyle.fontRate}>
-                            {selected.rate}
-                            {"  "}
-                            <Rate
-                                className={globalStyle.fontRate}
-                                disabled
-                                allowHalf
-                                defaultValue={Number(selected.rate.toFixed(1))}
-                            />
+                        <span className={globalStyle.cost}>
+                            {selected.cost}
+                            {selected.valute}
                         </span>
-                        <span className={globalStyle.cardFont}>
-                            {selected.countRate}
-                        </span>
+                        <span className={globalStyle.cardFont}>{selected.from}</span>
+                        <div>
+                            <span className={globalStyle.fontRate}>
+                                {selected.rate}
+                                {"  "}
+                                <Rate
+                                    className={globalStyle.fontRate}
+                                    disabled
+                                    allowHalf
+                                    defaultValue={Number(selected.rate.toFixed(1))}
+                                />
+                            </span>
+                            <span className={globalStyle.cardFont}>
+                                {selected.countRate}
+                            </span>
+                        </div>
                     </div>
                 </Col>
                 <Col className={styles.centerContainer}>
-                    <span className={styles.btnOrder}>Заказать</span>
+                    <div className={styles.btnOrder}>Заказать</div>
                 </Col>
             </Row>
         </div>
