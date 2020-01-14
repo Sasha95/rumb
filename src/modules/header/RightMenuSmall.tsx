@@ -23,7 +23,7 @@ export const RightMenuSmall: React.FC<IProps> = ({titles}) => {
             </Menu.Item>
             {titles.map((item, index) => (
             <Menu.Item className={styles.modified} key={index}>
-                <Link to={`rumb/${item.name}/`} className={styles.text}>
+                <Link to={`rumb/${item.name}/`}>
                     {item.description}
                 </Link>
             </Menu.Item>

@@ -100,9 +100,21 @@
   font-size: 14px;
   margin-left: -10px;
 }
+.imageContainer {
+  padding-top: 70px;
+  background: #262626;
+  padding-bottom: 40px;
+}
+
+.fontOrder {
+  font-weight: normal;
+  color: #8C8C8C;
+  font-size: 20px;
+  line-height: 28px;
+}
 
 @media screen and (max-width: 850px) {
     .popularText{
         text-align: center;
     }
-  }
+}

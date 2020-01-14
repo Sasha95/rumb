@@ -14,10 +14,10 @@ interface IProps {
 
 export const RightMenuBig: React.FC<IProps> = ({titles}) => {
     return(
-        <Menu mode="horizontal" inlineCollapsed={false}>   
+        <Menu mode="horizontal" inlineCollapsed={false}>        
             {titles.map((item, index) => (
             <Menu.Item className={styles.modified} key={index}>
-                <Link to={`rumb/${item.name}/`} className={styles.text}>
+                <Link to={`rumb/${item.name}/`} replace={true}>
                     {item.description}
                 </Link>
             </Menu.Item>

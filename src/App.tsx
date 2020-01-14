@@ -4,15 +4,16 @@ import { Route, Switch } from "react-router-dom";
 import { MainTravel } from './modules/mainTravel';
 import { Search } from './modules/search';
 import { Order } from './modules/order/Order';
+import { Payment } from './modules/order/payment/Payment';
 
 const App: React.FC = () => {
   return (
     <>
-      <Route path="/rumb/">
+      <Route path="/rumb">
         <Header />
       </Route>
       <Switch>
-        <Route exact path="/rumb/">
+        <Route exact path="/rumb">
           <MainTravel />
         </Route>
         <Route path="/rumb/search/">
@@ -20,6 +21,9 @@ const App: React.FC = () => {
         </Route>
         <Route path="/rumb/order:orderId/">
           <Order />
+        </Route>
+        <Route path="/rumb/payment:orderId/">
+          <Payment />
         </Route>
         <Route path="/rumb/howItWorks/">
           {/* <HowItWorks /> */}

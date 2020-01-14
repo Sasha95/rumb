@@ -10,7 +10,7 @@ import calnedar from "../../resources/mainCalendar.svg";
 import classnames from "classnames"
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import "../../modules/mainTravel/customantd.css"
-import { useMedia } from "../../hooks/useMedia";
+import { CalendarModal } from "./CalendarModal";
 
 interface IProps {
   handleDate: (startDate: string, endDate: string) => void;
@@ -18,61 +18,20 @@ interface IProps {
 
 export const RangeDate: React.FC<IProps> = ({handleDate}) => {
   const [show, setShow] = useState();
-  const [startDate, setstartDate] = useState(moment()); //
-  const [endDate, setendDate] = useState(moment().add(3, "days")); //
   const [countDate, setCountDate] = useState(
     `${moment().format("DD MMM")} - ${moment()
       .add(3, "days")
       .format("DD MMM")}`
   );
-  const [focusedInput, setfocusedInput] = useState<FocusedInputShape>(
-    "startDate"
-  );
-
-  useEffect(()=> {
-    if (startDate && endDate){
-    handleDate(startDate.format("YYYY-MM-DD"), endDate.format("YYYY-MM-DD"));
-    }
-  }, [startDate, endDate, handleDate])
-
-  const onDatesChange = ({ startDate, endDate }: any) => {
-    setstartDate(startDate);
-    setendDate(endDate);
-    if (startDate && endDate){
-      setCountDate(`${startDate.format("DD MMM")} - ${endDate.format("DD MMM")}`);
-    }
-  };
-  const onFocusChange = (focusedInput: FocusedInputShape | null) => {
-    setfocusedInput(!focusedInput ? "startDate" : focusedInput);
-  };
-  const Sizes = ["SMALL"];
-  const isMinimum = useMedia(["(max-width: 800px)"], Sizes, "BIG");
   
   return (
     <div className={styles.container}>
-      <Modal
-        width={isMinimum && "375px"}
-        centered
-        visible={show}
-        onCancel={() => setShow(false)}
-        footer={null}
-      >
-        <div style={{height:isMinimum === "SMALL"? "500px": "100%"}}>
-        <DayPickerRangeController
-          numberOfMonths={isMinimum === "SMALL"? 12: 2}
-          onDatesChange={onDatesChange}
-          onFocusChange={onFocusChange}
-          focusedInput={focusedInput}
-          startDate={startDate}
-          endDate={endDate}
-          withPortal={true}
-          hideKeyboardShortcutsPanel
-          minimumNights={3}
-          navNext={isMinimum === "SMALL"? <div />: undefined}
-          orientation={isMinimum === "SMALL"? "verticalScrollable": "horizontal"}
-        />
-        </div>
-      </Modal>
+      <CalendarModal 
+        setShow={setShow} 
+        show={show} 
+        handleDate={handleDate}
+        setCountDate={setCountDate}
+      />
       <div onClick={() => setShow(true)} className={styles.dateContainer}>
         <Input
             readOnly

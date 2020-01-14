@@ -223,3 +223,6 @@
 .ant-menu-horizontal > .ant-menu-item-selected > a{
   color: #262626;
 }
+.ant-menu-vertical {
+  border-right: none;
+}

@@ -2,26 +2,23 @@ import React, { useState, useEffect } from "react";
 import styles from "./order.module.css";
 import globalStyle from "../../core/theme/commonStyle.module.css";
 import { data } from "../../api/mock/cards";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { ICard } from "../../api/dto/Card";
 import { Rate, Row, Col } from "antd";
-import like from "../../resources/like.svg";
-import share from "../../resources/share.svg";
-import book from "../../resources/book.svg";
-import calendar from "../../resources/calendar.svg";
-import time from "../../resources/time.svg";
-import thunder from "../../resources/thunder.svg";
-import equipment from "../../resources/equipment.svg";
-import { SelectedItem } from "../../components/selected";
 import { OrderInformation } from "../../components/orderInformation/OrderInformation";
 import moment from "moment";
 import Truncate from "react-truncate";
 import classnames from "classnames"
+import { ImageContainer } from "./ImageContainer";
+import { CardInfo } from "./CardInfo";
+import { RangeDate } from "../../components/rangeDate/RangeDate";
+import { CalendarModal } from "../../components/rangeDate/CalendarModal";
 
 export const Order = () => {
     const { orderId } = useParams();
     const selected: ICard = data.filter(x => x.id === Number(orderId))[0];
     const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState();
 
     const handleToggle = () => {
         setShow(!show)
@@ -30,92 +27,31 @@ export const Order = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
+    const handleDate = (startDate: string, endDate: string) => {
+        console.log(startDate, endDate)
+    }
+    const history = useHistory();
+    const handlePay = () => {
+        setShowModal(true)
+        // history.push(`/rumb/payment${selected.id}/requires`)
+    }
 
     return (
+        <>
+        <CalendarModal show={showModal} setShow={setShowModal} handleDate={handleDate}>
+            <div>TEST!!!</div>
+        </CalendarModal>
         <div className={styles.container}>
-            <div className={styles.imageContainer}>
-                <Row type={"flex"} justify={"center"} align={"top"}>
-                    <Col>
-                        <img src={selected.images[0]} alt={"img"} />
-                    </Col>
-                    <Col className={globalStyle.marginImage}>
-                        <img src={selected.images[1]} alt={"img"} />
-                    </Col>
-                    <Col className={styles.socialContainer}>
-                        <img src={selected.images[2]} alt={"img"} />
-                        <div className={styles.socialLike}>
-                            <img
-                                className={styles.shareLike}
-                                src={share}
-                                alt={"share"}
-                            />
-                            <span className={styles.shareLikeText}>
-                                Поделиться
-                                    </span>
-                        </div>
-                        <div className={styles.socialShare}>
-                            <img
-                                className={styles.shareLike}
-                                src={like}
-                                alt={"like"}
-                            />
-                            <span className={styles.shareLikeText}>Избранное</span>
-                        </div>
-                    </Col>
-                </Row>
-                <Row type={"flex"} justify={"center"} className={styles.paddingLeftContainer}>
-                    <Col className={globalStyle.leftContainer}>
-                        <div className={styles.commonText}>
-                            c {moment(selected.dateOfStart).format('D MMM YYYY')} по {moment(selected.dateOfEnd).format('D MMM YYYY')}
-                        </div>
-                        <div className={styles.commonInteres}>
-                            {selected.title}
-                        </div>
-                        <div className={styles.commonText} style={{ textTransform: "uppercase" }}>
-                            {selected.country} {selected.town ? ", " + selected.town : ""}
-                        </div>
-                    </Col>
-
-                    <Col className={globalStyle.rightContainer}>
-                        <SelectedItem
-                            imgage={book}
-                            title={"Интерес"}
-                            description={selected.interes}
-                            descriptionImage={"regata"}
-                        />
-                        <SelectedItem
-                            imgage={calendar}
-                            title={"Дата начала"}
-                            description={moment(selected.dateOfStart).format('D MMMM YYYY')}
-                            descriptionImage={"date"}
-                        />
-                        <SelectedItem
-                            imgage={time}
-                            title={"Длительность"}
-                            description={moment(selected.dateOfEnd).from(moment(selected.dateOfStart), true)}
-                            descriptionImage={"dureation"}
-                        />
-                        <SelectedItem
-                            imgage={thunder}
-                            title={"Уровень сложности"}
-                            description={selected.professional}
-                            descriptionImage={"level"}
-                        />
-                        <SelectedItem
-                            imgage={equipment}
-                            title={"Оборудование"}
-                            description={selected.equipment}
-                            descriptionImage={"equimpment"}
-                        />
-                    </Col>
-                </Row>
+            <div className={globalStyle.imageContainer}>       
+                <ImageContainer selected={selected} />        
+                <CardInfo selected={selected}/>
             </div>
             <OrderInformation operator={true} title={"Чем мы займемся"}>
                 <Truncate
                     trimWhitespace
                     lines={show ? 5 : false}
                     open={show}
-                    className={styles.font}
+                    className={globalStyle.fontOrder}
                 >
                     <div>{selected.description}</div>
                 </Truncate>
@@ -134,7 +70,7 @@ export const Order = () => {
             </OrderInformation>
             <OrderInformation title={"Где мы будем"}>
                 <div className={styles.font}>{selected.adress.fullAdress}</div>
-                <div className={styles.font}>{selected.adress.timeStart}</div>
+                <div className={styles.font}>Начало в {selected.adress.timeStart} по местному времени.</div>
             </OrderInformation>
             <OrderInformation title={"Правила отмены брони"}>
                 <div className={styles.font}>{selected.cancelReserv}</div>
@@ -174,9 +110,10 @@ export const Order = () => {
                     </div>
                 </Col>
                 <Col className={styles.centerContainer}>
-                    <div className={styles.btnOrder}>Заказать</div>
+                    <div onClick={handlePay} className={styles.btnOrder}>Заказать</div>
                 </Col>
             </Row>
         </div>
+        </>
     );
 };

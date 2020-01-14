@@ -2,12 +2,6 @@
     background: #FFFFFF;
 }
 
-.imageContainer {
-    padding-top: 70px;
-    background: #262626;
-    padding-bottom: 40px;
-}
-
 .row {
     display: -webkit-box;
     display: -moz-box;
@@ -21,52 +15,6 @@
 .cell {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto; 
-}
-
-.socialContainer {
-    position: relative;
-}
-.socialLike {
-    position: absolute;
-    top: 13px;
-    left: 30px;
-    background: #FFFFFF;
-    border: 1px solid #D9D9D9;
-    box-sizing: border-box;
-    border-radius: 4px;
-    width: 150px;
-    cursor: pointer;
-}
-.socialShare {
-    composes: socialLike;
-    left: 210px;
-}
-
-.shareLike{
-    padding: 10px 1px 10px 18px;
-}
-.shareLikeText{
-    color: #595959;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-    padding: 5px 16px 5px 15px;
-}
-
-.commonText {
-    color: #F5F5F5;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 22px;
-}
-
-.commonInteres {
-    color: #FFFFFF;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 32px;
-    padding-bottom: 5px;
-    padding-top: 5px;
 }
 
 .font {
@@ -131,6 +79,3 @@
     padding-top: 10px;
 }
 
-.paddingLeftContainer{
-    padding-top: 35px;
-}

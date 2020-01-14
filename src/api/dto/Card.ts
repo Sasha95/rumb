@@ -25,6 +25,7 @@ export interface ICard {
     adress: {
         fullAdress: string,
         timeStart: string,
+        timeEnd: string,
     }
     cancelReserv: string,
     images: string[]

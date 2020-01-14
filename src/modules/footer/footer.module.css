@@ -1,11 +1,11 @@
 .wrapper {
-    height: 40px;
+    /* height: 40px; */
     background-color: #ffffff;
     display: flex;
     justify-content: center;
     text-align: left;
     bottom: 0;
-    width: 100%;
+    /* width: 100%; */
     position: relative;
 }
 
@@ -21,7 +21,7 @@
     height: 24px;
     font-size: 14px;
     line-height: 22px;
-    display: flex;
+    /* display: flex; */
     align-self: center;
     color: #52C41A;
     cursor: pointer;
@@ -38,5 +38,20 @@
 @media(max-width: 960px){ 
     .btn {
         left: 30px;
+    }
+}
+
+@media(max-width: 640px){ 
+    .btn{
+        position: static;        
+        align-self: start;
+        margin-left: 20px;
+    }
+    .text{
+        margin-left: 10px;
+    }
+    .wrapper{
+        flex-direction: column-reverse;
+        padding-bottom: 18px;
     }
 }

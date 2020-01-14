@@ -1,5 +1,5 @@
 .menuBar{
-  padding: 0 83px;
+  margin-top: 20px;
   overflow: auto;
   display: flex;
   align-items: center;
@@ -9,7 +9,9 @@
   font-size: 16px;
   line-height: 24px;
 }
-
+.inputContainer {
+  width: 384px;
+}
 .logo{
   float: left;
 }
@@ -18,7 +20,7 @@
   font-size: 20px;
   padding: 18px 20px;
   text-transform: capitalize;
-  width: 120px;
+  /* width: 100px; */
   text-decoration: none;
   color: #000000;
   font-weight: 600;
@@ -48,6 +50,11 @@
   background-color: transparent;
 }
 
+.menuCon .leftMenu{
+  float: left;
+  background-color: transparent;
+}
+
 .barsMenu{
   float: right;
   height: 32px;
@@ -55,6 +62,10 @@
   margin-top: 8px;
   display: none;
   background: none;
+}
+.barsMenu:hover{
+  background: transparent;
+  border-color: transparent;
 }
 .barsBtn{
   display: block;
@@ -84,28 +95,23 @@
   color: inherit !important;
 }
 
-
 @media(max-width: 800px){
   .barsMenu{
-    margin: 32px 23px;
     display: inline-block;
   }
-  .leftMenu,.rightMenu{
+  .rightMenu{
     display: none;
-  }
-  .logos{
-    margin-left: -20px;
-  }
-  .logos{
-    padding: 10px 20px;
-  }
-  .menuBar {
-    margin-left: 23px;
   }
 }
 
 @media(max-width: 1080px){ 
   .menuBar {
     padding: 0px;
+  }
+}
+
+@media(max-width: 1300px){
+  .inputContainer{
+    width: 290px;
   }
 }

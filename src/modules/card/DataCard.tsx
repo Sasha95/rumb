@@ -1,20 +1,20 @@
-import React, { useRef } from "react";
-import { useHistory } from "react-router-dom";
-import { Rate, Carousel, Icon } from "antd";
-import { ICard } from "../../api/dto/Card";
-import globalStyle from "../../core/theme/commonStyle.module.css";
-import styles from "./card.module.css";
-import place from "../../resources/place.svg";
-import date from "../../resources/date.svg";
-import clock from "../../resources/clock.svg";
-import read from "../../resources/read.svg";
-import flash from "../../resources/flash.svg";
-import skin from "../../resources/skin.svg";
-import Truncate from "react-truncate";
-import moment from "moment";
-import classnames from "classnames";
-import TextTruncate from "react-text-truncate";
-import { useMedia } from "../../hooks/useMedia";
+import React, { useRef } from 'react';
+import { useHistory } from 'react-router-dom';
+import { Rate, Carousel, Icon } from 'antd';
+import { ICard } from '../../api/dto/Card';
+import globalStyle from '../../core/theme/commonStyle.module.css';
+import styles from './card.module.css';
+import place from '../../resources/place.svg';
+import date from '../../resources/date.svg';
+import clock from '../../resources/clock.svg';
+import read from '../../resources/read.svg';
+import flash from '../../resources/flash.svg';
+import skin from '../../resources/skin.svg';
+import Truncate from 'react-truncate';
+import moment from 'moment';
+import classnames from 'classnames';
+import TextTruncate from 'react-text-truncate';
+import { useMedia } from '../../hooks/useMedia';
 
 interface IData {
   card: ICard;
@@ -33,8 +33,8 @@ export const DataCard: React.FC<IData> = ({ card }) => {
   const prev = () => {
     refContainer.current.prev();
   };
-  const Sizes = ["SMALL"];
-  const isMinimum = useMedia(["(max-width: 800px)"], Sizes, "BIG");
+  const Sizes = ['SMALL'];
+  const isMinimum = useMedia(['(max-width: 800px)'], Sizes, 'BIG');
 
   return (
     <div className={styles.container}>
@@ -57,7 +57,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
                 key={index}
                 className={styles.imageCarousel}
                 src={image}
-                alt={"place"}
+                alt={'place'}
               />
             ))}
           </Carousel>
@@ -73,7 +73,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             )}
           >
             <span className={styles.palce}>
-              <img className={styles.image} src={place} alt={"place"} />
+              <img className={styles.image} src={place} alt={'place'} />
               <span className={styles.city}>
                 {card.town}, {card.country}
               </span>
@@ -91,13 +91,13 @@ export const DataCard: React.FC<IData> = ({ card }) => {
           <span>
             <img src={date} alt={date} />
             <span className={styles.date}>
-              {moment(card.dateOfStart).format("D MMMM YYYY")}
+              {moment(card.dateOfStart).format('D MMMM YYYY')}
             </span>
           </span>
           <span className={styles.rateFont}>
             <span className={globalStyle.fontRate}>
               {card.rate}
-              {"  "}
+              {'  '}
               <Rate
                 className={globalStyle.fontRate}
                 disabled
@@ -111,9 +111,9 @@ export const DataCard: React.FC<IData> = ({ card }) => {
 
         <TextTruncate
           containerClassName={styles.textTrunc}
-          line={isMinimum === "SMALL" ? 3 : 4}
-          element="span"
-          truncateText="…"
+          line={isMinimum === 'SMALL' ? 3 : 4}
+          element='span'
+          truncateText='…'
           text={card.description}
           textTruncateChild={
             <span className={styles.showmore} onClick={handleOrder}>
@@ -125,7 +125,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
 
       <div className={styles.thirdContainer}>
         <span className={styles.fontContainer}>
-          <img src={read} alt={"read"} />
+          <img src={read} alt={'read'} />
           <span
             className={classnames(styles.cardFontPAdding, globalStyle.cardFont)}
           >
@@ -133,17 +133,17 @@ export const DataCard: React.FC<IData> = ({ card }) => {
           </span>
           {card.time && (
             <span>
-              <img src={clock} alt={"clock"} />
+              <img src={clock} alt={'clock'} />
               <span className={globalStyle.cardFont}>{card.time}</span>
             </span>
           )}
         </span>
         <span className={styles.fontInline}>
-          <img src={flash} alt={"flash"} />
+          <img src={flash} alt={'flash'} />
           <span className={globalStyle.cardFont}>{card.professional}</span>
         </span>
         <span className={styles.fontInline}>
-          <img src={skin} alt={"skin"} />
+          <img src={skin} alt={'skin'} />
           <span className={globalStyle.cardFont}>{card.equipment}</span>
         </span>
         <div className={styles.orderContainer}>

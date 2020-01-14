@@ -1,0 +1,14 @@
+.containerNav {
+    margin-top: 40px;
+}
+.text {
+    color: #8C8C8C;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.textActive {
+    composes: text;
+    color: #595959;
+}

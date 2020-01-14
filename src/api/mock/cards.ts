@@ -31,7 +31,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, image1, image2, swim, swim]
@@ -62,7 +63,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, bike, regat, swim, swim]
@@ -93,7 +95,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, bike, regat, swim, swim]
@@ -124,7 +127,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, bike, regat, swim, swim]
@@ -155,7 +159,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, bike, regat, swim, swim]
@@ -186,7 +191,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, bike, regat, swim, swim]
@@ -217,7 +223,8 @@ export const data: ICard[] = [{
     requires: "Различные требования к экипировке, подготовке и т.д.. Возможно различные гайды",
     adress: {
         fullAdress: "Emile Braunplein, Гент, Бельгия",
-        timeStart: "Начало в 11:00 по местному времени.",
+        timeStart: "11:00",
+        timeEnd: "17:00",
     },
     cancelReserv: " Если вы отменяете участие в туре в течение 24 часов с момента его бронирования, вы получаете полный возврат",
     images: [swim, bike, regat, swim, swim]
