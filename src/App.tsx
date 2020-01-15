@@ -9,11 +9,11 @@ import { Payment } from './modules/order/payment/Payment';
 const App: React.FC = () => {
   return (
     <>
-      <Route path="/rumb/">
+      <Route path="/rumb">
         <Header />
       </Route>
       <Switch>
-        <Route exact path="/rumb/">
+        <Route exact path="/rumb">
           <MainTravel />
         </Route>
         <Route path="/rumb/search/">

@@ -246,11 +246,12 @@
   }
   .corusel{
     max-width: 386px;
-    width: 386px;
   }
   .imageCarousel{
     max-width: 386px;
+    /* width: 150px; */
   }
+
 
   .textTrunc{
     display: none;
