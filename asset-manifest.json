@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/rumb/static/css/main.02e6f6e4.chunk.css",
+    "main.css": "/rumb/static/css/main.d7e9b86d.chunk.css",
     "main.js": "/rumb/static/js/main.4f263151.chunk.js",
     "main.js.map": "/rumb/static/js/main.4f263151.chunk.js.map",
     "runtime-main.js": "/rumb/static/js/runtime-main.8d1c76a9.js",
@@ -9,10 +9,10 @@
     "static/js/2.20a84a0a.chunk.js": "/rumb/static/js/2.20a84a0a.chunk.js",
     "static/js/2.20a84a0a.chunk.js.map": "/rumb/static/js/2.20a84a0a.chunk.js.map",
     "index.html": "/rumb/index.html",
-    "precache-manifest.e2509708a03115a6515b95f9e59f6935.js": "/rumb/precache-manifest.e2509708a03115a6515b95f9e59f6935.js",
+    "precache-manifest.dd43ec513a975ab6d3b1e751490d23e6.js": "/rumb/precache-manifest.dd43ec513a975ab6d3b1e751490d23e6.js",
     "service-worker.js": "/rumb/service-worker.js",
     "static/css/2.229fa63d.chunk.css.map": "/rumb/static/css/2.229fa63d.chunk.css.map",
-    "static/css/main.02e6f6e4.chunk.css.map": "/rumb/static/css/main.02e6f6e4.chunk.css.map",
+    "static/css/main.d7e9b86d.chunk.css.map": "/rumb/static/css/main.d7e9b86d.chunk.css.map",
     "static/js/2.20a84a0a.chunk.js.LICENSE": "/rumb/static/js/2.20a84a0a.chunk.js.LICENSE",
     "static/media/index.css": "/rumb/static/media/SFProDisplay-UltralightItalic.cae1c036.woff",
     "static/media/bike.png": "/rumb/static/media/bike.217a7930.png",
@@ -55,7 +55,7 @@
     "static/js/runtime-main.8d1c76a9.js",
     "static/css/2.229fa63d.chunk.css",
     "static/js/2.20a84a0a.chunk.js",
-    "static/css/main.02e6f6e4.chunk.css",
+    "static/css/main.d7e9b86d.chunk.css",
     "static/js/main.4f263151.chunk.js"
   ]
 }
