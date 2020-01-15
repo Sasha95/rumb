@@ -1,81 +1,109 @@
 .container {
-    background: #FFFFFF;
+  background: #ffffff;
+}
+.containerCalendar {
+    padding: 17px 17px 10px 17px;
+}
+.closeModal {
+  padding: 9px 0px 0px 9px;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.titleModal {
+  margin-right: auto;
+  align-self: flex-end;
+  color: #262626;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.containterModal {
+  display: flex;
 }
 
 .row {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .cell {
-    -webkit-flex: 1 1 auto;
-    flex: 1 1 auto; 
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .font {
-    font-weight: normal;
-    color: #8C8C8C;
-    font-size: 20px;
-    line-height: 28px;
+  font-weight: normal;
+  color: #8c8c8c;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .fontInclud {
-    color: #595959;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 28px;
+  color: #595959;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .fontRule {
-    text-decoration-line: underline;
-    color: #389E0D;
+  text-decoration-line: underline;
+  color: #389e0d;
 }
 
 .hr {
-    margin-top: 61px;
-    border: 1px solid #D9D9D9;
+  margin-top: 61px;
+  border: 1px solid #d9d9d9;
 }
 
 .btnOrder {
-    composes: buttonOrder from '../../core/theme/commonStyle.module.css';
-    width: 100px;
-    height: 32px;
-    text-align: center;
+  composes: buttonOrder from "../../core/theme/commonStyle.module.css";
+  width: 100px;
+  height: 32px;
+  text-align: center;
 }
 
 .footerDay {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 22px;
-    color: #8C8C8C;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #8c8c8c;
 }
-.footerText{
-    composes: footerDay;
-    color: #262626;
+.footerText {
+  composes: footerDay;
+  color: #262626;
 }
 
 .footerTextContainer {
-    text-align: justify;
+  text-align: justify;
 }
 
 .footerContainer {
-    width: 700px;
-    padding-right: 94px;
-    display: flex;
-    justify-content: flex-end;
+  width: 700px;
+  padding-right: 94px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .centerContainer {
-    align-self: center;
+  align-self: center;
 }
 
-.paddingInclud{
-    padding-bottom: 10px;
-    padding-top: 10px;
+.paddingInclud {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
+.modalFooter {
+  align-items: center;
+}
+
+.hrModal {
+  border: 1px solid #e8e8e8;
+}

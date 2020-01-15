@@ -1,0 +1,45 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.dayContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 60px;
+  background: #e8e8e8;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+}
+
+.day {
+  color: #262626;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.dayTitle {
+    color: #8C8C8C;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.timeTitle {
+    composes: dayTitle;
+    color: #595959;
+}
+
+.dateTimeContainer {
+  padding-left: 30px;
+}
+
+.btnContainer {
+  width: 230px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}

@@ -1,13 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import styles from "./payment.module.css"
-import { useParams, Link, Route } from "react-router-dom";
+import { useParams, Route, NavLink } from "react-router-dom";
 import { data } from "../../../api/mock/cards";
-import classnames from "classnames"
 import { CardInfo } from "../CardInfo"
 import { ICard } from "../../../api/dto/Card";
-import { Row } from "antd";
-import {Requires} from "./Requires"
-import globalStyles from "../../../core/theme/commonStyle.module.css"
+import { Requires } from "./require/Requires"
+import { Member } from "./member/Member";
 
 export const Payment = () => {
     const { orderId } = useParams();
@@ -18,12 +16,30 @@ export const Payment = () => {
         <div>
             <CardInfo selected={selected} />
             <div className={styles.containerNav}>
-                <Link to={`/rumb/payment${selected.id}/requires`}>Требования тура</Link>{" / "}
-                <Link to={`/rumb/payment${selected.id}/members`}>Кто едет с вами ?</Link>{" / "}
-                <Link to={`/rumb/payment${selected.id}/pay`}>Оплата</Link>
+                <NavLink                    
+                    activeClassName={styles.textActive}
+                    className={styles.text}
+                    to={`/rumb/payment${selected.id}/requires`}>
+                    Требования тура
+                </NavLink>{" / "}
+                <NavLink
+                    activeClassName={styles.textActive}
+                    className={styles.text}
+                    to={`/rumb/payment${selected.id}/members`}>
+                    Кто едет с вами ?
+                </NavLink>{" / "}
+                <NavLink
+                    activeClassName={styles.textActive}
+                    className={styles.text}
+                    to={`/rumb/payment${selected.id}/pay`}>
+                    Оплата
+                </NavLink>
             </div>
             <Route path="/rumb/payment:orderId/requires">
                 <Requires selected={selected} />
+            </Route>
+            <Route path="/rumb/payment:orderId/members">
+                <Member selected={selected} />
             </Route>
         </div>
     )

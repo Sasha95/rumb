@@ -43,9 +43,9 @@ export const OtherFilter: React.FC<IProps> = ({ close, show }) => {
                 </div>
                 <div className={styles.footerContainer}>
                     <hr className={styles.hr} />
-                    <div className={styles.footer}>
-                        <span onClick={handleClear} className={classnames(globalStyle.unselectable, styles.clear)}>Очистить всё</span>
-                        <span className={classnames(globalStyle.unselectable, styles.btn)}>Показать</span>
+                    <div className={globalStyle.footerModal}>
+                        <span className={classnames(globalStyle.unselectable, globalStyle.btnModal)}>Показать</span>
+                        <span onClick={handleClear} className={classnames(globalStyle.unselectable, globalStyle.clearModal)}>Очистить всё</span>
                     </div>
                 </div>
             </div>

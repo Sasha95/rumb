@@ -112,7 +112,35 @@
   font-size: 20px;
   line-height: 28px;
 }
+.clearModal {
+  color: #262626;
+  text-decoration-line: underline;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
 
+.btnModal {
+  background: #389E0D;
+  color: #FFFFFF;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 5px 16px;
+  border-radius: 4px;
+  width: 120px;
+  height: 32px;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footerModal {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 20px;
+}
 @media screen and (max-width: 850px) {
     .popularText{
         text-align: center;
