@@ -38,7 +38,7 @@ export const Header = () => {
   };
   const Sizes = ["SMALL", "MEDIUM"];
   let isMinimum = useMedia(["(max-width: 800px)", "(max-width: 1200px)"], Sizes, "BIG");
-  isMinimum = isMinimum === "MEDIUM" && !matchPath(location.pathname, "/rumb")?.isExact? "MEDIUM": "BIG";
+  isMinimum = isMinimum === "MEDIUM" && !matchPath(location.pathname, "/")?.isExact? "MEDIUM": "BIG";
   const showDrawer = () => {
     setVisible(true);
   };
@@ -49,14 +49,14 @@ export const Header = () => {
   return (
     <nav className={styles.menuBar}>
       <div className={styles.logo}>
-        <Link to="/rumb" className={styles.logos}>
+        <Link to="/" className={styles.logos}>
           ЛОГО
         </Link>
       </div>
 
       <div className={styles.menuCon}>
         <div className={styles.leftMenu}>
-        {!matchPath(location.pathname, "/rumb")?.isExact &&
+        {!matchPath(location.pathname, "/")?.isExact &&
           <Menu>
           <Menu.Item key="search">
             <Input
