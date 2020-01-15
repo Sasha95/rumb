@@ -41,6 +41,6 @@ export const Payment = () => {
             <Route path="/rumb/payment:orderId/members">
                 <Member selected={selected} />
             </Route>
-        </div>
+        </div> 
     )
 }
