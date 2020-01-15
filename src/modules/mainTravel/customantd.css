@@ -226,3 +226,7 @@
 .ant-menu-vertical {
   border-right: none;
 }
+
+.ant-carousel .slick-list .slick-slide.slick-active {
+  width: 386px;
+}
