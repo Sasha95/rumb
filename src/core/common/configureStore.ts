@@ -7,7 +7,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 export const history = createBrowserHistory();
 
-const persistWhitelist: Array<keyof IAppState> = ["current"]
+const persistWhitelist: Array<keyof IAppState> = ["orderDate", "current"]
 const persistConfig = {
   key: "root",
   storage,
