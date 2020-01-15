@@ -12,6 +12,7 @@ const App: React.FC = () => {
       <Route path="/rumb">
         <Header />
       </Route>
+      <Redirect from="/" to="/rumb" />
       <Switch>
         <Route exact path="/rumb">
           <MainTravel />
