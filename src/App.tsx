@@ -1,6 +1,6 @@
 import React from 'react';
 import { Header } from './modules/header/Header';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { MainTravel } from './modules/mainTravel';
 import { Search } from './modules/search';
 import { Order } from './modules/order/Order';
@@ -12,6 +12,7 @@ const App: React.FC = () => {
       <Route path="/rumb">
         <Header />
       </Route>
+      <Redirect from="/rumb/" to="/rumb" />
       <Switch>
         <Route exact path="/rumb">
           <MainTravel />
