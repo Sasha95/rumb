@@ -63,4 +63,7 @@
     .imgContainer {
       flex-direction: column;     
     }
+    .image{
+        padding-left: 0px;
+    }
 }
