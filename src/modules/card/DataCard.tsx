@@ -41,6 +41,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
       <div className={styles.firstContainer}>
         <div className={styles.imgcont}>
           <Icon
+            style={{zIndex: 10}}
             className={styles.leftArrow}
             type="right-circle"
             onClick={prev}
@@ -62,6 +63,7 @@ export const DataCard: React.FC<IData> = ({ card }) => {
             ))}
           </Carousel>
           <Icon
+           style={{zIndex: 10}}
             className={styles.rightArrow}
             type="right-circle"
             onClick={next}
