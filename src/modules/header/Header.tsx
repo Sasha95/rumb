@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./header.module.css";
-import { Link, useLocation, Route } from "react-router-dom";
+import { Link, useLocation, matchPath } from "react-router-dom";
 import { Button, Drawer, Icon, Input, Menu } from "antd";
 import { useSelector } from "react-redux";
 import { currentSelector } from "../../store/currentSelect/currentSelectors";
@@ -38,7 +38,7 @@ export const Header = () => {
   };
   const Sizes = ["SMALL", "MEDIUM"];
   let isMinimum = useMedia(["(max-width: 800px)", "(max-width: 1200px)"], Sizes, "BIG");
-  isMinimum = isMinimum === "MEDIUM" && location.pathname !== "/rumb"? "MEDIUM": "BIG";
+  isMinimum = isMinimum === "MEDIUM" && !matchPath(location.pathname, "/rumb")?.isExact? "MEDIUM": "BIG";
   const showDrawer = () => {
     setVisible(true);
   };
@@ -46,7 +46,6 @@ export const Header = () => {
   const onClose = () => {
     setVisible(false);
   };
-
   return (
     <nav className={styles.menuBar}>
       <div className={styles.logo}>
@@ -57,7 +56,7 @@ export const Header = () => {
 
       <div className={styles.menuCon}>
         <div className={styles.leftMenu}>
-        {location.pathname !== "/rumb" &&
+        {!matchPath(location.pathname, "/rumb")?.isExact &&
           <Menu>
           <Menu.Item key="search">
             <Input

@@ -8,6 +8,7 @@ import { ICard } from "../dto/Card"
 export const data: ICard[] = [{
     id: 1,
     freeSeats: 1,
+    seats: 2,
     town: "Гент",
     country: "Бельгия",
     title: "Обучение морской одиночной регате от профессионалов",
@@ -39,6 +40,7 @@ export const data: ICard[] = [{
 },
 {
     id: 2,
+    seats: 2,
     freeSeats: 2,
     town: "Гент",
     country: "Бельгия",
@@ -71,6 +73,7 @@ export const data: ICard[] = [{
 },
 {
     id: 3,
+    seats: 5,
     freeSeats: 2,
     town: "Гент",
     country: "Бельгия",
@@ -103,6 +106,7 @@ export const data: ICard[] = [{
 },
 {
     id: 4,
+    seats: 2,
     freeSeats: 1,
     town: "Гент",
     country: "Бельгия",
@@ -135,6 +139,7 @@ export const data: ICard[] = [{
 },
 {
     id: 5,
+    seats: 6,
     freeSeats: 5,
     town: "Тирасполь",
     country: "Приднестровье",
@@ -167,6 +172,7 @@ export const data: ICard[] = [{
 },
 {
     id: 6,
+    seats: 2,
     freeSeats: 1,
     town: "Тирасполь",
     country: "Приднестровье",
@@ -199,6 +205,7 @@ export const data: ICard[] = [{
 },
 {
     id: 7,
+    seats: 2,
     freeSeats: 2,
     town: "Тирасполь",
     country: "Приднестровье",
