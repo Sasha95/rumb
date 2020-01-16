@@ -24,17 +24,17 @@ export const Languages = () => {
     return (
         <>
             <Modal show={showModal} title={"Выбрать язык и регион"} onClose={handleCloseModal}>
-                <ul className={stylemodal.flexContainerLangval} >
+                <div className={stylemodal.flexContainerLangval} >
                     {languages.map((item, index) => (
-                        <li className={classNames(
+                        <div className={classNames(
                                 {[stylemodal.flexItemLangval]: item===selected, 
                                 [stylemodal.flexItemLangvalUnactive]: item!==selected }
                             )} onClick={()=>handleChange(item)} key={index}>
                             <div className={stylemodal.titleItemModal}>{item.name}</div>
                             <div className={stylemodal.textItemModal}>{item.description}</div>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </Modal>
             <span className={styles.textBold} onClick={handleOpenModal}>
                 {<img src={languageImg} alt="language" />} {" "}

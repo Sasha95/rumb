@@ -23,18 +23,18 @@ export const Valute = () => {
     return (
         <>
             <Modal show={showModal} title={"Выбрать валюту"} onClose={handleCloseModal}>
-                <ul className={stylemodal.flexContainerLangval} >
+                <div className={stylemodal.flexContainerLangval} >
                     {valutes.map((item, index) => (
-                        <li className={classNames(
+                        <div className={classNames(
                                 {[stylemodal.flexItemLangval]: item===selected, 
                                 [stylemodal.flexItemLangvalUnactive]: item!==selected }
                             )}
                             onClick={()=>handleChange(item)} key={index}>
                                 <div className={stylemodal.titleItemModal}>{item.description}</div>
                                 <div className={stylemodal.textItemModal}>{item.name} - {item.symbol}</div>
-                        </li>
+                        </div>
                     ))}
-                </ul>
+                </div>
             </Modal>
             <span className={styles.textBold} onClick={handleOpenModal}>
                 {selected.symbol} {" "}

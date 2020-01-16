@@ -55,7 +55,6 @@
   .flexContainerLangval {
     padding: 0px;
     margin: 0;
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
   }
@@ -98,5 +97,10 @@
   }
   .hr {
     display: none;
+  }
+  .modalMain{
+    height: 100%;
+    width: 101%;
+    border-radius: 0;
   }
 }

@@ -18,16 +18,16 @@ export const Member: React.FC<IProps> = ({ selected }) => {
         history.push(`/rumb/payment${selected.id}/pay`)
     }
     return (
-        <>
-            <div>
+        <div>
+            <div className={styles.memberTitle}>
                 Кто едет с вами?
             </div>
             <div>
-                <div>Участники</div>                
+                <div className={styles.member}>Участники</div>                
                 <Select
                     defaultValue={"1 участник"}
                     showSearch
-                    style={{width: "256px"}}                    
+                    className={styles.selectContainer}
                     optionFilterProp="children"
                 >
                     {Array(selected.seats).fill(0).map((e,i)=>i+1).map(index => (
@@ -42,10 +42,10 @@ export const Member: React.FC<IProps> = ({ selected }) => {
                     ))}
                 </Select>
             </div>
-            <div>
+            <div className={styles.member}>
                 Познакомьтесь с автором тура
             </div>
-            <div>
+            <div className={styles.textArea}>
                 <TextArea
                     value={value}
                     placeholder='Здравствуйте! Заинтересовал Ваш тур.'     
@@ -54,6 +54,6 @@ export const Member: React.FC<IProps> = ({ selected }) => {
                 />
             </div>
             <div onClick={handleNext} className={classnames(globalStyle.buttonOrder, styles.btnContainer)}>Продолжить</div>       
-        </>
+        </div>
     )
 }

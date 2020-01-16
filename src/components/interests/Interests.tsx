@@ -18,7 +18,7 @@ export const Interests: React.FC<IProps> = ({handleSelected}) => {
         handleSelected(x);
     }
     return (
-        <>
+        <div className="interes">
             <Select       
                 mode="multiple"
                 placeholder=""
@@ -34,6 +34,6 @@ export const Interests: React.FC<IProps> = ({handleSelected}) => {
                 ))}
             </Select>
             <hr className={globalStyle.hr} />
-        </>
+        </div>
     )
 }
