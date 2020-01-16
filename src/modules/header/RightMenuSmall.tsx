@@ -28,6 +28,6 @@ export const RightMenuSmall: React.FC<IProps> = ({titles}) => {
                 </Link>
             </Menu.Item>
         ))}
-      </Menu>
+        </Menu>
     )
 }

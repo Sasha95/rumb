@@ -223,10 +223,19 @@
 .ant-menu-horizontal > .ant-menu-item-selected > a{
   color: #262626;
 }
+.ant-menu-item > a:hover{
+  color: #262626;
+}
 .ant-menu-vertical {
   border-right: none;
 }
 
 .ant-carousel .slick-list .slick-slide.slick-active {
   width: 386px;
+}
+
+/* tooltip */
+
+.ant-tooltip {
+  display: none;
 }
