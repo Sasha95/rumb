@@ -7,7 +7,7 @@ import { Row, Col } from "antd"
 import classnames from "classnames"
 import styles from "./requires.module.css";
 import { useSelector } from "react-redux"
-import { orderDateSelector } from "../../../../store/orderDate/orderDateSelectors"
+import { orderSelector } from "../../../../store/order/orderSelectors"
 import moment from "moment"
 import { Day } from "./Day"
 import { useHistory } from "react-router-dom"
@@ -21,7 +21,7 @@ export const Requires: React.FC<IProps> = ({ selected }) => {
     const handleToggle = () => {
         setShow(!show);
     }
-    const orderDay = useSelector(orderDateSelector);
+    const orderDay = useSelector(orderSelector);
     const dayStart = moment(orderDay.dateOfStart)
     const dayEnd = moment(orderDay.dateOfEnd)
     const history = useHistory();
@@ -50,8 +50,7 @@ export const Requires: React.FC<IProps> = ({ selected }) => {
                 <Col className={(globalStyle.rightContainer)}>
                     <Day date={dayEnd} selected={selected} title={"Завершающий день"} />
                 </Col>
-            </Row>
-                
+            </Row>                
         </>
     )
 }

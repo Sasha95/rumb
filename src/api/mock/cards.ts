@@ -22,6 +22,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 91,
+    services: 25.6,
+    result: 116.6,
     valute: "$",
     from: "с человека",
     including: {
@@ -55,6 +57,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 85,
+    services: 25,
+    result: 110,
     valute: "$",
     from: "с человека",
     including: {
@@ -88,6 +92,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 120,
+    services: 20.2,
+    result: 140.2,
     valute: "$",
     from: "с человека",
     including: {
@@ -121,6 +127,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 120,
+    services: 20.2,
+    result: 140.2,
     valute: "$",
     from: "с человека",
     including: {
@@ -154,6 +162,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 120,
+    services: 20.2,
+    result: 140.2,
     valute: "$",
     from: "с человека",
     including: {
@@ -187,6 +197,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 120,
+    services: 20.2,
+    result: 140.2,
     valute: "$",
     from: "с человека",
     including: {
@@ -220,6 +232,8 @@ export const data: ICard[] = [{
     professional: "Для новичков",
     equipment: "Треб. снаряжение",
     cost: 120,
+    services: 20.2,
+    result: 140.2,
     valute: "$",
     from: "с человека",
     including: {

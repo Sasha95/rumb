@@ -112,13 +112,18 @@
 }
 
 /* Modal */
-.ant-modal-close-x{
+.customModal .ant-modal-close-x{
   display: none;
+}
+.ant-modal-close-x{
+  /* display: none; */
 }
 .ant-modal-body{
   padding: 0px;
 }
-
+.ant-modal-content{
+  border-radius: 10px;
+}
 /* Calendar */
 
 .DayPicker_weekHeader_li {

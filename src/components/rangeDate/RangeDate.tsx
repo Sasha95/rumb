@@ -29,6 +29,7 @@ export const RangeDate: React.FC<IProps> = ({ handleDate }) => {
     <div className={styles.container}>
       <Modal
         width={isMinimum === "SMALL" ? "375px" : ""}
+        closeIcon={<div></div>}
         centered
         visible={show}
         onCancel={() => setShow(false)}

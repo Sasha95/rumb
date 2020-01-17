@@ -16,6 +16,8 @@ export interface ICard {
     equipment: string;
     cost: number;
     valute: string;
+    result: number;
+    services: number;
     from: string;
     including: {
         inventory: string;

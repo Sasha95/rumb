@@ -14,7 +14,7 @@ import { CardInfo } from "./CardInfo";
 import { CalendarModal } from "../../components/rangeDate/CalendarModal";
 import { useMedia } from "../../hooks/useMedia";
 import { useDispatch } from "react-redux";
-import { set_order_date } from "../../store/orderDate/orderDateActions";
+import { set_order } from "../../store/order/orderActions";
 const close = require("../../resources/close.svg");
 
 export const Order = () => {
@@ -45,9 +45,12 @@ export const Order = () => {
     const history = useHistory();
     const handlePay = () => {
         setShowModal(false);
-        dispatch(set_order_date({
+        dispatch(set_order({
             dateOfStart: orderDateOfStart,
-            dateOfEnd: orderDateOfEnd
+            dateOfEnd: orderDateOfEnd,
+            cost: selected.cost,
+            services: selected.services,
+            sum: selected.result,
         }))
         history.push(`/rumb/payment${selected.id}/requires`)
     }
@@ -56,6 +59,7 @@ export const Order = () => {
         <>
             <Modal
                 visible={showModal}
+                closeIcon={<div></div>}
                 title={
                     <div className={styles.containterModal}>
                         <img className={styles.closeModal} onClick={handleCloseModal} src={close} alt="close" />

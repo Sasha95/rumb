@@ -34,6 +34,9 @@
     line-height: 22px;
     padding: 5px 16px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .showMore {

@@ -6,6 +6,9 @@ import { CardInfo } from "../CardInfo"
 import { ICard } from "../../../api/dto/Card";
 import { Requires } from "./require/Requires"
 import { Member } from "./member/Member";
+import { Row, Col } from "antd";
+import { Pay } from "./pay/Pay";
+import { RezultCard } from "./ResultCard";
 
 export const Payment = () => {
     const { orderId } = useParams();
@@ -13,34 +16,39 @@ export const Payment = () => {
     // const display = classnames(styles.text, { [styles.textActive]:  },)
 
     return (
-        <div>
+        <Row style={{ paddingBottom: "48px" }}>
             <CardInfo selected={selected} />
-            <div className={styles.containerNav}>
-                <NavLink                    
-                    activeClassName={styles.textActive}
-                    className={styles.text}
-                    to={`/rumb/payment${selected.id}/requires`}>
-                    Требования тура
+            <Row  className={styles.containerNav} type={"flex"} justify={"space-between"}>
+                <Col offset={3}>
+                    <NavLink
+                        activeClassName={styles.textActive}
+                        className={styles.text}
+                        to={`/rumb/payment${selected.id}/requires`}>
+                        Требования тура
                 </NavLink>{" / "}
-                <NavLink
-                    activeClassName={styles.textActive}
-                    className={styles.text}
-                    to={`/rumb/payment${selected.id}/members`}>
-                    Кто едет с вами ?
+                    <NavLink
+                        activeClassName={styles.textActive}
+                        className={styles.text}
+                        to={`/rumb/payment${selected.id}/members`}>
+                        Кто едет с вами ?
                 </NavLink>{" / "}
-                <NavLink
-                    activeClassName={styles.textActive}
-                    className={styles.text}
-                    to={`/rumb/payment${selected.id}/pay`}>
-                    Оплата
+                    <NavLink
+                        activeClassName={styles.textActive}
+                        className={styles.text}
+                        to={`/rumb/payment${selected.id}/pay`}>
+                        Оплата
                 </NavLink>
-            </div>
+                </Col>
+            </Row>
             <Route path="/rumb/payment:orderId/requires">
                 <Requires selected={selected} />
             </Route>
             <Route path="/rumb/payment:orderId/members">
                 <Member selected={selected} />
             </Route>
-        </div> 
+            <Route path="/rumb/payment:orderId/pay">
+                <Pay />
+            </Route>
+        </Row>
     )
 }
