@@ -46,6 +46,9 @@ export const Order = () => {
     const handlePay = () => {
         setShowModal(false);
         dispatch(set_order({
+            id: selected.id,
+            title: selected.title,
+            description: selected.description,
             dateOfStart: orderDateOfStart,
             dateOfEnd: orderDateOfEnd,
             cost: selected.cost,

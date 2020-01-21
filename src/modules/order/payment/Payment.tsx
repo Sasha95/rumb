@@ -7,8 +7,9 @@ import { ICard } from "../../../api/dto/Card";
 import { Requires } from "./require/Requires"
 import { Member } from "./member/Member";
 import { Row, Col } from "antd";
-import { Pay } from "./pay/Pay";
+import Pay from "./pay/Pay";
 import { RezultCard } from "./ResultCard";
+import { StripeProvider, Elements } from 'react-stripe-elements'
 
 export const Payment = () => {
     const { orderId } = useParams();
@@ -47,7 +48,11 @@ export const Payment = () => {
                 <Member selected={selected} />
             </Route>
             <Route path="/rumb/payment:orderId/pay">
-                <Pay />
+            <StripeProvider apiKey="pk_test_j7KlMPUXrrTh3PpKNZRzhRfD00F7l2qfRy">
+                <Elements>
+                    <Pay />
+                </Elements>
+            </StripeProvider>
             </Route>
         </Row>
     )

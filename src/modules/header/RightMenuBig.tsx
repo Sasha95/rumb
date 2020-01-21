@@ -5,7 +5,7 @@ import { Valute } from "../../components/valute/Valute"
 import { Languages } from "../../components/language/Language"
 import styles from "./header.module.css"
 
-interface IProps {
+export interface IProps {
     titles: {
         name: string;
         description: string;
